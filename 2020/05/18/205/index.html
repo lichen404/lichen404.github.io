@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>执行*.sh 文件的几种方式 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">执行*.sh 文件的几种方式</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 18, 2020&nbsp;&nbsp;17:59:27</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Linux/">Linux</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="执行-sh-文件的几种方式"><a href="#执行-sh-文件的几种方式" class="headerlink" title="执行*.sh 文件的几种方式"></a>执行*.sh 文件的几种方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh filename.sh<br>./filename.sh(需要文件有执行权限)<br></code></pre></td></tr></table></figure>
+<p>上面的方法是通过建立子 shell 执行脚本中的语句，而以下方法是在当前 shell 中执行脚本内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<h4 id="source-命令"><a href="#source-命令" class="headerlink" title="source 命令"></a>source 命令</h4><p>source 命令也称为“点命令”，也就是一个点符号（.）,是 bash 的内部命令。</p>
+<h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><p>使 Shell 读入指定的 Shell 程序文件并依次执行文件中的所有语句</p>
+<h5 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br></code></pre></td></tr></table></figure>
+<h5 id="source-filename-与-sh-filename-及-filename-执行脚本的区别"><a href="#source-filename-与-sh-filename-及-filename-执行脚本的区别" class="headerlink" title="source filename 与 sh filename 及 ./filename 执行脚本的区别"></a>source filename 与 sh filename 及 ./filename 执行脚本的区别</h5><ol>
+<li> 当 shell 脚本具有可执行权限时，用 sh filename 与 ./filename 执行脚本是没有区别的。 ./filename 是因为当前目录没有在 PATH 中，”.”是用来表示当前目录的。</li>
+<li> sh filename 重新建立了一个子 shell，在子 shell 中执行脚本里面的语句，该子 shell 继承父 shell 的环境变量，但子 shell 新建的，改变的变量不会被带回父 shell。</li>
+<li> source filename 或 . filename 只是简单地读取脚本里的语句依次在当前 shell 里面执行，并没有建立新的子 shell。那么脚本里面所有新建，改变变量的语句都会保存在当前 shell 里面。</li>
+</ol>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><ol>
+<li> 新建 test.sh 脚本,内容为:A=1</li>
+<li> 然后使其可执行 chmod +x test.sh</li>
+<li> 运行 sh test.sh，然后 echo $A,显示为空，因为 A=1 并没有传给当前的 shell</li>
+<li> 运行 ./test.sh 效果是一样的</li>
+<li> 运行 source test.sh 或者 . test.sh,然后 echo $A,则会显示 1，说明 A=1 的变量在当前 shell 中</li>
+</ol>
+<hr>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li>  linux 下的 source 命令 <a target="_blank" rel="noopener" href="https://blog.csdn.net/wangyangkobe/article/details/6595143">https://blog.csdn.net/wangyangkobe/article/details/6595143</a></li>
+<li>  执行*.sh 文件的 6 种方式 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37699336/article/details/80724700">https://blog.csdn.net/qq_37699336/article/details/80724700</a></li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/05/29/214/">pointer-events:none 和 cursor:not-allowed 踩坑</a>
+            
+            
+            <a class="next" rel="next" href="/2020/04/14/199/">JS高阶函数</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>无线网卡监听模式 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">无线网卡监听模式</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 18, 2019&nbsp;&nbsp;6:51:00</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>监听模式（monitor mode），或 RFMON（Radio Frequency MONitor），是指无线网卡可以接收所有经过它的数据流的工作方式，对应于IEEE 802.11网卡的其他模式，诸如Master（路由器）、Managed（普通模式的网卡）、Ad-hoc等。监听模式不区分所接收数据包的目标MAC地址，这点和混杂模式类似。然而，和混杂模式不同的是，监听模式的不需要和无线接入点（AP）或Ad-hoc网络建立连接。监听模式是无线网卡特有的特殊模式，而混杂模式应用于有线网卡和无线网卡。</p>
+<p>监听模式通常用于网络发现、流量监听和分组分析。Linux、Mac OS X、Windows以及其他Unix-like平台有使用监听模式的网络发现、抓包工具，如KisMAC、Kismet、Wireshark、Aircrack-NG等。</p>
+<p>无线网络的特性可能让人联想到古老的集线器（Hub）网络，在集线器网络中，所有通过集线器的数据都会被转发给该集线器所有的接口，也就是说，只要连接在该集线器上的机器，就可以监听该网络上的所有机器的网络通信。默认情况下，网卡只会接受发给自己的数据报文，将其他的报文统统丢弃。当然也可以让网卡接受所有的报文，这就是所谓的混杂模式（promiscuous mode）。</p>
+<p>无线网卡跟这个很类似，默认情况下无线网卡和无线接入点（Wireless Access Point，WAP）建立连接后，就处于托管模式（Managed mode），在这个模式下，无线网卡只专注于接受从 WAP 发给自己的数据报文。如果想让无线网卡监听空气中所有的无线通信，则可以将无线网卡设置成监听模式（Monitor mode，也叫 RFMON 模式），然后再使用诸如 Wireshark 之类的软件捕获数据报文进行分析。</p>
+<p>无线网卡除了 Managed mode 和 Monitor mode 这两个模式之外，其实还支持好几种其他的模式，譬如：Ad hoc（也叫 IBSS 模式） 和 Master mode ，Linux Wireless 站点上对此有详细的介绍，也可以参考 Chris 的 《Wireshark 数据包分析实战》第 11 章，下面附一张无线网卡的几种工作模式的示意图。<br><img src="https://www.stayw1thme.xyz/usr/uploads/2019/07/4107977739.png" alt="3278227334.png" title="3278227334.png"></p>
+<hr>
+<p>转自</p>
+<ul>
+<li>  维基百科 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F">监听模式</a></li>
+<li>CSDN <a target="_blank" rel="noopener" href="https://blog.csdn.net/whatday/article/details/88796508">无线网络分析监听</a><br>  侵删</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/07/23/81/">Python待学习内容</a>
+            
+            
+            <a class="next" rel="next" href="/2019/04/18/73/">用pyecharts统计天气数据</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

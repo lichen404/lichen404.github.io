@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>用pyecharts统计天气数据 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">用pyecharts统计天气数据</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 18, 2019&nbsp;&nbsp;6:24:00</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Python/">Python</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>之前在知乎上看到了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57783355">每天起床第一句，太阳公公在哪里——用pyecharts研究天气</a>这篇文章，我注意到了文中提及的<a target="_blank" rel="noopener" href="http://www.tianqihoubao.com/">天气后报</a>网站。我在上面看到了我家这边的天气数据，从2011年到今天的都有。so 我也想搞来做个图表之类的来看一下。Let’s do it. 先搞个多线程爬虫，把数据格式化后存储在 MongoDB 里面。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3484431250.png"> 搞定了，然后写代码来生成与知乎文章类似的词云，折线图和饼图。代码太多，我这里只截取一小部分。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/966804010-1024x475.png"> 然后让我们来看看生成的图表吧。我家这边算是地处中原吧，秦岭-淮河一线附近，按道理说算是不冷不热。不过在历年气温上也能看到历史温度高达39度，夏天基本也有很多时候是30多度的高温。冬天虽说温度不算很低，但是很多地方都没有暖气，其实也挺冷的。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/884598495.png"> 晴雨天数估计是BUG了，18年晴天数有点夸张。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/2529365067.png"> 再来看看天气占比，最近几年感觉我家这边冬季也会有那种雾霾天气。不过在雾霾天在图表上显示的占比很小，霾天在将近10年的时间内实际只有2天。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3159919581.png"> 最后看下六月份的天气词云吧。跟我想的有点不一样，我的印象里六月是经常下大雨，打雷闪电的季节。但是实际上下大雨打雷的次数并不多。下雨多是阵雨，小雨，大雨跟暴雨次数很少。这也比较符合地理位置的气候吧，毕竟年降雨量也就那么多。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3525669193.png"> 不过我发现2015年6月份连着下了三天的大雨，不过我一点印象都没有… <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/563266257.png"></p>
+<hr>
+<p>关于爬虫和生成图表的代码可以去我的Github下载，<a target="_blank" rel="noopener" href="https://github.com/lichen404/weatherSpider">链接</a>.</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/04/18/77/">无线网卡监听模式</a>
+            
+            
+            <a class="next" rel="next" href="/2019/03/21/61/">小诗一首</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

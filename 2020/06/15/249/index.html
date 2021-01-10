@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>Untitled Post - 3 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Untitled Post - 3</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 15, 2020&nbsp;&nbsp;10:06:15</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/uncategorized/">uncategorized</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>大家好，我是今天的分享者小晨~。我是19年毕业的，考研失败后家里蹲了将近一年，期间在饥人谷跟着方方老师学习前端。目前在深圳工作，刚上班没多久，姿势水平不高，还是要学习一个。所以就不分享太多技术内容了。我的分享主要分为三个部分，可能有些内容前边的同学已经分享过了或者有错误，还请见谅。</p>
+<h3 id="编程相关"><a href="#编程相关" class="headerlink" title="编程相关"></a>编程相关</h3><p>我个人其实比较喜欢Python，所以给大家推荐下Python的入门教程吧~ <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400">廖雪峰的Python教程</a></p>
+<ul>
+<li>  这个教程虽然不是很长，但是基本把Python的重要内容和特性都涉及到了，有的地方比如装饰器，异步，刚开始看可能不明白，学习一段时间后再回过头看可能就能理解了。</li>
+<li>  另外廖雪峰老师的JS 跟 Git 教程也非常形象和浅显易懂，很适合新手。</li>
+</ul>
+<h3 id="日常生活"><a href="#日常生活" class="headerlink" title="日常生活"></a>日常生活</h3><h4 id="健康相关"><a href="#健康相关" class="headerlink" title="健康相关"></a>健康相关</h4><ul>
+<li>  我在上大学期间经常打游戏久坐，有时就会出现腰疼的情况。所以我现在比较注意这件事。大家如果有同样情况的话，建议买一个智能手环或者手表之类的，基本都带有久坐提醒功能。便宜的手环可能就几十块钱，准不准另说，但是最起码确实能在久坐时间过长的时候提醒到你，可以站起来接杯水或者上个厕所。</li>
+<li>  另外也可以关注下丁香医生这个公众号，或者在知乎上关注 丁香医生 或 叔贵K。这两个账户经常分享一些办公室养生相关内容。</li>
+</ul>
+<h4 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a>油猴脚本</h4><p>油猴我看前面已经有同学分享过了，那我这里就分享个自己在用的脚本好了 - CSDN去广告 边栏净化<a target="_blank" rel="noopener" href="https://xiedaimala.com/short_links/101987">https://xiedaimala.com/short_links/101987</a></p>
+<h4 id="IOS-捷径"><a href="#IOS-捷径" class="headerlink" title="IOS 捷径"></a>IOS 捷径</h4><p>IOS的捷径其实就类似于简单的编程，你可以通过一些指令，完成一个脚本。我个人觉得是一个很有意思的工具。大家可以在<a target="_blank" rel="noopener" href="https://sharecuts.cn/">这个网站</a>上面找到一些别人分享的捷径，然后自己再去模仿学习，DIY出来适合自己用的。</p>
+<h4 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h4><p>分享一下我在 youtube 上关注的两个博主吧。 - BigDongDong 主要是数码相关内容，博主本人好像是个演员，有拍过一些电视剧。 - 罗宾 也是数码博主，我关注他是因为博主本人在武汉，疫情期间每天拍vlog，都是一些生活相关内容，感兴趣可以关注一下。 - 他们在国内b站也有账户，不过有些视频没有上传。</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li>  TLDR的web版本,Linux命令速查 <a target="_blank" rel="noopener" href="https://tldr.linux.cn/">https://tldr.linux.cn/</a></li>
+<li>  Youtube 视频下载 <a target="_blank" rel="noopener" href="https://en.savefrom.net/17/">https://en.savefrom.net/17/</a></li>
+<li>  安卓应用下载，上面可以直接下载谷歌和国外的一些应用，如果不想用谷歌商店可以试试这个。不过网站貌似需要代理才可以访问。<a target="_blank" rel="noopener" href="https://apkpure.com/cn/">https://apkpure.com/cn/</a></li>
+<li>  大家用安卓手机，如果觉得国内商店下载到的软件很臃肿的话，可以去上面这个网站或者Google Play下载，比如QQ在Google Play上的版本相比国内就少很多广告和无用内容。</li>
+<li>  少数派 数码科技相关内容，个人感觉文章内容质量很好~ <a target="_blank" rel="noopener" href="https://sspai.com/">https://sspai.com/</a></li>
+</ul>
+<hr>
+<h3 id="菜鸡个人工作之余的一点感想"><a href="#菜鸡个人工作之余的一点感想" class="headerlink" title="菜鸡个人工作之余的一点感想"></a>菜鸡个人工作之余的一点感想</h3><p>这部分内容主要是我自己的一些想法，如果有不对的地方，还请谅解！</p>
+<ul>
+<li>  我自己从来不用抖音，快手，头条之类的软件。我觉得采用类似推荐算法的软件都很容易让人陷入“信息茧房”。互联网越来越蓬勃发展，但是个人得到的信息却可能越来越封闭。传统的贴吧论坛在衰落，推荐算法越来越智能，我们能看到的却可能只有我们想看到的。我对新闻比较感兴趣，平时工作之余会去纽约时报中文，FT中文，多维新闻等看，也会去国内的微博，百度之类的看。多样的信息渠道我觉得有助于避免我们的观点变得偏激。</li>
+<li>  在参加工作之后，我发现自己手头正在做的事情经常会被打断，时间变得碎片化。一会领导可能就会在QQ上发信息找你，或者淘宝提醒我该抢啥了。 我感觉自己变得很健忘，刚才还在想的事情一被打断就忘了，搞得我很烦。现在我采用的方法是一有什么想法就在QQ上发给我的电脑或者手机（因为QQ在我的电脑，ipad，手机上都有安装），记录下来。大家如果也有类似情况的话，可以分享下应对方法，这样时间久了，我觉得记性越来越差了…</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/">CSS实现流光文字</a>
+            
+            
+            <a class="next" rel="next" href="/2020/05/29/214/">pointer-events:none 和 cursor:not-allowed 踩坑</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

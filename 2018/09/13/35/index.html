@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>最短路径问题：Floyd算法 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">最短路径问题：Floyd算法</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 13, 2018&nbsp;&nbsp;6:57:00</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.stayw1thme.xyz/usr/uploads/2018/09/446556475.png" alt="示例" title="示例"> 暑假，小哼准备去一些城市旅游。有些城市之间有公路，有些城市之间则没有，如下图。为了节省经费以及方便计划旅程，小哼希望在出发之前知道任意两个城市之前的最短路程。<br><img src="https://www.stayw1thme.xyz/usr/uploads/2018/09/673917683.png" alt="081028xjgvimgz7882qdu7.png" title="081028xjgvimgz7882qdu7.png"> 上图中有4个城市8条公路，公路上的数字表示这条公路的长短。请注意这些公路是单向的。我们现在需要求任意两个城市之间的最短路程，也就是求任意两个点之间的最短路径。这个问题这也被称为“多源最短路径”问题。<br>现在需要一个数据结构来存储图的信息，我们仍然可以用一个4*4的矩阵（二维数组e）来存储。比如1号城市到2号城市的路程为2，则设e[1] [3]的值为2。2号城市无法到达4号城市，则设置e[2] [4]的值为∞。另外此处约定一个城市自己是到自己的也是0，例如e[1] [5]为0，具体如下。<br><img src="https://www.stayw1thme.xyz/usr/uploads/2018/09/2450790867.png" alt="081028o2n5ebn8hdeh9e5l.png" title="081028o2n5ebn8hdeh9e5l.png"> 我们来想一想，根据我们以往的经验，如果要让任意两点（例如从顶点a点到顶点b）之间的路程变短，只能引入第三个点（顶点k），并通过这个顶点k中转即a-&gt;k-&gt;b，才可能缩短原来从顶点a点到顶点b的路程。那么这个中转的顶点k是1<del>n中的哪个点呢？甚至有时候不只通过一个点，而是经过两个点或者更多点中转会更短，即a-&gt;k1-&gt;k2b-&gt;或者a-&gt;k1-&gt;k2…-&gt;k-&gt;i…-&gt;b。比如上图中从4号城市到3号城市（4-&gt;3）的路程e[4] [7]原本是12。如果只通过1号城市中转（4-&gt;1-&gt;3），路程将缩短为11（e[4] [1]+e[1] [3]=5+6=11）。其实1号城市到3号城市也可以通过2号城市中转，使得1号到3号城市的路程缩短为5（e[1] [2]+e[2] [3]=2+3=5）。所以如果同时经过1号和2号两个城市中转的话，从4号城市到3号城市的路程会进一步缩短为10。通过这个的例子，我们发现每个顶点都有可能使得另外两个顶点之间的路程变短。好，下面我们将这个问题一般化。 当任意两点之间不允许经过第三个点时，这些城市之间最短路程就是初始路程，如下。<br><img src="https://www.stayw1thme.xyz/usr/uploads/2018/09/3738937906.png" alt="081029zdxxq919ttqt8tu8.png" title="081029zdxxq919ttqt8tu8.png"> 假如现在只允许经过1号顶点，求任意两点之间的最短路程，应该如何求呢？只需判断e[i] [1]+e[1] [j]是否比e[i] [j]要小即可。e[i] [j]表示的是从i号顶点到j号顶点之间的路程。e[i] [1]+e[1] [j]表示的是从i号顶点先到1号顶点，再从1号顶点到j号顶点的路程之和。其中i是1</del>n循环，j也是1~n循环，代码实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">for(i&#x3D;1;i3-&gt;…-&gt;1-&gt;2-&gt;3这样路径中，每绕一次1-&gt;-2&gt;3这样的环，最短路就会减少1，永远找不到最短路。其实如果一个图中带有“负权回路”那么这个图则没有最短路。<br></code></pre></td></tr></table></figure>
+<p><img src="https://www.stayw1thme.xyz/usr/uploads/2018/09/1975616114.png" alt="081030elthvel6et6k886y.png" title="081030elthvel6et6k886y.png"><br><strong>我理解的Floyd算法原理：通过遍历每一个结点与其他所有结点可能存在的路径，取其中的最小值（通过遍历其他所有结点，使其充当中介结点与当前路径比较来实现），从而获得所有点之间的最短路径。原理说起来比较难懂，看前边的算法实现就明白了。</strong></p>
+<hr>
+<p>本文转自:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34374664/article/details/52261672">傻子也能看懂的弗洛伊德算法（转）</a> 侵删<br>本人水平有限，有错误的地方请指正，谢谢！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/01/09/45/">斐讯K3C路由器的一个安全漏洞</a>
+            
+            
+            <a class="next" rel="next" href="/2018/09/12/33/">最短路径问题：Dijkstra算法</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
