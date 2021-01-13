@@ -136,11 +136,12 @@
         </header>
 
         <div class="post-content">
-            <p>监听模式（monitor mode），或 RFMON（Radio Frequency MONitor），是指无线网卡可以接收所有经过它的数据流的工作方式，对应于IEEE 802.11网卡的其他模式，诸如Master（路由器）、Managed（普通模式的网卡）、Ad-hoc等。监听模式不区分所接收数据包的目标MAC地址，这点和混杂模式类似。然而，和混杂模式不同的是，监听模式的不需要和无线接入点（AP）或Ad-hoc网络建立连接。监听模式是无线网卡特有的特殊模式，而混杂模式应用于有线网卡和无线网卡。</p>
-<p>监听模式通常用于网络发现、流量监听和分组分析。Linux、Mac OS X、Windows以及其他Unix-like平台有使用监听模式的网络发现、抓包工具，如KisMAC、Kismet、Wireshark、Aircrack-NG等。</p>
-<p>无线网络的特性可能让人联想到古老的集线器（Hub）网络，在集线器网络中，所有通过集线器的数据都会被转发给该集线器所有的接口，也就是说，只要连接在该集线器上的机器，就可以监听该网络上的所有机器的网络通信。默认情况下，网卡只会接受发给自己的数据报文，将其他的报文统统丢弃。当然也可以让网卡接受所有的报文，这就是所谓的混杂模式（promiscuous mode）。</p>
-<p>无线网卡跟这个很类似，默认情况下无线网卡和无线接入点（Wireless Access Point，WAP）建立连接后，就处于托管模式（Managed mode），在这个模式下，无线网卡只专注于接受从 WAP 发给自己的数据报文。如果想让无线网卡监听空气中所有的无线通信，则可以将无线网卡设置成监听模式（Monitor mode，也叫 RFMON 模式），然后再使用诸如 Wireshark 之类的软件捕获数据报文进行分析。</p>
-<p>无线网卡除了 Managed mode 和 Monitor mode 这两个模式之外，其实还支持好几种其他的模式，譬如：Ad hoc（也叫 IBSS 模式） 和 Master mode ，Linux Wireless 站点上对此有详细的介绍，也可以参考 Chris 的 《Wireshark 数据包分析实战》第 11 章，下面附一张无线网卡的几种工作模式的示意图。<br><img src="https://www.stayw1thme.xyz/usr/uploads/2019/07/4107977739.png" alt="3278227334.png" title="3278227334.png"></p>
+            <p>监听模式（monitor mode）,或 RFMON（Radio Frequency MONitor）,是指无线网卡可以接收所有经过它的数据流的工作方式,对应于IEEE 802.11网卡的其他模式,诸如Master（路由器）、Managed（普通模式的网卡）、Ad-hoc等.监听模式不区分所接收数据包的目标MAC地址,这点和混杂模式类似.然而,和混杂模式不同的是,监听模式的不需要和无线接入点（AP）或Ad-hoc网络建立连接.监听模式是无线网卡特有的特殊模式,而混杂模式应用于有线网卡和无线网卡.</p>
+<p>监听模式通常用于网络发现、流量监听和分组分析.Linux、Mac OS X、Windows以及其他Unix-like平台有使用监听模式的网络发现、抓包工具,如KisMAC、Kismet、Wireshark、Aircrack-NG等.</p>
+<p>无线网络的特性可能让人联想到古老的集线器（Hub）网络,在集线器网络中,所有通过集线器的数据都会被转发给该集线器所有的接口,也就是说,只要连接在该集线器上的机器,就可以监听该网络上的所有机器的网络通信.默认情况下,网卡只会接受发给自己的数据报文,将其他的报文统统丢弃.当然也可以让网卡接受所有的报文,这就是所谓的混杂模式（promiscuous mode）.</p>
+<p>无线网卡跟这个很类似,默认情况下无线网卡和无线接入点（Wireless Access Point,WAP）建立连接后,就处于托管模式（Managed mode）,在这个模式下,无线网卡只专注于接受从 WAP 发给自己的数据报文.如果想让无线网卡监听空气中所有的无线通信,则可以将无线网卡设置成监听模式（Monitor mode,也叫 RFMON 模式）,然后再使用诸如 Wireshark 之类的软件捕获数据报文进行分析.</p>
+<p>无线网卡除了 Managed mode 和 Monitor mode 这两个模式之外,其实还支持好几种其他的模式,譬如：Ad hoc（也叫 IBSS 模式） 和 Master mode ,Linux Wireless 站点上对此有详细的介绍,也可以参考 Chris 的 《Wireshark 数据包分析实战》第 11 章,下面附一张无线网卡的几种工作模式的示意图.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4107977739-190x300.png" alt="4107977739-190x300"></p>
 <hr>
 <p>转自</p>
 <ul>

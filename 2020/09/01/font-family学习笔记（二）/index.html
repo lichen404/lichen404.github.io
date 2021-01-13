@@ -210,40 +210,40 @@
 <li>  CSS-Tricks</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span>: <span class="hljs-selector-tag">Sentinel</span> <span class="hljs-selector-tag">SSm</span> <span class="hljs-selector-tag">A</span>,<span class="hljs-selector-tag">Sentinel</span> <span class="hljs-selector-tag">SSm</span> <span class="hljs-selector-tag">B</span>,<span class="hljs-selector-tag">system-ui</span>,<span class="hljs-selector-tag">-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span>,<span class="hljs-selector-tag">Roboto</span>,<span class="hljs-selector-tag">Helvetica</span>,<span class="hljs-selector-tag">Arial</span>,<span class="hljs-selector-tag">sans-serif</span>,<span class="hljs-selector-tag">Apple</span> <span class="hljs-selector-tag">Color</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Symbol</span><br></code></pre></td></tr></table></figure>
-<h3 id="font-family-关键字"><a href="#font-family-关键字" class="headerlink" title="font-family 关键字"></a>font-family 关键字</h3><p>对于CSS中的font-family而言，它有两类取值。 1. 一类是类似这样的具体的字体族名定义:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:&quot;Arial&quot;</span> <span class="hljs-comment">/* 这里定义了一个具体的字体样式，字体族名为Arial */</span><br></code></pre></td></tr></table></figure>
+<h3 id="font-family-关键字"><a href="#font-family-关键字" class="headerlink" title="font-family 关键字"></a>font-family 关键字</h3><p>对于CSS中的font-family而言,它有两类取值. 1. 一类是类似这样的具体的字体族名定义:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:&quot;Arial&quot;</span> <span class="hljs-comment">/* 这里定义了一个具体的字体样式,字体族名为Arial */</span><br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li> 一类是通用字体族名,它是一种备选机制，用于在指定的字体不可用时给出较好的字体，类似这样:</li>
+<li> 一类是通用字体族名,它是一种备选机制,用于在指定的字体不可用时给出较好的字体,类似这样:</li>
 </ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:sans-serif</span> <span class="hljs-comment">/* sans-serif表示无衬线字体族，例如 &quot;Open Sans&quot;,&quot;Arial&quot;,&quot;微软雅黑&quot; */</span><br></code></pre></td></tr></table></figure>
-<p>关于通用字体族名，在CSS Fonts Module Level 3 – Basic Font Properties 中，定义了5个，也就是我们熟知的几个通用字体族名： 1. serif衬线字体族 2. sans-serif非衬线字体族 3. monospace 等宽字体，即字体中每个字宽度相等 4. cursive 草书字体 5. fantasy 主要是那些具有特殊艺术效果的字体</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:sans-serif</span> <span class="hljs-comment">/* sans-serif表示无衬线字体族,例如 &quot;Open Sans&quot;,&quot;Arial&quot;,&quot;微软雅黑&quot; */</span><br></code></pre></td></tr></table></figure>
+<p>关于通用字体族名,在CSS Fonts Module Level 3 – Basic Font Properties 中,定义了5个,也就是我们熟知的几个通用字体族名： 1. serif衬线字体族 2. sans-serif非衬线字体族 3. monospace 等宽字体,即字体中每个字宽度相等 4. cursive 草书字体 5. fantasy 主要是那些具有特殊艺术效果的字体</p>
 <h3 id="新增通用字体族关键字"><a href="#新增通用字体族关键字" class="headerlink" title="新增通用字体族关键字"></a>新增通用字体族关键字</h3><hr>
-<p>在 CSS Fonts Module Level 4 – Generic font families 中，新增了几个关键字：</p>
+<p>在 CSS Fonts Module Level 4 – Generic font families 中,新增了几个关键字：</p>
 <ul>
 <li>  system-ui 系统默认字体</li>
 <li>  emoji 用于兼容emoji表情符号字符</li>
 <li>  math 适用于数字表达式</li>
 <li>  fangsong 此字体系列用于中文的（仿宋）字体</li>
 </ul>
-<h4 id="system-ui"><a href="#system-ui" class="headerlink" title="system-ui"></a>system-ui</h4><p>简单而言，font-family：system-ui 的目的就是在不同的操作系统的Web页面下，自动选择本操作系统下的默认系统字体。 默认适用特定操作系统的系统字体可以提高性能，因为浏览器或者 webview 不必去下载任何字体，而是使用已有的字体文件。font-family：system-ui 字体设置的优势之处在于它与当前操作系统使用的字体相匹配，对于文本内容而言，它可以得到最恰当的展示。</p>
-<h5 id="apple-system-BlinkMacSystemFont"><a href="#apple-system-BlinkMacSystemFont" class="headerlink" title="--apple-system/BlinkMacSystemFont"></a>--apple-system/BlinkMacSystemFont</h5><p>在 macOS 和 ios 上，我们需要使用 -apple-system 及 BlinkMacSystemFont 来兼容适配 system-ui 标准。</p>
-<h5 id="Segoe-UI"><a href="#Segoe-UI" class="headerlink" title="Segoe UI"></a>Segoe UI</h5><p>Segoe UI 是 Windows 从 Vista 开始的默认西文字体族，只有西文，不支持汉字，属于无衬线字体。 它也表示一个系列而不是某一款单一字体。使用 font-family：segoe UI 可以在Windows 平台及Windows Phone 上选取最佳的西文字体展示。</p>
-<h5 id="Roboto"><a href="#Roboto" class="headerlink" title="Roboto"></a>Roboto</h5><p>Roboto 是为 Android 操作系统设计的一个无衬线字体家族。这个字体家族包含Thin，Light，Regular，Medium，Bold，Black六种粗细及相配的斜体。</p>
-<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><p>@font-face 允许网页开发者为其网页指定在线或本地字体。 通过这种作者自备字体的方式，@font-face 可以消除对用户电脑字体的依赖。</p>
+<h4 id="system-ui"><a href="#system-ui" class="headerlink" title="system-ui"></a>system-ui</h4><p>简单而言,font-family：system-ui 的目的就是在不同的操作系统的Web页面下,自动选择本操作系统下的默认系统字体. 默认适用特定操作系统的系统字体可以提高性能,因为浏览器或者 webview 不必去下载任何字体,而是使用已有的字体文件.font-family：system-ui 字体设置的优势之处在于它与当前操作系统使用的字体相匹配,对于文本内容而言,它可以得到最恰当的展示.</p>
+<h5 id="apple-system-BlinkMacSystemFont"><a href="#apple-system-BlinkMacSystemFont" class="headerlink" title="--apple-system/BlinkMacSystemFont"></a>--apple-system/BlinkMacSystemFont</h5><p>在 macOS 和 ios 上,我们需要使用 -apple-system 及 BlinkMacSystemFont 来兼容适配 system-ui 标准.</p>
+<h5 id="Segoe-UI"><a href="#Segoe-UI" class="headerlink" title="Segoe UI"></a>Segoe UI</h5><p>Segoe UI 是 Windows 从 Vista 开始的默认西文字体族,只有西文,不支持汉字,属于无衬线字体. 它也表示一个系列而不是某一款单一字体.使用 font-family：segoe UI 可以在Windows 平台及Windows Phone 上选取最佳的西文字体展示.</p>
+<h5 id="Roboto"><a href="#Roboto" class="headerlink" title="Roboto"></a>Roboto</h5><p>Roboto 是为 Android 操作系统设计的一个无衬线字体家族.这个字体家族包含Thin,Light,Regular,Medium,Bold,Black六种粗细及相配的斜体.</p>
+<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><p>@font-face 允许网页开发者为其网页指定在线或本地字体. 通过这种作者自备字体的方式,@font-face 可以消除对用户电脑字体的依赖.</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@font-face</span> &#123;<br>  <span class="hljs-attribute">font-family</span>: MyHelvetica;<br>  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">local</span>(<span class="hljs-string">&quot;Helvetica Neue Bold&quot;</span>),<br>  <span class="hljs-built_in">local</span>(<span class="hljs-string">&quot;HelveticaNeue-Bold&quot;</span>),<br>  <span class="hljs-built_in">url</span>(MgOpenModernaBold.ttf);<br>  <span class="hljs-attribute">font-weight</span>: bold;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="font-css"><a href="#font-css" class="headerlink" title="font.css"></a>font.css</h3><p>github 上的一个项目，可以保证在不同平台上都显示为质量最高的黑体。可以参考下它的写法： <a target="_blank" rel="noopener" href="https://zenozeng.github.io/fonts.css/">https://zenozeng.github.io/fonts.css/</a></p>
+<h3 id="font-css"><a href="#font-css" class="headerlink" title="font.css"></a>font.css</h3><p>github 上的一个项目,可以保证在不同平台上都显示为质量最高的黑体.可以参考下它的写法： <a target="_blank" rel="noopener" href="https://zenozeng.github.io/fonts.css/">https://zenozeng.github.io/fonts.css/</a></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>以 Github 的 font-family 设置为例:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span>: <span class="hljs-selector-tag">-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span>,<span class="hljs-selector-tag">Helvetica</span>,<span class="hljs-selector-tag">Arial</span>,<span class="hljs-selector-tag">sans-serif</span>,<span class="hljs-selector-tag">Apple</span> <span class="hljs-selector-tag">Color</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Emoji</span>;<br></code></pre></td></tr></table></figure>
 <ol>
-<li> -apple-system， 在一些稍低版本 Mac OS X 和 iOS 上，它针对旧版上的 Neue Helvetica 和 Lucida Grande 字体，升级使用更为合适的 San Francisco Fonts</li>
-<li> BlinkMacSystemFont，针对一些 Mac OS X 上的 Chrome 浏览器，使用系统默认字体</li>
-<li> segoe ui，在 Windows 上选取系统默认字体</li>
-<li> Helvetica,Arial，在针对不同操作系统不同平台设定采用默认系统字体后，针对一些低版本浏览器的降级方案</li>
-<li> sans-serif，兜底方案，保证字体风格统一，至少也得是无衬线字体</li>
+<li> -apple-system, 在一些稍低版本 Mac OS X 和 iOS 上,它针对旧版上的 Neue Helvetica 和 Lucida Grande 字体,升级使用更为合适的 San Francisco Fonts</li>
+<li> BlinkMacSystemFont,针对一些 Mac OS X 上的 Chrome 浏览器,使用系统默认字体</li>
+<li> segoe ui,在 Windows 上选取系统默认字体</li>
+<li> Helvetica,Arial,在针对不同操作系统不同平台设定采用默认系统字体后,针对一些低版本浏览器的降级方案</li>
+<li> sans-serif,兜底方案,保证字体风格统一,至少也得是无衬线字体</li>
 <li> 兼容 emoji 表情符号</li>
 </ol>
 <hr>
-<p>参考链接： 1. <a href="'https://segmentfault.com/a/1190000006110417'">如何优雅的选择字体 font-family</a> 2. <a href="'https://ixu.me/font-family-chinese.html'">中文环境下中文排版的font-family 字体选择</a> 3. <a href="'https://juejin.im/post/6844903912760147982'">Web 字体 font-family 再探秘</a> 4. <a href="'http://www.woshipm.com/pd/2900904.html'">让你的设计更好看：10款常用的数字字体推荐</a> 5. <a href="'http://www.woshipm.com/pd/2807007.html'">界面好看，字体当然不能拖后腿</a> 6. <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face'">@font-face MDN</a></p>
+<p>参考链接： 1. <a href="'https://segmentfault.com/a/1190000006110417'">如何优雅的选择字体 font-family</a> 2. <a href="'https://ixu.me/font-family-chinese.html'">中文环境下中文排版的font-family 字体选择</a> 3. <a href="'https://juejin.im/post/6844903912760147982'">Web 字体 font-family 再探秘</a> 4. <a href="'http://www.woshipm.com/pd/2900904.html'">让你的设计更好看：10款常用的数字字体推荐</a> 5. <a href="'http://www.woshipm.com/pd/2807007.html'">界面好看,字体当然不能拖后腿</a> 6. <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face'">@font-face MDN</a></p>
 
         </div>
 

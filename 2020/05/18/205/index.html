@@ -199,24 +199,24 @@
 
         <div class="post-content">
             <h3 id="执行-sh-文件的几种方式"><a href="#执行-sh-文件的几种方式" class="headerlink" title="执行*.sh 文件的几种方式"></a>执行*.sh 文件的几种方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh filename.sh<br>./filename.sh(需要文件有执行权限)<br></code></pre></td></tr></table></figure>
-<p>上面的方法是通过建立子 shell 执行脚本中的语句，而以下方法是在当前 shell 中执行脚本内容。</p>
+<p>上面的方法是通过建立子 shell 执行脚本中的语句,而以下方法是在当前 shell 中执行脚本内容.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
-<h4 id="source-命令"><a href="#source-命令" class="headerlink" title="source 命令"></a>source 命令</h4><p>source 命令也称为“点命令”，也就是一个点符号（.）,是 bash 的内部命令。</p>
+<h4 id="source-命令"><a href="#source-命令" class="headerlink" title="source 命令"></a>source 命令</h4><p>source 命令也称为“点命令”,也就是一个点符号（.）,是 bash 的内部命令.</p>
 <h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><p>使 Shell 读入指定的 Shell 程序文件并依次执行文件中的所有语句</p>
 <h5 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
 <p>或</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br></code></pre></td></tr></table></figure>
 <h5 id="source-filename-与-sh-filename-及-filename-执行脚本的区别"><a href="#source-filename-与-sh-filename-及-filename-执行脚本的区别" class="headerlink" title="source filename 与 sh filename 及 ./filename 执行脚本的区别"></a>source filename 与 sh filename 及 ./filename 执行脚本的区别</h5><ol>
-<li> 当 shell 脚本具有可执行权限时，用 sh filename 与 ./filename 执行脚本是没有区别的。 ./filename 是因为当前目录没有在 PATH 中，”.”是用来表示当前目录的。</li>
-<li> sh filename 重新建立了一个子 shell，在子 shell 中执行脚本里面的语句，该子 shell 继承父 shell 的环境变量，但子 shell 新建的，改变的变量不会被带回父 shell。</li>
-<li> source filename 或 . filename 只是简单地读取脚本里的语句依次在当前 shell 里面执行，并没有建立新的子 shell。那么脚本里面所有新建，改变变量的语句都会保存在当前 shell 里面。</li>
+<li> 当 shell 脚本具有可执行权限时,用 sh filename 与 ./filename 执行脚本是没有区别的. ./filename 是因为当前目录没有在 PATH 中,”.”是用来表示当前目录的.</li>
+<li> sh filename 重新建立了一个子 shell,在子 shell 中执行脚本里面的语句,该子 shell 继承父 shell 的环境变量,但子 shell 新建的,改变的变量不会被带回父 shell.</li>
+<li> source filename 或 . filename 只是简单地读取脚本里的语句依次在当前 shell 里面执行,并没有建立新的子 shell.那么脚本里面所有新建,改变变量的语句都会保存在当前 shell 里面.</li>
 </ol>
 <h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><ol>
 <li> 新建 test.sh 脚本,内容为:A=1</li>
 <li> 然后使其可执行 chmod +x test.sh</li>
-<li> 运行 sh test.sh，然后 echo $A,显示为空，因为 A=1 并没有传给当前的 shell</li>
+<li> 运行 sh test.sh,然后 echo $A,显示为空,因为 A=1 并没有传给当前的 shell</li>
 <li> 运行 ./test.sh 效果是一样的</li>
-<li> 运行 source test.sh 或者 . test.sh,然后 echo $A,则会显示 1，说明 A=1 的变量在当前 shell 中</li>
+<li> 运行 source test.sh 或者 . test.sh,然后 echo $A,则会显示 1,说明 A=1 的变量在当前 shell 中</li>
 </ol>
 <hr>
 <h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>

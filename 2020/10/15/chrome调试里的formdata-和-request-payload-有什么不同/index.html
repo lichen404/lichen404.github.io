@@ -200,27 +200,27 @@
         </header>
 
         <div class="post-content">
-            <p>最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload，有时显示的是 FormData。 <img src="https://stayw1thme.xyz/wp-content/uploads/2020/10/QQ%E5%9B%BE%E7%89%8720201014170809.png"> <img src="https://stayw1thme.xyz/wp-content/uploads/2020/10/QQ%E5%9B%BE%E7%89%8720201014170628.png"> 刚开始我以为可能只是 Chrome 的一个显示 bug 之类的，也没有发现有什么规律。后来百度一下才发现里面还是有些门道的。 我在思否的这篇<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">文章</a>里找到了答案，这篇文章里的答案也是从 StackOverflow 上贴过去的。 原问题和回答如下： What’s the difference between “Request Payload” vs “Form Data” as seen in Chrome dev tools Network tab? The Request Payload - or to be more precise: payload body of a HTTP Request - is the data normally send by a POST or PUT Request. It’s the part after the headers and the CRLF of a HTTP Request. A request with Content-Type: application/json may look like this:</p>
+            <p>最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. <img src="https://stayw1thme.xyz/wp-content/uploads/2020/10/QQ%E5%9B%BE%E7%89%8720201014170809.png"> <img src="https://stayw1thme.xyz/wp-content/uploads/2020/10/QQ%E5%9B%BE%E7%89%8720201014170628.png"> 刚开始我以为可能只是 Chrome 的一个显示 bug 之类的,也没有发现有什么规律.后来百度一下才发现里面还是有些门道的. 我在思否的这篇<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">文章</a>里找到了答案,这篇文章里的答案也是从 StackOverflow 上贴过去的. 原问题和回答如下： What’s the difference between “Request Payload” vs “Form Data” as seen in Chrome dev tools Network tab? The Request Payload - or to be more precise: payload body of a HTTP Request - is the data normally send by a POST or PUT Request. It’s the part after the headers and the CRLF of a HTTP Request. A request with Content-Type: application/json may look like this:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;json<br><br>&#123; &quot;foo&quot; : &quot;bar&quot;, &quot;name&quot; : &quot;John&quot; &#125;<br></code></pre></td></tr></table></figure>
 <p>If you submit this per AJAX the browser simply shows you what it is submitting as payload body. That’s all it can do because it has no idea where the data is coming from. If you submit a HTML-Form with method=”POST” and Content-Type: application/x-www-form-urlencoded or Content-Type: multipart/form-data your request may look like this:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;x-www-form-urlencoded<br><br>foo&#x3D;bar&amp;name&#x3D;John<br></code></pre></td></tr></table></figure>
-<p>In this case the form-data is the request payload. Here the Browser knows more: it knows that bar is the value of the input-field foo of the submitted form. And that’s what it is showing to you. So, they differ in the Content-Type but not in the way data is submitted. In both cases the data is in the message-body. And Chrome distinguishes how the data is presented to you in the Developer Tools. 所以 chrome 显示 Request Payload 或者 FormData 的原因就在于 Content-Type 请求头设置的不同。</p>
+<p>In this case the form-data is the request payload. Here the Browser knows more: it knows that bar is the value of the input-field foo of the submitted form. And that’s what it is showing to you. So, they differ in the Content-Type but not in the way data is submitted. In both cases the data is in the message-body. And Chrome distinguishes how the data is presented to you in the Developer Tools. 所以 chrome 显示 Request Payload 或者 FormData 的原因就在于 Content-Type 请求头设置的不同.</p>
 <h3 id="Content-Type"><a href="#Content-Type" class="headerlink" title="Content-Type"></a>Content-Type</h3><p>Content-Type 实体头部用于指示资源的 MIME 类型（media type）</p>
 <h4 id="常见的几种-Content-Type"><a href="#常见的几种-Content-Type" class="headerlink" title="常见的几种 Content-Type"></a>常见的几种 Content-Type</h4><ul>
-<li>  aplication/x-www-form-urlencode （原生form表单默认提交数据的格式，form表单数据被编码成key/value 格式发送到服务器）</li>
+<li>  aplication/x-www-form-urlencode （原生form表单默认提交数据的格式,form表单数据被编码成key/value 格式发送到服务器）</li>
 <li>  multipart/form-data (表单上传文件时使用此格式)</li>
-<li>  application/json （axios 传递对象默认，JSON数据格式）</li>
+<li>  application/json （axios 传递对象默认,JSON数据格式）</li>
 <li>  text/html （HTML格式）</li>
 <li>  text/plain (纯文本格式)</li>
 </ul>
 <h4 id="不同请求方式默认-Content-Type-的差异"><a href="#不同请求方式默认-Content-Type-的差异" class="headerlink" title="不同请求方式默认 Content-Type 的差异"></a>不同请求方式默认 Content-Type 的差异</h4><ul>
-<li>  使用原生AJAX方式发送请求，Content-Type 默认为”text/plain”</li>
-<li>  使用原生Form表单形式发送请求，Content-Type 默认为 “application/x-www-form-urlencode”</li>
-<li>  使用axios传递对象时，Content-Type 默认为”application/json”</li>
-<li>  使用axios传递字符串形如key1=value1&amp;key2=value2时，默认为”application/x-www-form-urlencode”</li>
+<li>  使用原生AJAX方式发送请求,Content-Type 默认为”text/plain”</li>
+<li>  使用原生Form表单形式发送请求,Content-Type 默认为 “application/x-www-form-urlencode”</li>
+<li>  使用axios传递对象时,Content-Type 默认为”application/json”</li>
+<li>  使用axios传递字符串形如key1=value1&amp;key2=value2时,默认为”application/x-www-form-urlencode”</li>
 </ul>
 <hr>
-<p>参考链接： 1. <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">前后端联调之Form Data 与 Request Payload，你真的了解吗？</a> 2. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/klb561/p/10090540.html">https://www.cnblogs.com/klb561/p/10090540.html</a></p>
+<p>参考链接： 1. <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">前后端联调之Form Data 与 Request Payload,你真的了解吗？</a> 2. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/klb561/p/10090540.html">https://www.cnblogs.com/klb561/p/10090540.html</a></p>
 
         </div>
 

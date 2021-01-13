@@ -191,10 +191,6 @@
                             
                                 <a href="/categories/CSS/">CSS</a>
                             
-                                <a href="/categories/css/">css</a>
-                            
-                                <a href="/categories/css/Fuck-CSS/">Fuck CSS</a>
-                            
                         </span>
                     
                 </div>
@@ -202,12 +198,12 @@
         </header>
 
         <div class="post-content">
-            <h3 id="pointer-events-none-和-cursor-not-allowed-踩坑"><a href="#pointer-events-none-和-cursor-not-allowed-踩坑" class="headerlink" title="pointer-events:none 和 cursor:not-allowed 踩坑"></a>pointer-events:none 和 cursor:not-allowed 踩坑</h3><p>最近有一个需求是在卡片不可用时，禁用鼠标点击事件并把鼠标指针设置为禁用状态。 于是我通过在卡片上设置了 CSS 样式</p>
+            <h3 id="pointer-events-none-和-cursor-not-allowed-踩坑"><a href="#pointer-events-none-和-cursor-not-allowed-踩坑" class="headerlink" title="pointer-events:none 和 cursor:not-allowed 踩坑"></a>pointer-events:none 和 cursor:not-allowed 踩坑</h3><p>最近有一个需求是在卡片不可用时,禁用鼠标点击事件并把鼠标指针设置为禁用状态. 于是我通过在卡片上设置了 CSS 样式</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disable</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>结果鼠标指针的禁用样式一直无法生效，我在 a 标签的父元素上设置了 cursor:not-allowed 才有效果。</p>
+<p>结果鼠标指针的禁用样式一直无法生效,我在 a 标签的父元素上设置了 cursor:not-allowed 才有效果.</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span>&#123;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<p>我看了下 MDN 上 cursor:not-allowed 和 pointer-events:none 的说明，也没看明白什么原因。 后来在博客上看到了产生这个问题的原因。在 a 标签上设置了 pointer-events:none 后，a 标签就无法再响应鼠标事件了，所以设置的指针样式也不会生效。因此把这两个属性放在一个元素上，是不能达到我们所需要的效果的。</p>
-<h4 id="pointer-events-none"><a href="#pointer-events-none" class="headerlink" title="pointer-events:none"></a>pointer-events:none</h4><p>MDN 文档的说法是元素设置 pointer-events:none 后将永远不会成为鼠标事件的 target，可以理解为你能看到这个元素，但却摸不到。 如下图所示，用一个 div 元素 把 a 标签挡住后，在 div 上设置 pointer-events:none 是可以点击到下面的 a 标签的 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2020/05/pointer-events-none.gif" alt="pointer-events:none"> 如果为 a 标签设置了 “pointer-events:none”，点击 a 标签，不会跳转到链接地址，而且也没有悬浮样式，但是通过 tab 键可以选中连接进行跳转，可以把 href 去掉，这样就无法选中了。</p>
+<p>我看了下 MDN 上 cursor:not-allowed 和 pointer-events:none 的说明,也没看明白什么原因. 后来在博客上看到了产生这个问题的原因.在 a 标签上设置了 pointer-events:none 后,a 标签就无法再响应鼠标事件了,所以设置的指针样式也不会生效.因此把这两个属性放在一个元素上,是不能达到我们所需要的效果的.</p>
+<h4 id="pointer-events-none"><a href="#pointer-events-none" class="headerlink" title="pointer-events:none"></a>pointer-events:none</h4><p>MDN 文档的说法是元素设置 pointer-events:none 后将永远不会成为鼠标事件的 target,可以理解为你能看到这个元素,但却摸不到. 如下图所示,用一个 div 元素 把 a 标签挡住后,在 div 上设置 pointer-events:none 是可以点击到下面的 a 标签的:<img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/pointer-events-none.gif" alt="pointer-events-none"> 如果为 a 标签设置了 “pointer-events:none”,点击 a 标签,不会跳转到链接地址,而且也没有悬浮样式,但是通过 tab 键可以选中连接进行跳转,可以把 href 去掉,这样就无法选中了.</p>
 <hr>
 <h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ol>
 <li> MDN 文档 - <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events'">https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events</a></li>
@@ -237,6 +233,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/CSS/"># CSS</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -247,7 +247,7 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/06/15/249/">Untitled Post - 3</a>
+                <a class="prev" rel="prev" href="/2020/06/15/249/">饥人谷分享</a>
             
             
             <a class="next" rel="next" href="/2020/05/18/205/">执行*.sh 文件的几种方式</a>

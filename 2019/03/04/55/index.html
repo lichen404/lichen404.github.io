@@ -136,36 +136,55 @@
         </header>
 
         <div class="post-content">
-            <p>最近在学习前端的过程中因为用到了AJAX，所以要在本地调试。但是令人X疼的是即使是在本地，也会遇到跨域问题。因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同。 <img src="https://www.stayw1thme.xyz/usr/uploads/2019/03/2666391080.png" alt="ajax报错" title="ajax报错"><br>但其实浏览器本身是接收到了数据的，但是出于浏览器<code>同源策略</code>的限制，我们不能看到数据。如果你不了解浏览器的同源策略，下面有简单的解释：<br>简单来说，同源策略就是浏览器出于安全考虑，限制了Javascript脚本在不同网站页面的运行，避免不同网站的代码相互影响。下面是同源页面的判定规则：</p>
-<p>URL</p>
-<p>Outcome</p>
-<p>Reason</p>
-<p>http: //store.company/dir2/other.html</p>
-<p>Success</p>
-<p> </p>
-<p>http: //store.company.com/dir/inner/another.html</p>
-<p>Success</p>
-<p> </p>
-<p>https: //store.company.com/secure.html</p>
-<p>Failure</p>
-<p>Different protocol</p>
-<p>http: //store.company.com:81/dir/etc.html</p>
-<p>Failure</p>
-<p>Different port</p>
-<p>http: //news.company.com/dir/other.html</p>
-<p>Failure</p>
-<p>Different host</p>
-<p>简单来说就是要同域名，同端口，同协议才算是“同源”。我在CSDN找到了我觉得比较完美解决本地调试的办法。</p>
+            <p>最近在学习前端的过程中因为用到了AJAX,所以要在本地调试.但是令人X疼的是即使是在本地,也会遇到跨域问题.因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2666391080-300x98.png" alt="2666391080-300x98"></p>
+<p>但其实浏览器本身是接收到了数据的,但是出于浏览器<code>同源策略</code>的限制,我们不能看到数据.如果你不了解浏览器的同源策略,下面有简单的解释：<br>简单来说,同源策略就是浏览器出于安全考虑,限制了JavaScript 脚本在不同网站页面的运行,避免不同网站的代码相互影响.下面是同源页面的判定规则：</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Outcome</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://store.company/dir2/other.html">http://store.company/dir2/other.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com/dir/inner/another.html">http://store.company.com/dir/inner/another.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://store.company.com/secure.html">https://store.company.com/secure.html</a></td>
+<td>Failure</td>
+<td>Different protocol</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com:81/dir/etc.html">http://store.company.com:81/dir/etc.html</a></td>
+<td>Failure</td>
+<td>Different port</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://news.company.com/dir/other.html">http://news.company.com/dir/other.html</a></td>
+<td>Failure</td>
+<td>Different host</td>
+</tr>
+</tbody></table>
+<p>**简单来说就是要同域名,同端口,同协议才算是“同源”.**我在CSDN找到了我觉得比较完美解决本地调试的办法.</p>
 <ol>
 <li> 升级Chrome到最新版本或下载最新版本的浏览器</li>
-<li> 创建一个调试用的Chrome快捷方式，右键选择Chrome快捷方式，在弹出的右键菜单中选择”创建快捷方式”，重命名新建的快捷方式为Chrome-Debug。</li>
-<li> 打开Chrome-Debug快捷方式属性，右键选择Chrome-Debug快捷方式，右键菜单中选择”属性”，打开Chrome-Debug快捷方式属性设置对话框。</li>
-<li> 增加启动参数,在目标后面增加如下的启动参数：–user-data-dir=”c:ChromeDebug” –test-type –disable-web-security ，点”确定”按钮保存设置。完整的目标内容如下所示：”C:Program Files (x86)GoogleChromeApplicationchrome.exe” –user-data-dir=”c:ChromeDebug” –test-type –disable-web-security (注意 每个–前面都有一个空格)</li>
-<li> 打开Chrome-Debug。因为启动参数中增加了–user-data-dir=”c:ChromeDebug”，表示Chrome会从c:ChromeDebug中存取用户数据，因该目录可能为空，所以新打开的Chrome-Debug窗口是一个全新的Chrome，没有书签、历史、扩展程序等内容，需要再重新安装扩展程序。</li>
-<li> 再次打开之前出错的程序，就可以发现Ajax已经可以正常跨域访问了。</li>
+<li> 创建一个调试用的Chrome快捷方式,右键选择Chrome快捷方式,在弹出的右键菜单中选择”创建快捷方式”,重命名新建的快捷方式为Chrome-Debug.</li>
+<li> 打开Chrome-Debug快捷方式属性,右键选择Chrome-Debug快捷方式,右键菜单中选择”属性”,打开Chrome-Debug快捷方式属性设置对话框.</li>
+<li> 增加启动参数,在目标后面增加如下的启动参数：–user-data-dir=”c:ChromeDebug” –test-type –disable-web-security ,点”确定”按钮保存设置.完整的目标内容如下所示：”C:Program Files (x86)GoogleChromeApplicationchrome.exe” –user-data-dir=”c:ChromeDebug” –test-type –disable-web-security (注意 每个–前面都有一个空格)</li>
+<li> 打开Chrome-Debug.因为启动参数中增加了–user-data-dir=”c:ChromeDebug”,表示Chrome会从c:ChromeDebug中存取用户数据,因该目录可能为空,所以新打开的Chrome-Debug窗口是一个全新的Chrome,没有书签、历史、扩展程序等内容,需要再重新安装扩展程序.</li>
+<li> 再次打开之前出错的程序,就可以发现Ajax已经可以正常跨域访问了.</li>
 </ol>
 <hr>
-<p>具体内容可查看:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41802303/article/details/80666933">chrome浏览器开启Ajax跨域访问调试</a>,侵删。 <strong>2020-3-1 更新：不应该使用file协议打开html文件，请使用 Parcel 建立本地服务器访问。同源问题可以通过JSONP或CORS解决。</strong></p>
+<p>具体内容可查看:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41802303/article/details/80666933">chrome浏览器开启Ajax跨域访问调试</a>,侵删.</p>
+<p> <strong>2020-3-1 更新：不应该使用file协议打开html文件,请使用 Parcel 建立本地服务器访问.同源问题可以通过JSONP或CORS解决.</strong></p>
 
         </div>
 

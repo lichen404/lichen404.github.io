@@ -136,9 +136,23 @@
         </header>
 
         <div class="post-content">
-            <p>之前在知乎上看到了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57783355">每天起床第一句，太阳公公在哪里——用pyecharts研究天气</a>这篇文章，我注意到了文中提及的<a target="_blank" rel="noopener" href="http://www.tianqihoubao.com/">天气后报</a>网站。我在上面看到了我家这边的天气数据，从2011年到今天的都有。so 我也想搞来做个图表之类的来看一下。Let’s do it. 先搞个多线程爬虫，把数据格式化后存储在 MongoDB 里面。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3484431250.png"> 搞定了，然后写代码来生成与知乎文章类似的词云，折线图和饼图。代码太多，我这里只截取一小部分。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/966804010-1024x475.png"> 然后让我们来看看生成的图表吧。我家这边算是地处中原吧，秦岭-淮河一线附近，按道理说算是不冷不热。不过在历年气温上也能看到历史温度高达39度，夏天基本也有很多时候是30多度的高温。冬天虽说温度不算很低，但是很多地方都没有暖气，其实也挺冷的。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/884598495.png"> 晴雨天数估计是BUG了，18年晴天数有点夸张。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/2529365067.png"> 再来看看天气占比，最近几年感觉我家这边冬季也会有那种雾霾天气。不过在雾霾天在图表上显示的占比很小，霾天在将近10年的时间内实际只有2天。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3159919581.png"> 最后看下六月份的天气词云吧。跟我想的有点不一样，我的印象里六月是经常下大雨，打雷闪电的季节。但是实际上下大雨打雷的次数并不多。下雨多是阵雨，小雨，大雨跟暴雨次数很少。这也比较符合地理位置的气候吧，毕竟年降雨量也就那么多。 <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/3525669193.png"> 不过我发现2015年6月份连着下了三天的大雨，不过我一点印象都没有… <img src="https://www.stayw1thme.xyz/wp-content/uploads/2019/04/563266257.png"></p>
+            <p>之前在知乎上看到了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57783355">每天起床第一句,太阳公公在哪里——用pyecharts研究天气</a>这篇文章,我注意到了文中提及的<a target="_blank" rel="noopener" href="http://www.tianqihoubao.com/">天气后报</a>网站.我在上面看到了我家这边的天气数据,从2011年到今天的都有.so 我也想搞来做个图表之类的来看一下.Let’s do it. </p>
+<p>先搞个多线程爬虫,把数据格式化后存储在 MongoDB 里面. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3484431250.png" alt="3484431250"></p>
+<p>搞定了,然后写代码来生成与知乎文章类似的词云,折线图和饼图.代码太多,我这里只截取一小部分.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/966804010-768x356.png" alt="966804010-768x356"></p>
+<p> 然后让我们来看看生成的图表吧.我家这边算是地处中原吧,秦岭-淮河一线附近,按道理说算是不冷不热.不过在历年气温上也能看到历史温度高达39度,夏天基本也有很多时候是30多度的高温.冬天虽说温度不算很低,但是很多地方都没有暖气,其实也挺冷的.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/884598495-768x384.png" alt="884598495-768x384"></p>
+<p> 晴雨天数估计是BUG了,18年晴天数有点夸张.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2529365067-768x384.png" alt="2529365067-768x384"></p>
+<p> 再来看看天气占比,最近几年感觉我家这边冬季也会有那种雾霾天气.不过在雾霾天在图表上显示的占比很小,霾天在将近10年的时间内实际只有2天.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3159919581-768x384.png" alt="3159919581-768x384"></p>
+<p>最后看下六月份的天气词云吧.跟我想的有点不一样,我的印象里六月是经常下大雨,打雷闪电的季节.但是实际上下大雨打雷的次数并不多.下雨多是阵雨,小雨,大雨跟暴雨次数很少.这也比较符合地理位置的气候吧,毕竟年降雨量也就那么多.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3525669193-768x476.png" alt="3525669193-768x476"></p>
+<p> 不过我发现2015年6月份连着下了三天的大雨,不过我一点印象都没有…</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/563266257.png" alt="563266257"></p>
 <hr>
-<p>关于爬虫和生成图表的代码可以去我的Github下载，<a target="_blank" rel="noopener" href="https://github.com/lichen404/weatherSpider">链接</a>.</p>
+<p>关于爬虫和生成图表的代码可以去我的GitHub下载,<a target="_blank" rel="noopener" href="https://github.com/lichen404/weatherSpider">链接</a>.</p>
 
         </div>
 
@@ -161,6 +175,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/Python/"># Python</a>
+                    
+                        
                 </span>
             </div>
             <div>

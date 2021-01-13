@@ -198,11 +198,11 @@
         </header>
 
         <div class="post-content">
-            <h3 id="JS-中-typeof-和-instanceof-的区别"><a href="#JS-中-typeof-和-instanceof-的区别" class="headerlink" title="JS 中 typeof 和 instanceof 的区别"></a>JS 中 typeof 和 instanceof 的区别</h3><h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><p>typeof 的返回值是一个字符串，一般是 “number”,”string”,”boolean”,”object”,”function” 和 “undefined”</p>
+            <h3 id="JS-中-typeof-和-instanceof-的区别"><a href="#JS-中-typeof-和-instanceof-的区别" class="headerlink" title="JS 中 typeof 和 instanceof 的区别"></a>JS 中 typeof 和 instanceof 的区别</h3><h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><p>typeof 的返回值是一个字符串,一般是 “number”,”string”,”boolean”,”object”,”function” 和 “undefined”</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-number">123</span>); <span class="hljs-comment">//&quot;number&quot;</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;123&quot;</span>); <span class="hljs-comment">//&quot;string&quot;</span><br></code></pre></td></tr></table></figure>
 <h4 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h4><p>instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><span class="hljs-built_in">console</span>.log(list <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>); <span class="hljs-comment">//true</span><br><span class="hljs-built_in">console</span>.log(list <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Object</span>); <span class="hljs-comment">//true</span><br><span class="hljs-comment">//因为 Array 是 Object 的子类</span><br></code></pre></td></tr></table></figure>
-<p>具体说就是可以从来判断一个变量是否是某个类的实例，也可以用来判断在继承关系中某个类是否是一个实例的父类。</p>
+<p>具体说就是可以从来判断一个变量是否是某个类的实例,也可以用来判断在继承关系中某个类是否是一个实例的父类.</p>
 
         </div>
 
