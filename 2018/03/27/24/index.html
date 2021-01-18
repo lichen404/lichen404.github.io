@@ -140,15 +140,35 @@
 <hr>
 <p>先看下自己大一写的代码,真的惨不忍睹：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> request<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-keyword">import</span> re<br>num=<span class="hljs-number">1</span><br>url=<span class="hljs-string">&quot;http://www.heibanke.com/lesson/crawler_ex00/&quot;</span><br><span class="hljs-keyword">while</span>(num):f=request.Request(url)<br>page=request.urlopen(f)<br>soup=BeautifulSoup(page,<span class="hljs-string">&#x27;html.parser&#x27;</span>,from_encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>content=soup.find_all(<span class="hljs-string">&#x27;h3&#x27;</span>)<br>content=<span class="hljs-built_in">str</span>(content)<br>p=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">&#x27; ]+&gt;&#x27;</span>)<br>content=p.sub(<span class="hljs-string">&quot;&quot;</span>,content)<br>print(content)<br>num=re.findall(<span class="hljs-string">r&quot;\d+\.?\d*&quot;</span>,content)<br>num=<span class="hljs-built_in">str</span>(num)<br>print(num)<br>num=re.sub(<span class="hljs-string">r&quot;\D&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,num)<br>url=<span class="hljs-string">&#x27;http://www.heibanke.com/lesson/crawler_ex00/&#x27;</span><br>url+=num<br></code></pre></td></tr></table></figure>
-<p>1.第一关没啥好说的.就是不断的请求网页,拼接URL直到获得Flag就好了. 2.第二关加了账户和密码,也很简单,就是一个POST Method,怎么实现都行. 3.第三关,就是我当时放弃的那关.当时我发现登录后会跳转到黑板课记账的页面,不明所以,于是就没再做了,其实只要再按浏览器返回键就好了…<br>这一关加了CSRFTOKEN验证和登录操作.首先要登录黑板课网站,然后才能进行闯关.而闯关页面多两层保护的意思其实就是登录黑板课网站和闯关都需要CSRFTOKEN,CSRFTOKEN从cookies里取或者直接爬网页标签里的都可以. <img src="https://www.stayw1thme.xyz/usr/uploads/2018/03/2643224345.jpg" alt="第三关" title="第三关"> 也就是说登录黑板课之前要获取CSRFTOKEN,然后与你的账户密码一块POST,闯关页面同理,也要先获取CSRF字段,注意两个CSRF字段值是不一样的. 4.第四关,在第三关的基础上又加了多线程.随便输一个账户密码进去,会提示你密码可以在一个链接里找,打开链接是密码位置与值对应的一个表,总共有13页.而这个网站载入又贼慢,就是想让你用多线程的方法去访问.<strong>注意访问不要太频繁,同时开的线程太多,网站会无法访问.</strong><br>拼接好密码再加上用户名和csrftoken访问即可.<br><img src="https://www.stayw1thme.xyz/usr/uploads/2018/03/190579856.jpg" alt="第四关" title="第四关"> Bingo!整100位的密码,不过为啥我用了多线程还是花了这么长时间… 5.最后一关,在第三关的基础上加了验证码.我不会图像识别,于是直接暴力人工打码了,希望以后能有更优雅的实现. 所有代码：</p>
+<ol>
+<li><p>第一关没啥好说的.就是不断的请求网页,拼接URL直到获得Flag就好了. </p>
+</li>
+<li><p>第二关加了账户和密码,也很简单,就是一个POST Method,怎么实现都行. </p>
+</li>
+<li><p>第三关,就是我当时放弃的那关.当时我发现登录后会跳转到黑板课记账的页面,不明所以,于是就没再做了,其实只要再按浏览器返回键就好了…  </p>
+<p>这一关加了CSRFTOKEN验证和登录操作.首先要登录黑板课网站,然后才能进行闯关.而闯关页面多两层保护的意思其实就是登录黑板课网站和闯关都需要CSRFTOKEN,CSRFTOKEN从cookies里取或者直接爬网页标签里的都可以. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2643224345.jpg" alt="2643224345"></p>
+<p>也就是说登录黑板课之前要获取CSRFTOKEN,然后与你的账户密码一块POST,闯关页面同理,也要先获取CSRF字段,注意两个CSRF字段值是不一样的.</p>
+</li>
+<li><p>第四关,在第三关的基础上又加了多线程.随便输一个账户密码进去,会提示你密码可以在一个链接里找,打开链接是密码位置与值对应的一个表,总共有13页.而这个网站载入又贼慢,就是想让你用多线程的方法去访问.<strong>注意访问不要太频繁,同时开的线程太多,网站会无法访问.</strong><br>拼接好密码再加上用户名和csrftoken访问即可.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/190579856.jpg" alt="190579856"></p>
+<p>Bingo!整100位的密码,不过为啥我用了多线程还是花了这么长时间… </p>
+</li>
+</ol>
+<p>​    5.最后一关,在第三关的基础上加了验证码.我不会图像识别,于是直接暴力人工打码了,希望以后能有更优雅的实现. 所有代码：</p>
 <ul>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/1.py">第一关</a></li>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/2.py">第二关</a></li>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/3.py">第三关</a></li>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/4.py">第四关</a></li>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/5.py">第五关</a></li>
-</ul>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/1.py">第一关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/2.py">第二关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/3.py">第三关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/4.py">第四关</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/5.py">第五关</a></p>
 <hr>
+</li>
+</ul>
 <p>因为很多时候只是为了得到运行结果,并且都是半夜写的！代码写的并不是很Pythonic.以后还是尽量要把代码写的简洁优雅,追求可读性高的写法.最起码以后看的时候不会那么难受,这也算是一个小小的目标吧.</p>
 
         </div>

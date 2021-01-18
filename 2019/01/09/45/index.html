@@ -139,8 +139,10 @@
 
         <div class="post-content">
             <p>最近偶然发下之前在转转上收的K3C竟然默认开启了WPS功能(Wi-Fi Protected Setup),而且我在官改的固件中也找不到关闭的按钮.正好我手上有块支持Kali linux无线破解的网卡,我决定测试一下,使用Kali linux上的reaver来爆破pin码,看看斐讯有没有做这方面的防护.</p>
-<p><img src="https://www.stayw1thme.xyz/usr/uploads/2019/01/4131968415.jpg" alt="reaver.jpg" title="reaver.jpg"></p>
-<p>可以看到,路由器默认开启了WPS功能,并且pin码竟然默认为12345670,直接跑出了密码.虽说现在使用这种方法破解路由器已经有点过时,但这也算是一个不大不小的漏洞.因为我手上只有一台刷了官改固件K3C,不知道这是我这一台机器的情况,还是都是这样的,也不清楚是官改固件的问题还是都是这样的.<br><img src="https://www.stayw1thme.xyz/usr/uploads/2019/01/1828136325.jpg" alt="minidwep.jpg" title="minidwep.jpg"><br>在cdlinux上使用minidwep也是一样的结果.后来我在恩山无线论坛上找到了比较靠谱的方法：</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4131968415.jpg" alt="4131968415"></p>
+<p>可以看到,路由器默认开启了WPS功能,并且pin码竟然默认为12345670,直接跑出了密码.虽说现在使用这种方法破解路由器已经有点过时,但这也算是一个不大不小的漏洞.因为我手上只有一台刷了官改固件K3C,不知道这是我这一台机器的情况,还是都是这样的,也不清楚是官改固件的问题还是都是这样的.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1828136325.jpg" alt="1828136325"></p>
+<p>在cdlinux上使用minidwep也是一样的结果.后来我在恩山无线论坛上找到了比较靠谱的方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">winscp找到&#x2F;opt&#x2F;lantiq&#x2F;wave&#x2F;confs&#x2F;hostapd_wlan0.conf、<br>&#x2F;opt&#x2F;lantiq&#x2F;wave&#x2F;confs&#x2F;hostapd_wlan2.conf这两个文件,<br>将里面的wps_state&#x3D;2改成wps_state&#x3D;0然后重启即可<br></code></pre></td></tr></table></figure>
 <hr>
 <p>附上原答案链接：<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=341654&page=2#pid3135592">K3C 如何关闭wps功能</a></p>
