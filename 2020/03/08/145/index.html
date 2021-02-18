@@ -282,6 +282,11 @@
 <td>git restore 用来取代 git checkout 来实现撤销对工作区文件的修改,让文件回到最近一次git commit 或 git add 时的状态 Ex:git restore readme.txt.<code>git restore --staged</code>取代了 git reset HEAD ,可以把暂存区的修改撤销掉,重新放回工作区 Ex:git restore readme.txt –staged</td>
 </tr>
 </tbody></table>
+<h3 id="git-fetch-和-git-pull"><a href="#git-fetch-和-git-pull" class="headerlink" title="git fetch 和 git  pull"></a>git fetch 和 git  pull</h3><p>git fetch 是将远程主机的最新内容拉到本地但并不进行 merge，用户可以自行决定是否 merge。在取回更新后，会返回一个 FETCH_HEAD,指的是某个 branch 在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">log</span> -p FETCH_HEAD<br></code></pre></td></tr></table></figure>
+<p>可以通过这些信息来判断是否产生冲突，已确定是否将更新 merge 到当前分支。</p>
+<p>git pull 是将远程主机的最新内容拉到本地并直接合并，即 git pull = git fetch + git merge,这样可能会产生冲突,需要手动解决。</p>
+<h3 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h3><p>git rebase 可以把本地未 push 的分叉提交历史整理成直线</p>
 <h2 id="使用-Github"><a href="#使用-Github" class="headerlink" title="使用 Github"></a>使用 Github</h2><ul>
 <li><p>  关联远程仓库： Ex: <code>git remote add origin git@github.com:lichen404/jirengu.git</code> origin 为远程仓库的名称,可以修改,但通常使用这个</p>
 </li>
@@ -305,8 +310,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git branch<br>* dev<br>  master<br>$ git cherry-pick 4c805e2<br>[master 1d4b803] fix bug 101<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br></code></pre></td></tr></table></figure>
 <h3 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h3><p>可以将 git 命令缩写,减少工作量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config --global alias.co checkout<br>$ git config --global alias.ci commit<br>$ git config --global alias.br branch<br>$ git config --global alias.unstage <span class="hljs-string">&#x27;reset HEAD&#x27;</span> //撤销add<br>$ git config --global alias.last <span class="hljs-string">&#x27;log -1&#x27;</span> //显示最近一次提交<br></code></pre></td></tr></table></figure>
-<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>配置Git的时候,加上<code>--global</code>是针对当前用户起作用的,如果不加,那只针对当前的仓库起作用. 每个仓库的Git配置文件都放在<code>.git/config</code>文件中. 当前用户的Git配置文件放在用户主目录下的一个隐藏文件<code>.gitconfig</code> 配置别名也可以直接修改这个文件,如果改错了,可以删掉文件重新通过命令配置.</p>
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>配置Git的时候,加上<code>--global</code>是针对当前用户起作用的,如果不加,那只针对当前的仓库起作用. 每个仓库的Git配置文件都放在<code>.git/config</code>文件中. 当前用户的 Git 配置文件放在用户主目录下的一个隐藏文件<code>.gitconfig</code> 配置别名也可以直接修改这个文件,如果改错了,可以删掉文件重新通过命令配置.</p>
 <h3 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h3><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的 Git 教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://yonghaowu.github.io/2017/06/18/TheGitYouShouldKnow/">你们仍未掌握那天所学的 git 知识</a></p>
 
         </div>
 
