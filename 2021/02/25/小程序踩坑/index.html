@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>小程序踩坑 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">小程序踩坑</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 25, 2021&nbsp;&nbsp;22:13:01</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="小程序踩坑"><a href="#小程序踩坑" class="headerlink" title="小程序踩坑"></a>小程序踩坑</h3><p>之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。</p>
+<h4 id="小程序云开发"><a href="#小程序云开发" class="headerlink" title="小程序云开发"></a>小程序云开发</h4><p>云开发简单的来说就是能够快速给前端提供数据库和后端接口，不需要去搭建后端框架，运维。数据库类似 mongo DB，是文档型的数据库。云函数则是执行在云端的一段代码，可以提供给前端调用，可以理解成一个远程的接口，但是却不需要我们关心具体的后端框架或鉴权等。</p>
+<h5 id="云函数执行后数据库未存储数据"><a href="#云函数执行后数据库未存储数据" class="headerlink" title="云函数执行后数据库未存储数据"></a>云函数执行后数据库未存储数据</h5><p>原因是我没有上传部署更新后的云函数，在云端的云函数是旧的。这样的话在本地调试是OK的，但就是在云端环境无法存储数据。右键点击云函数，选择上传并部署即可。</p>
+<h5 id="数据库-watch-无效"><a href="#数据库-watch-无效" class="headerlink" title="数据库 watch 无效"></a>数据库 watch 无效</h5><p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102111285.png" alt="image-20210210102111285"></p>
+<p>在本地设置了对云端数据库的监听，但实际上没有生效。原因是没有赋予正确的数据权限。</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102319650.png" alt="image-20210210102319650"></p>
+<h4 id="小程序写法"><a href="#小程序写法" class="headerlink" title="小程序写法"></a>小程序写法</h4><p>小程序的写法类似于 Vue 和 React 的结合体。需要特别注意的是，小程序的数据更新方式类似于 React，使用 setData 函数来更新数据（异步),但是与 React 不同的是，它也会同时改变 this.data 中的值。</p>
+<p>React</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">const</span> [data,setData] = useState(<span class="hljs-number">0</span>)<br>setData(data + <span class="hljs-number">1</span>)<br><span class="hljs-built_in">console</span>.log(data) <span class="hljs-comment">// 0</span><br><br></code></pre></td></tr></table></figure>
+<p>小程序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">Page(&#123;<br>    data:&#123;<br>        num:<span class="hljs-number">0</span><br>	&#125;,<br>    <span class="hljs-function"><span class="hljs-title">onLoad</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.setData(&#123;<span class="hljs-attr">num</span>:<span class="hljs-built_in">this</span>.data.num + <span class="hljs-number">1</span>&#125;)<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">this</span>.data.num) <span class="hljs-comment">// 1</span><br>    &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<hr>
+<p>微信官方也有详细的开发文档，介绍了更多内容。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">https://developers.weixin.qq.com/miniprogram/dev/framework/</a></li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"># 小程序</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/">翻译时遇到的一个语法问题</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
