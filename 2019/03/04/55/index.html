@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,40 +106,50 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">解决本地调试AJAX的跨域问题</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+        
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">March 4, 2019&nbsp;&nbsp;5:29:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/JavaScript/">JavaScript</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    解决本地调试AJAX的跨域问题
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p>最近在学习前端的过程中因为用到了AJAX,所以要在本地调试.但是令人X疼的是即使是在本地,也会遇到跨域问题.因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同. </p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            March 4, 2019
+                                                                &nbsp;&nbsp;
+                                                                5:29:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/JavaScript/">
+                                                                        JavaScript
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p>最近在学习前端的过程中因为用到了AJAX,所以要在本地调试.但是令人X疼的是即使是在本地,也会遇到跨域问题.因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同. </p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2666391080-300x98.png" alt="2666391080-300x98"></p>
 <p>但其实浏览器本身是接收到了数据的,但是出于浏览器<code>同源策略</code>的限制,我们不能看到数据.如果你不了解浏览器的同源策略,下面有简单的解释：<br>简单来说,同源策略就是浏览器出于安全考虑,限制了JavaScript 脚本在不同网站页面的运行,避免不同网站的代码相互影响.下面是同源页面的判定规则：</p>
 <table>
@@ -187,55 +199,100 @@
 <p>具体内容可查看:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41802303/article/details/80666933">chrome浏览器开启Ajax跨域访问调试</a>,侵删.</p>
 <p> <strong>2020-3-1 更新：不应该使用file协议打开html文件,请使用 Parcel 建立本地服务器访问.同源问题可以通过JSONP或CORS解决.</strong></p>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2019/03/21/61/">小诗一首</a>
-            
-            
-            <a class="next" rel="next" href="/2019/02/16/48/">罗技K480键盘使用指南</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2019/03/21/61/">
+                                                小诗一首
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2019/02/16/48/">
+                                                        罗技K480键盘使用指南
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,11 +106,11 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-        <div class="post-toc">
+        
+            <div class="post-toc">
     <div class="tocbot-list">
     </div>
     <div class="tocbot-list-menu">
@@ -169,37 +171,47 @@
     }
 
 </script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">wireshark捕捉到的IP报文为什么是1514字节？</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+                
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">January 21, 2018&nbsp;&nbsp;2:21:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    wireshark捕捉到的IP报文为什么是1514字节？
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p>按照教材上对应用最广泛的以太网V2的定义,<strong>以太网封装IP数据包的最大长度是1500字节</strong>,也就是说以太网最大帧长应该是以太网首部加上1500,再加上7字节的前导同步码和1字节的帧开始定界符,具体就是：7字节前导同步码＋1字节帧开始定界符＋6字节的目的MAC＋6字节的源MAC＋2字节的帧类型＋1500＋4字节的CRC校验.如图：</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            January 21, 2018
+                                                                &nbsp;&nbsp;
+                                                                2:21:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                                                        计算机网络
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p>按照教材上对应用最广泛的以太网V2的定义,<strong>以太网封装IP数据包的最大长度是1500字节</strong>,也就是说以太网最大帧长应该是以太网首部加上1500,再加上7字节的前导同步码和1字节的帧开始定界符,具体就是：7字节前导同步码＋1字节帧开始定界符＋6字节的目的MAC＋6字节的源MAC＋2字节的帧类型＋1500＋4字节的CRC校验.如图：</p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2380356210.png" alt="2380356210"></p>
 <p>按照上述,物理层的最大帧应该是1526字节,但是实际上我用wireshark捕捉到的最大帧却是1514字节,原因是当数据帧到达网卡时,在物理层上网卡要先去掉前导同步码和帧开始定界符,然后对帧进行CRC检验,如果帧校验和错,就丢弃此帧.如果校验和正确,就判断帧的目的硬件地址是否符合自己的接收条件（目的地址是自己的物理硬件地址、广播地址、可接收的多播硬件地址等）,如果符合,就将帧交“设备驱动程序”做进一步处理.这时我们的抓包软件才能抓到数据,因此,抓包软件抓到的是去掉前导同步码、帧开始分界符、CRC校验之外的数据,其最大值是6+6+2+1500=1514</p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3177431725.jpg" alt="3177431725"></p>
@@ -212,55 +224,100 @@
 </li>
 </ul>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2018/02/02/22/">博客ToDoList</a>
-            
-            
-            <a class="next" rel="next" href="/2018/01/20/10/">一次wireshark的实践应用</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2018/02/02/22/">
+                                                博客ToDoList
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2018/01/20/10/">
+                                                        一次wireshark的实践应用
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

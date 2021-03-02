@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,11 +106,11 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-        <div class="post-toc">
+        
+            <div class="post-toc">
     <div class="tocbot-list">
     </div>
     <div class="tocbot-list-menu">
@@ -169,37 +171,47 @@
     }
 
 </script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">最短路径问题：Dijkstra算法</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+                
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">September 12, 2018&nbsp;&nbsp;8:53:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    最短路径问题：Dijkstra算法
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><p>算法思路：</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            September 12, 2018
+                                                                &nbsp;&nbsp;
+                                                                8:53:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                                                        数据结构
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><p>算法思路：</p>
 <ol>
 <li> Dijkstra算法采用的是一种贪心的策略,声明一个数组dis来保存源点到各个顶点的最短距离和一个保存已经找到了最短路径的顶点的集合：T,初始时,原点 s 的路径权重被赋为 0 （dis[s] = 0）.若对于顶点 s 存在能直接到达的边（s,m）,则把dis[m]设为w（s, m）,同时把所有其他（s不能直接到达的）顶点的路径长度设为无穷大.初始时,集合T只有顶点s.</li>
 <li> 然后,从dis数组选择最小值dis[i]（vi ∈V-S ）,则该值就是源点s到该值对应的顶点的最短路径,并且把该点加入到T中,OK,此时完成一个顶点.</li>
@@ -217,55 +229,100 @@
 <hr>
 <p>部分内容转自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35644234/article/details/60870719">最短路径问题—Dijkstra算法详解</a> 侵删<br>本人水平有限,有错误的地方请指正,谢谢！</p>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2018/09/13/35/">最短路径问题：Floyd算法</a>
-            
-            
-            <a class="next" rel="next" href="/2018/04/20/29/">下载站已开启（换服务器了,下载站已关闭）</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2018/09/13/35/">
+                                                最短路径问题：Floyd算法
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2018/04/20/29/">
+                                                        下载站已开启（换服务器了,下载站已关闭）
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

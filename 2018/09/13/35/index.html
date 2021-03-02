@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,40 +106,50 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">最短路径问题：Floyd算法</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+        
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">September 13, 2018&nbsp;&nbsp;6:57:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    最短路径问题：Floyd算法
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/446556475.png" alt="446556475"></p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            September 13, 2018
+                                                                &nbsp;&nbsp;
+                                                                6:57:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                                                        数据结构
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/446556475.png" alt="446556475"></p>
 <p>暑假,小哼准备去一些城市旅游.有些城市之间有公路,有些城市之间则没有,如下图.为了节省经费以及方便计划旅程,小哼希望在出发之前知道任意两个城市之前的最短路程.  </p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/673917683.png" alt="673917683"></p>
 <p>上图中有4个城市8条公路,公路上的数字表示这条公路的长短.请注意这些公路是单向的.我们现在需要求任意两个城市之间的最短路程,也就是求任意两个点之间的最短路径.这个问题这也被称为“多源最短路径”问题.  </p>
@@ -152,55 +164,100 @@
 <hr>
 <p>本文转自:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34374664/article/details/52261672">傻子也能看懂的弗洛伊德算法（转）</a> 侵删<br>本人水平有限,有错误的地方请指正,谢谢！</p>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2019/01/09/45/">斐讯K3C路由器的一个安全漏洞</a>
-            
-            
-            <a class="next" rel="next" href="/2018/09/12/33/">最短路径问题：Dijkstra算法</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2019/01/09/45/">
+                                                斐讯K3C路由器的一个安全漏洞
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2018/09/12/33/">
+                                                        最短路径问题：Dijkstra算法
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

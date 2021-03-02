@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,11 +106,11 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-        <div class="post-toc">
+        
+            <div class="post-toc">
     <div class="tocbot-list">
     </div>
     <div class="tocbot-list-menu">
@@ -169,30 +171,38 @@
     }
 
 </script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">mobX 学习笔记</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+                
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">March 1, 2021&nbsp;&nbsp;10:37:39</a>
-                        </span>
-                    
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    mobX 学习笔记
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            March 1, 2021
+                                                                &nbsp;&nbsp;
+                                                                10:37:39
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.ts<br>import &#123; observable, action &#125; from &#39;mobx&#39;;<br>export default class ActivityStore &#123;<br>  @observable activityList: Array &#x3D; [];<br><br>  @action.bound fetchActivityList() &#123;<br>    return fetch(&quot;&#x2F;activity&quot;).then(<br>      action(data &#x3D;&gt; &#123;                 &#x2F;&#x2F;用 action 在then后继续绑定当前实例<br>        this.activityList &#x3D; this.activityList.concat(data)<br>      &#125;)<br>    );<br>  &#125;<br><br>&#125;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 收集所有store于 stores.ts<br>import ActivityStore from &quot;.&#x2F;activityStore&quot;<br>const storeContext &#x3D; React.createContext(&#123;<br>  activityStore: new ActivityStore()<br>&#125;)<br>const useStores &#x3D; () &#x3D;&gt; React.useContext(storeContext);  &#x2F;&#x2F; 利用 context hook<br>export default useStores;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 任何一个需要store的组件,例如 Activity.tsx<br>import React, &#123; useEffect &#125; from &quot;react&quot;<br>import useStores from &#39;.&#x2F;stores&#39;<br>import &#123;observer&#125; from &quot;mobx-react&quot;<br><br>export default observer(function Activity() &#123;  &#x2F;&#x2F; 套上obeserver<br>  const &#123; activityStore &#125; &#x3D; useStores();  &#x2F;&#x2F; 在 React 里 use 一切<br><br>  useEffect(() &#x3D;&gt; &#123;<br>    activityStore.fetActivityList().then(() &#x3D;&gt;<br>      console.log(&quot;fetch OK!&quot;)<br>    &#125;)<br>  &#125;, [])<br><br>  return &lt;div&gt;activityStore.activityList.map(activity &#x3D;&gt; activity.name)&lt;&#x2F;div&gt;<br>&#125;)<br></code></pre></td></tr></table></figure>
 <p>我在项目里采用的也是这种使用方式，接下来总结下 mobx 和 mobx-react 的主要 api：</p>
 <h3 id="observable"><a href="#observable" class="headerlink" title="@observable"></a>@observable</h3><p>observable 是一种让数据的变化可以被观察的方法，底层是通过和 Vue 2 相同的 Object.defineProperty() 来实现的，把该属性转化成 getter /setter。在 Mobx 5 中，使用 es6 中的 proxy 的来实现数据的变化监听，从而避免出现了跟 Vue2 中一样的问题。</p>
@@ -249,59 +259,106 @@
 <li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903977553756168#heading-22">MobX 简单入门教程</a></li>
 </ul>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/tags/React/"># React</a>
-                    
-                        <a href="/tags/mobX/"># mobX</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-            
-            <a class="next" rel="next" href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/">react-epic 笔记</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                                    
+                                                        <a href="/tags/React/">#
+                                                            React
+                                                        </a>
+                                                        
+                                                        <a href="/tags/mobX/">#
+                                                            mobX
+                                                        </a>
+                                                        
+                                                            
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                                
+                                                    <a class="next" rel="next" href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/">
+                                                        react-epic 笔记
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,11 +106,11 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-        <div class="post-toc">
+        
+            <div class="post-toc">
     <div class="tocbot-list">
     </div>
     <div class="tocbot-list-menu">
@@ -169,37 +171,47 @@
     }
 
 </script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">CSS实现流光文字</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+                
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">July 1, 2020&nbsp;&nbsp;17:58:01</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/CSS/">CSS</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    CSS实现流光文字
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p>公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            July 1, 2020
+                                                                &nbsp;&nbsp;
+                                                                17:58:01
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/CSS/">
+                                                                        CSS
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p>公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#text</span> &#123;<br>            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">100px</span>;<br>            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">145px</span>;<br>            <span class="hljs-attribute">text-align</span>: center;<br>            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;<br>            <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">10px</span>;<br>            <span class="hljs-comment">/* -webkit-text-fill-color: transparent; */</span><br>            <span class="hljs-attribute">color</span>: transparent;<br>            <span class="hljs-attribute">background-size</span>: <span class="hljs-number">200%</span> <span class="hljs-number">100%</span>;<br>            <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">linear-gradient</span>(to right, #<span class="hljs-number">4261</span>aa, #<span class="hljs-number">6</span>d87da <span class="hljs-number">25%</span>, #<span class="hljs-number">93</span>b9ed <span class="hljs-number">50%</span>, #acd7f5 <span class="hljs-number">75%</span>, #ffffff <span class="hljs-number">100%</span>);<br>            <span class="hljs-attribute">-webkit-background-clip</span>: text;<br>            <span class="hljs-attribute">animation</span>: text <span class="hljs-number">5s</span> linear infinite;<br>            <span class="hljs-attribute">background-clip</span>: text;<br>        &#125;<br><br>        <span class="hljs-keyword">@keyframes</span> text &#123;<br>            0% &#123;<br>                <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>;<br>            &#125;<br><br>            100% &#123;<br>                <span class="hljs-attribute">background-position</span>: <span class="hljs-number">100%</span> <span class="hljs-number">0</span>;<br>            &#125;<br>        &#125;<br></code></pre></td></tr></table></figure>
 <p>只需要把元素的 text 或者 text-fill-color 设置为 transparent ,然后设置元素的背景为渐变色,background-size 宽度设为 200%,扩大背景,设置-webkit-background-clip 为 text,背景色只覆盖文字 .最后使用 animation 动画变更 background-position 的位置即可. 效果如下图：</p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/yourname.gif" alt="yourname"></p>
@@ -236,55 +248,100 @@
 </li>
 </ol>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">font-family学习笔记（一）</a>
-            
-            
-            <a class="next" rel="next" href="/2020/06/15/249/">饥人谷分享</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
+                                                font-family学习笔记（一）
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2020/06/15/249/">
+                                                        饥人谷分享
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,42 +106,54 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">斐讯K3C路由器的一个安全漏洞</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+        
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">January 9, 2019&nbsp;&nbsp;2:06:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-                            
-                                <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    斐讯K3C路由器的一个安全漏洞
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p>最近偶然发下之前在转转上收的K3C竟然默认开启了WPS功能(Wi-Fi Protected Setup),而且我在官改的固件中也找不到关闭的按钮.正好我手上有块支持Kali linux无线破解的网卡,我决定测试一下,使用Kali linux上的reaver来爆破pin码,看看斐讯有没有做这方面的防护.</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            January 9, 2019
+                                                                &nbsp;&nbsp;
+                                                                2:06:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                                                        计算机网络
+                                                                    </a>
+                                                                    
+                                                                    <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                                                        网络安全
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p>最近偶然发下之前在转转上收的K3C竟然默认开启了WPS功能(Wi-Fi Protected Setup),而且我在官改的固件中也找不到关闭的按钮.正好我手上有块支持Kali linux无线破解的网卡,我决定测试一下,使用Kali linux上的reaver来爆破pin码,看看斐讯有没有做这方面的防护.</p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4131968415.jpg" alt="4131968415"></p>
 <p>可以看到,路由器默认开启了WPS功能,并且pin码竟然默认为12345670,直接跑出了密码.虽说现在使用这种方法破解路由器已经有点过时,但这也算是一个不大不小的漏洞.因为我手上只有一台刷了官改固件K3C,不知道这是我这一台机器的情况,还是都是这样的,也不清楚是官改固件的问题还是都是这样的.  </p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1828136325.jpg" alt="1828136325"></p>
@@ -148,55 +162,100 @@
 <hr>
 <p>附上原答案链接：<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=341654&page=2#pid3135592">K3C 如何关闭wps功能</a></p>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2019/02/16/48/">罗技K480键盘使用指南</a>
-            
-            
-            <a class="next" rel="next" href="/2018/09/13/35/">最短路径问题：Floyd算法</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2019/02/16/48/">
+                                                罗技K480键盘使用指南
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2018/09/13/35/">
+                                                        最短路径问题：Floyd算法
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>

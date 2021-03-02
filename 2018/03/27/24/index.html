@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -45,6 +46,7 @@
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -104,40 +106,50 @@
         }
     }
 </script>
-        <div class="main">
-            <div class="container">
+            <div class="main">
+                <div class="container">
     
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">黑板课爬虫闯关</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
-                    
+        
 
                     
-                        <span class="post-time">
-                        Date: <a href="#">March 27, 2018&nbsp;&nbsp;23:08:00</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/Python/">Python</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    黑板课爬虫闯关
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author: <a itemprop="author" rel="author" href="/">
+                                                Li Chen
+                                            </a>
+                                            
 
-        <div class="post-content">
-            <p>大一的时候发现的一个比较有意思的网站:<a target="_blank" rel="noopener" href="http://www.heibanke.com/lesson/crawler_ex00/">黑板课爬虫闯关</a>,可以用来Python练手.当时我只做了前两关,第三关因为觉得登陆完跳转莫名奇妙的,就没再做下去.最近又看到了这个闯关题目于是抽空通关了一下.</p>
+                                                
+                                                    <span class="post-time">
+                                                        Date: <a href="#">
+                                                            March 27, 2018
+                                                                &nbsp;&nbsp;
+                                                                23:08:00
+                                                        </a>
+                                                    </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                                                                Category:
+                                                                
+                                                                    <a href="/categories/Python/">
+                                                                        Python
+                                                                    </a>
+                                                                    
+                                                            </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
+
+                            <div class="post-content">
+                                <p>大一的时候发现的一个比较有意思的网站:<a target="_blank" rel="noopener" href="http://www.heibanke.com/lesson/crawler_ex00/">黑板课爬虫闯关</a>,可以用来Python练手.当时我只做了前两关,第三关因为觉得登陆完跳转莫名奇妙的,就没再做下去.最近又看到了这个闯关题目于是抽空通关了一下.</p>
 <hr>
 <p>先看下自己大一写的代码,真的惨不忍睹：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> request<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-keyword">import</span> re<br>num=<span class="hljs-number">1</span><br>url=<span class="hljs-string">&quot;http://www.heibanke.com/lesson/crawler_ex00/&quot;</span><br><span class="hljs-keyword">while</span>(num):f=request.Request(url)<br>page=request.urlopen(f)<br>soup=BeautifulSoup(page,<span class="hljs-string">&#x27;html.parser&#x27;</span>,from_encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>content=soup.find_all(<span class="hljs-string">&#x27;h3&#x27;</span>)<br>content=<span class="hljs-built_in">str</span>(content)<br>p=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">&#x27; ]+&gt;&#x27;</span>)<br>content=p.sub(<span class="hljs-string">&quot;&quot;</span>,content)<br>print(content)<br>num=re.findall(<span class="hljs-string">r&quot;\d+\.?\d*&quot;</span>,content)<br>num=<span class="hljs-built_in">str</span>(num)<br>print(num)<br>num=re.sub(<span class="hljs-string">r&quot;\D&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,num)<br>url=<span class="hljs-string">&#x27;http://www.heibanke.com/lesson/crawler_ex00/&#x27;</span><br>url+=num<br></code></pre></td></tr></table></figure>
@@ -172,55 +184,100 @@
 </ul>
 <p>因为很多时候只是为了得到运行结果,并且都是半夜写的！代码写的并不是很Pythonic.以后还是尽量要把代码写的简洁优雅,追求可读性高的写法.最起码以后看的时候不会那么难受,这也算是一个小小的目标吧.</p>
 
-        </div>
+                            </div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
+                            
+                                <section class="post-copyright">
+                                    
+                                            
+                                                    
+                                                        <p class="copyright-item">
+                                                            <span>License:</span>
+                                                            <span>
+                                                                Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+                                                            </span>
+                                                        </p>
+                                                        
+                                                            
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2018/04/20/29/">下载站已开启（换服务器了,下载站已关闭）</a>
-            
-            
-            <a class="next" rel="next" href="/2018/02/02/22/">博客ToDoList</a>
-            
-        </section>
+                                </section>
+                                
+                                    <section class="post-tags">
+                                        <div>
+                                            <span>Tag(s):</span>
+                                            <span class="tag">
+                                                
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:window.history.back();">back</a>
+                                            <span>· </span>
+                                            <a href="/">home</a>
+                                        </div>
+                                    </section>
+                                    <section class="post-nav">
+                                        
+                                            <a class="prev" rel="prev" href="/2018/04/20/29/">
+                                                下载站已开启（换服务器了,下载站已关闭）
+                                            </a>
+                                            
+                                                
+                                                    <a class="next" rel="next" href="/2018/02/02/22/">
+                                                        博客ToDoList
+                                                    </a>
+                                                    
+                                    </section>
 
+                                    <section id="comments">
 
-    </article>
+                                        <div id="disqus_thread">
+                                            
+                                                
+                                                                    <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+                                                                        
+                                                                                    
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                            var disqus_shortname = 'lichen404-hexo-blog'; // required: replace example with your forum shortname
+
+                                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                                            (function () {
+                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>Please enable JavaScript
+                                            to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments
+                                                powered by
+                                                Disqus.</a></noscript>
+                                    </section>
+                        </article>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
+            </div>
+            <footer id="footer" class="footer">
     <div class="copyright">
         <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
+
     </div>
 </body>
+
 </html>
