@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Li Chen">
+
+
+
+
+
+<title>mobX 学习笔记 | 李晨的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">mobX 学习笔记</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Li Chen</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 1, 2021&nbsp;&nbsp;10:37:39</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.ts<br>import &#123; observable, action &#125; from &#39;mobx&#39;;<br>export default class ActivityStore &#123;<br>  @observable activityList: Array &#x3D; [];<br><br>  @action.bound fetchActivityList() &#123;<br>    return fetch(&quot;&#x2F;activity&quot;).then(<br>      action(data &#x3D;&gt; &#123;                 &#x2F;&#x2F;用 action 在then后继续绑定当前实例<br>        this.activityList &#x3D; this.activityList.concat(data)<br>      &#125;)<br>    );<br>  &#125;<br><br>&#125;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 收集所有store于 stores.ts<br>import ActivityStore from &quot;.&#x2F;activityStore&quot;<br>const storeContext &#x3D; React.createContext(&#123;<br>  activityStore: new ActivityStore()<br>&#125;)<br>const useStores &#x3D; () &#x3D;&gt; React.useContext(storeContext);  &#x2F;&#x2F; 利用 context hook<br>export default useStores;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 任何一个需要store的组件,例如 Activity.tsx<br>import React, &#123; useEffect &#125; from &quot;react&quot;<br>import useStores from &#39;.&#x2F;stores&#39;<br>import &#123;observer&#125; from &quot;mobx-react&quot;<br><br>export default observer(function Activity() &#123;  &#x2F;&#x2F; 套上obeserver<br>  const &#123; activityStore &#125; &#x3D; useStores();  &#x2F;&#x2F; 在 React 里 use 一切<br><br>  useEffect(() &#x3D;&gt; &#123;<br>    activityStore.fetActivityList().then(() &#x3D;&gt;<br>      console.log(&quot;fetch OK!&quot;)<br>    &#125;)<br>  &#125;, [])<br><br>  return &lt;div&gt;activityStore.activityList.map(activity &#x3D;&gt; activity.name)&lt;&#x2F;div&gt;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<p>我在项目里采用的也是这种使用方式，接下来总结下 mobx 和 mobx-react 的主要 api：</p>
+<h3 id="observable"><a href="#observable" class="headerlink" title="@observable"></a>@observable</h3><p>observable 是一种让数据的变化可以被观察的方法，底层是通过和 Vue 2 相同的 Object.defineProperty() 来实现的，把该属性转化成 getter /setter。在 Mobx 5 中，使用 es6 中的 proxy 的来实现数据的变化监听，从而避免出现了跟 Vue2 中一样的问题。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/list.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">Vue不能检测数组和对象的变化</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html#mobx-4-%E5%8F%8A%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC-%E9%94%99%E8%AF%AF%E7%9A%84-%E4%BD%BF%E7%94%A8-observable-%E5%AF%B9%E8%B1%A1%E8%BF%98%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%B1%9E%E6%80%A7">[Mobx 4 及以下版本]错误的：使用 observable 对象还不存在的属性</a></li>
+</ul>
+<h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><p>计算值是可以根据现有的状态或其他计算值衍生出的值。如果任何影响计算值的值发生变化了，计算值将根据状态自动更新。</p>
+<h3 id="autorun"><a href="#autorun" class="headerlink" title="autorun"></a>autorun</h3><p>直译的意思就是自动运行，使用 autorun 时，所提供的函数会立即被触发一次，以观察哪些可观察数据被引用，然后每次它的依赖关系改变时会自动运行。autorun 的作用是在可观察数据被修改之后，自动去执行依赖可观察数据的行为，这个行为一直就是传入 autorun 的函数。</p>
+<p>传递给 autorun 的函数在调用后接受一个参数，即当前 reaction(autorun),可用于在执行期间清理 autorun</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> numbers = observable([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]);<br><span class="hljs-keyword">var</span> sum = computed(<span class="hljs-function">() =&gt;</span> numbers.reduce(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a + b, <span class="hljs-number">0</span>));<br><br><span class="hljs-keyword">var</span> disposer = autorun(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(sum.get()));<br><span class="hljs-comment">// 输出 &#x27;6&#x27;</span><br>numbers.push(<span class="hljs-number">4</span>);<br><span class="hljs-comment">// 输出 &#x27;10&#x27;</span><br><br>disposer();<br>numbers.push(<span class="hljs-number">5</span>);<br><span class="hljs-comment">// 不会再输出任何值。`sum` 不会再重新计算。</span><br></code></pre></td></tr></table></figure>
+<h3 id="autorun-和-computed"><a href="#autorun-和-computed" class="headerlink" title="autorun 和 computed"></a>autorun 和 computed</h3><ul>
+<li>它们都是响应式调用的表达式</li>
+<li>@computed 用于响应式的产生一个可以被其他 observer 使用的值,autorun 不产生新的值，而是达到一个效果(打印日志，发起网络请求等命令式的副作用)</li>
+<li>@computed 中如果一个计算值不再被观察了,MobX 可以自动地将其垃圾回收，而 autorun 中的值必须要手动清理才行</li>
+</ul>
+<h3 id="when"><a href="#when" class="headerlink" title="when"></a>when</h3><p>接收两个函数参数，第一个函数必须根据可观察数据来返回一个布尔值，当该布尔值为 true 时，才会去执行第二个函数，并且只会执行一次。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, when &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>when(<span class="hljs-function">() =&gt;</span> leo.bool, <span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;这是true&#x27;</span>)<br>&#125;)<br>leo.bool = <span class="hljs-literal">true</span><br><span class="hljs-comment">// 这是true</span><br></code></pre></td></tr></table></figure>
+<p><strong>注意</strong></p>
+<ol>
+<li>第一个参数，必须是根据<strong>可观察数据</strong>来返回的布尔值，而不是普通变量的布尔值。</li>
+<li>如果第一个参数默认值为 true ，则 when 函数会默认执行一次。</li>
+</ol>
+<h3 id="reaction"><a href="#reaction" class="headerlink" title="reaction"></a>reaction</h3><p>高级版的 autorun ，对于如何追踪 observable 赋予了更细粒度的控制。接受两个函数参数，第一个函数引用可观察数据，并返回一个可观察数据，作为第二个函数的参数。</p>
+<p>reaction 第一次渲染的时候，会先执行一次第一个函数，这样 MobX 就会知道哪些可观察数据被引用了。随后在这些数据被修改的时候，执行第二个函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, reaction &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>reaction(<span class="hljs-function">() =&gt;</span> [leo.str, leo.num], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>leo.str = <span class="hljs-string">&#x27;pingan&#x27;</span><br>leo.num = <span class="hljs-number">122</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br></code></pre></td></tr></table></figure>
+<p>这里我们依次修改 leo.str 和 leo.num 两个变量，会发现 reaction 方法被执行两次，在控制台输出两次结果 [“pingan”, 122] ，因为可观察数据 str 和 num 分别被修改了一次。</p>
+<p><strong>实际使用场景</strong></p>
+<p>当我们没有获取到数据的时候，没有必要去执行存缓存逻辑，当第一次获取到数据以后，就执行存缓存的逻辑。</p>
+<h3 id="action"><a href="#action" class="headerlink" title="@action"></a>@action</h3><p>action 是修改任何状态的东西，任何修改状态的函数都应该使用 @action。Mobx 6 的默认配置中 enforceActions 设置为 true，也就是说任何修改状态的操作都需要通过 action 来完成。</p>
+<h4 id="runInAction"><a href="#runInAction" class="headerlink" title="runInAction"></a>runInAction</h4><p>runInAction 是个简单的工具函数，它接收代码块并在(异步的)动作中执行。这对于即时创建和执行动作非常有用，例如在异步函数过程中。runInAction(f) 是 action(f)() 的语法糖。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, computed, reaction, action&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>&#123;<br>    @observable string = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable number = <span class="hljs-number">123</span>;<br>    @action.bound <span class="hljs-function"><span class="hljs-title">bar</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>        <span class="hljs-built_in">this</span>.number = <span class="hljs-number">100</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">let</span> store = <span class="hljs-keyword">new</span> Store()<br>reaction(<span class="hljs-function">() =&gt;</span> [store.string, store.number], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>runInAction(<span class="hljs-function">() =&gt;</span> &#123;<br>    store.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>    store.number = <span class="hljs-number">100</span><br>&#125;)<span class="hljs-comment">//[&quot;pingan&quot;, 100]</span><br></code></pre></td></tr></table></figure>
+<h3 id="observer"><a href="#observer" class="headerlink" title="observer"></a>observer</h3><p>observer 函数/装饰器 是由 mobx-react 提供的，可以把React 组件转换成响应式组件。它使用 autoRun 包装了组件的 render 函数以确保任何组件渲染中的使用的数据变化都可以强制刷新组件。而当数据没有变化时，它同样确保了组件不会重新渲染，类似于 React  PureComponent。</p>
+<p>所有渲染 observer 数据的组件都需要使用 observer 来确保数据变化时组件能够响应。需要注意的一个常见错误是：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html#mobx-%E5%8F%AA%E4%BC%9A%E4%B8%BA%E6%95%B0%E6%8D%AE%E6%98%AF%E7%9B%B4%E6%8E%A5%E9%80%9A%E8%BF%87-render-%E5%AD%98%E5%8F%96%E7%9A%84-observer-%E7%BB%84%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E8%BF%BD%E8%B8%AA">MobX 只会为数据是直接通过 render 存取的 observer 组件进行数据追踪</a></li>
+</ul>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>还有一些重要的内容我可能没有提及，文档中的这些部分也很有必要阅读</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mobx.js.org/react-integration.html">React 集成</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/pitfalls.html">常见陷阱与最佳实践</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react-performance.html">优化 React 组件渲染</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html">MobX 会对什么作出反应</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/refguide/array.html">Observable 数组</a></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在使用了 mobx 之后，总有种在使用 Vue 的感觉。mobx 跟 Vue 的原理是很相似的,它们的数据响应式实现原理是一致的。Vue 2 跟 mobX 4 使用了 Object.defineProperty ,Vue 3 和 Mobx 5 使用了 Proxy。mobX 跟 Vue 的 api 也有点像，computed 跟 autorun，感觉有点类似 Vue 里的 computed 跟 watch。不过以上更多是个人的一点感想和总结,如果有不对的地方还请谅解，并给予指正。非常感谢！</p>
+<hr>
+<p>参考:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/">mobX 中文文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://mobx.js.org/README.html">mobX 英文文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/328612405/answer/928903420">Mobx真的好用吗？它有什么优缺点？主要适用于什么场景？ - Mayeths的回答 - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://mobx-react.js.org/recipes-context">React Context</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903977553756168#heading-22">MobX 简单入门教程</a></li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/React/"># React</a>
+                    
+                        <a href="/tags/mobX/"># mobX</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/">react-epic 笔记</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
