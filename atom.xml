@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>李晨的博客</title>
+  <icon>http://example.com/icon.png</icon>
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-03-02T07:08:35.234Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Li Chen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mobX 学习笔记</title>
+    <link href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-03-01T02:37:39.000Z</published>
+    <updated>2021-03-02T07:08:35.234Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;学习使用-Mobx&quot;&gt;&lt;a href=&quot;#学习使用-Mobx&quot; class=&quot;headerlink&quot; title=&quot;学习使用 Mobx&quot;&gt;&lt;/a&gt;学习使用 Mobx&lt;/h2&gt;&lt;p&gt;在知乎上看到了一个很好的使用 mobx 配合 hooks</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="http://example.com/tags/React/"/>
+    
+    <category term="mobX" scheme="http://example.com/tags/mobX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-epic 笔记</title>
+    <link href="http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-03-01T02:36:01.000Z</published>
+    <updated>2021-03-02T07:08:35.238Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;解决控制台-MobX-警告&quot;&gt;&lt;a href=&quot;#解决控制台-MobX-警告&quot; class=&quot;headerlink&quot; title=&quot;解决控制台 MobX 警告&quot;&gt;&lt;/a&gt;解决控制台 MobX 警告&lt;/h3&gt;&lt;p&gt;&lt;code&gt;MobX: Since</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="http://example.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序踩坑</title>
+    <link href="http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
+    <id>http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
+    <published>2021-02-25T14:13:01.000Z</published>
+    <updated>2021-02-25T14:22:51.972Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;小程序踩坑&quot;&gt;&lt;a href=&quot;#小程序踩坑&quot; class=&quot;headerlink&quot; title=&quot;小程序踩坑&quot;&gt;&lt;/a&gt;小程序踩坑&lt;/h3&gt;&lt;p&gt;之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。&lt;/p&gt;
+&lt;h4</summary>
+        
+      
+    
+    
+    
+    
+    <category term="小程序" scheme="http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>翻译时遇到的一个语法问题</title>
+    <link href="http://example.com/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/</id>
+    <published>2021-01-29T16:31:01.000Z</published>
+    <updated>2021-01-29T16:31:37.156Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前翻译了一下 GitHub 的说明文档，遇到了一个不太明白的地方，今天来回顾记录一下。&lt;/p&gt;
+&lt;p&gt;翻译的文档里有这样一句话&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Only do this if you want the new branch to become the base</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>to 和 towards 的区别</title>
+    <link href="http://example.com/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://example.com/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-01-19T10:02:15.000Z</published>
+    <updated>2021-01-29T16:29:31.576Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Look at these 2 sentences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jane is walking &lt;strong&gt;to&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2021/01/06/hello-world/"/>
+    <id>http://example.com/2021/01/06/hello-world/</id>
+    <published>2021-01-06T14:42:51.600Z</published>
+    <updated>2021-01-06T14:42:51.601Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome调试里的FormData 和 Request Payload 有什么不同</title>
+    <link href="http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/"/>
+    <id>http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</id>
+    <published>2020-10-15T02:29:06.000Z</published>
+    <updated>2021-01-18T13:40:35.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. &lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="network" scheme="http://example.com/categories/network/"/>
+    
+    <category term="HTTP" scheme="http://example.com/categories/network/HTTP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue Router query 和 params 传参的区别</title>
+    <link href="http://example.com/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://example.com/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2020-09-04T10:31:41.000Z</published>
+    <updated>2021-01-18T13:40:35.844Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;params-query-是什么？&quot;&gt;&lt;a href=&quot;#params-query-是什么？&quot; class=&quot;headerlink&quot; title=&quot;params,query 是什么？&quot;&gt;&lt;/a&gt;params,query 是什么？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt; </summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
+    
+    <category term="javascript" scheme="http://example.com/categories/javascript/"/>
+    
+    <category term="Vue" scheme="http://example.com/categories/javascript/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>font-family学习笔记（二）</title>
+    <link href="http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2020-09-01T14:55:00.000Z</published>
+    <updated>2021-01-18T13:40:35.841Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;目前各个网站使用的font-family&quot;&gt;&lt;a href=&quot;#目前各个网站使用的font-family&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>font-family学习笔记（一）</title>
+    <link href="http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2020-08-18T09:19:18.000Z</published>
+    <updated>2021-01-18T13:40:35.838Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;字体分类&quot;&gt;&lt;a href=&quot;#字体分类&quot; class=&quot;headerlink&quot; title=&quot;字体分类&quot;&gt;&lt;/a&gt;字体分类&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;  serif（衬线）&lt;/li&gt;
+&lt;li&gt;  sans-serif（无衬线）&lt;/li&gt;
+&lt;li&gt; </summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS实现流光文字</title>
+    <link href="http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/"/>
+    <id>http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/</id>
+    <published>2020-07-01T09:58:01.000Z</published>
+    <updated>2021-01-18T13:40:35.835Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>饥人谷分享</title>
+    <link href="http://example.com/2020/06/15/249/"/>
+    <id>http://example.com/2020/06/15/249/</id>
+    <published>2020-06-15T02:06:15.000Z</published>
+    <updated>2021-01-13T14:12:15.195Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;自我介绍&quot;&gt;&lt;a href=&quot;#自我介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pointer-events:none 和 cursor:not-allowed 踩坑</title>
+    <link href="http://example.com/2020/05/29/214/"/>
+    <id>http://example.com/2020/05/29/214/</id>
+    <published>2020-05-29T09:19:58.000Z</published>
+    <updated>2021-01-13T14:19:24.204Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;pointer-events-none-和-cursor-not-allowed-踩坑&quot;&gt;&lt;a href=&quot;#pointer-events-none-和-cursor-not-allowed-踩坑&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>执行*.sh 文件的几种方式</title>
+    <link href="http://example.com/2020/05/18/205/"/>
+    <id>http://example.com/2020/05/18/205/</id>
+    <published>2020-05-18T09:59:27.000Z</published>
+    <updated>2021-01-13T14:20:17.749Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;执行-sh-文件的几种方式&quot;&gt;&lt;a href=&quot;#执行-sh-文件的几种方式&quot; class=&quot;headerlink&quot; title=&quot;执行*.sh 文件的几种方式&quot;&gt;&lt;/a&gt;执行*.sh 文件的几种方式&lt;/h3&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS高阶函数</title>
+    <link href="http://example.com/2020/04/14/199/"/>
+    <id>http://example.com/2020/04/14/199/</id>
+    <published>2020-04-14T06:33:30.000Z</published>
+    <updated>2021-01-29T16:05:50.645Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;map&quot;&gt;&lt;a href=&quot;#map&quot; class=&quot;headerlink&quot; title=&quot;map()&quot;&gt;&lt;/a&gt;map()&lt;/h4&gt;&lt;p&gt;创建一个新数组,其中每一个元素由调用数组中的每一个元素执行的函数得来&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS中typeof 和 instanceof 的区别</title>
+    <link href="http://example.com/2020/03/31/195/"/>
+    <id>http://example.com/2020/03/31/195/</id>
+    <published>2020-03-31T11:58:55.000Z</published>
+    <updated>2021-01-13T14:26:39.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;JS-中-typeof-和-instanceof-的区别&quot;&gt;&lt;a href=&quot;#JS-中-typeof-和-instanceof-的区别&quot; class=&quot;headerlink&quot; title=&quot;JS 中 typeof 和 instanceof</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>worpress本地更新方法</title>
+    <link href="http://example.com/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/</id>
+    <published>2020-03-14T06:24:13.000Z</published>
+    <updated>2021-01-13T15:56:38.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;因为某些众所周知的原因,wordpress没有办法自动在线更新.只能手动更新,具体方法：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git 使用总结</title>
+    <link href="http://example.com/2020/03/08/145/"/>
+    <id>http://example.com/2020/03/08/145/</id>
+    <published>2020-03-08T08:58:28.000Z</published>
+    <updated>2021-02-18T14:47:31.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;git-使用总结&quot;&gt;&lt;a href=&quot;#git-使用总结&quot; class=&quot;headerlink&quot; title=&quot;git 使用总结&quot;&gt;&lt;/a&gt;git 使用总结&lt;/h2&gt;&lt;h3 id=&quot;git-用户配置&quot;&gt;&lt;a href=&quot;#git-用户配置&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="http://example.com/categories/Git/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue笔记 - 四个生命周期钩子</title>
+    <link href="http://example.com/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/"/>
+    <id>http://example.com/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/</id>
+    <published>2020-03-01T13:30:21.000Z</published>
+    <updated>2021-01-18T13:40:35.846Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;生命周期钩子&quot;&gt;&lt;a href=&quot;#生命周期钩子&quot; class=&quot;headerlink&quot; title=&quot;生命周期钩子&quot;&gt;&lt;/a&gt;生命周期钩子&lt;/h3&gt;&lt;p&gt;每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如,需要设置数据监听、编译模板、将实例挂载到</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
+    
+    <category term="Vue 笔记" scheme="http://example.com/categories/JavaScript/Vue-%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python待学习内容</title>
+    <link href="http://example.com/2019/07/23/81/"/>
+    <id>http://example.com/2019/07/23/81/</id>
+    <published>2019-07-23T09:19:00.000Z</published>
+    <updated>2021-01-13T14:59:33.704Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;  &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+  </entry>
+  
+</feed>
