@@ -1,174 +1,1335 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <meta name="author" content="Li Chen">
-
-
-
-
-
-<title>李晨的博客</title>
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
+  <meta property="og:type" content="website">
+<meta property="og:title" content="李晨的博客">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="李晨的博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Li Chen">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
+<link rel="canonical" href="http://example.com/page/2/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
 
-    
-    
-        
-    
+  <title>李晨的博客</title>
+  
 
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">李晨的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-</header>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/" class="post-title-link" itemprop="url">CSS实现流光文字</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-07-01 17:58:01" itemprop="dateCreated datePublished" datetime="2020-07-01T17:58:01+08:00">2020-07-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#text</span> &#123;<br>            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">100px</span>;<br>            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">145px</span>;<br>            <span class="hljs-attribute">text-align</span>: center;<br>            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;<br>            <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">10px</span>;<br>            <span class="hljs-comment">/* -webkit-text-fill-color: transparent; */</span><br>            <span class="hljs-attribute">color</span>: transparent;<br>            <span class="hljs-attribute">background-size</span>: <span class="hljs-number">200%</span> <span class="hljs-number">100%</span>;<br>            <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">linear-gradient</span>(to right, #<span class="hljs-number">4261</span>aa, #<span class="hljs-number">6</span>d87da <span class="hljs-number">25%</span>, #<span class="hljs-number">93</span>b9ed <span class="hljs-number">50%</span>, #acd7f5 <span class="hljs-number">75%</span>, #ffffff <span class="hljs-number">100%</span>);<br>            <span class="hljs-attribute">-webkit-background-clip</span>: text;<br>            <span class="hljs-attribute">animation</span>: text <span class="hljs-number">5s</span> linear infinite;<br>            <span class="hljs-attribute">background-clip</span>: text;<br>        &#125;<br><br>        <span class="hljs-keyword">@keyframes</span> text &#123;<br>            0% &#123;<br>                <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>;<br>            &#125;<br><br>            100% &#123;<br>                <span class="hljs-attribute">background-position</span>: <span class="hljs-number">100%</span> <span class="hljs-number">0</span>;<br>            &#125;<br>        &#125;<br></code></pre></td></tr></table></figure>
+<p>只需要把元素的 text 或者 text-fill-color 设置为 transparent ,然后设置元素的背景为渐变色,background-size 宽度设为 200%,扩大背景,设置-webkit-background-clip 为 text,背景色只覆盖文字 .最后使用 animation 动画变更 background-position 的位置即可. 效果如下图：</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/yourname.gif" alt="yourname"></p>
+<p>(渐变颜色差距不是很大,所以效果不是很明显.比较明显的是 <a target="_blank" rel="noopener" href="https://codepen.io/Chokcoco/pen/xdroGp">这个</a> ) .借这个机会也学习了一波 background 的知识：</p>
+<h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3><p>background 是一个简写属性,可以定义相关的多个属性,比如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>  <span class="hljs-attribute">background</span>: left <span class="hljs-number">5%</span> / <span class="hljs-number">15%</span> <span class="hljs-number">60%</span> repeat-x <span class="hljs-built_in">url</span>(<span class="hljs-string">&#x27;../../media/examples/star.png&#x27;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>等于</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-position</span>:left <span class="hljs-number">5%</span>;<br>    <span class="hljs-attribute">background-size</span>:<span class="hljs-number">15%</span> <span class="hljs-number">60%</span>；<br>    background-repeat:repeat-x;<br>    <span class="hljs-attribute">background-image</span>:<span class="hljs-built_in">url</span>(<span class="hljs-string">&#x27;../../media/examples/star.png&#x27;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>注意</strong>：对于 background 属性,所有没有被指定的值都会被设定为它们的初始值.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>  <span class="hljs-attribute">background-size</span>: cover;<br>  <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span>;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&#x27;./test.png&#x27;</span>) <span class="hljs-comment">/*这样写会导致上面设置的两项属性被重置为默认值;*/</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="background-attachment"><a href="#background-attachment" class="headerlink" title="background-attachment"></a>background-attachment</h4><p>background-attachment 决定了背景图片在出现滚动条的情况下应该如何运动.说起来比较抽象,具体参看MDN上的例子： <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment'">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment</a></p>
+<h4 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h4><p>background-size 设置背景图片大小.图片可以保有其原有的尺寸,或者拉伸到新的尺寸,或者在保持原有比例的同时缩放到元素的可用空间的尺寸.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-size</span>:cover <span class="hljs-comment">/* 缩放背景图片以完全覆盖背景,可能背景图片部分会看不见 */</span><br>    background-size:contain <span class="hljs-comment">/* 缩放背景图片以完全装入背景区 */</span><br>    background-size:<span class="hljs-number">100%</span> <span class="hljs-number">100%</span> <span class="hljs-comment">/* 完全覆盖背景,把图片按照容器的长宽比进行压缩,当图片的长宽比与容器本身的长宽比不一致时,图片会发生形变 */</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h4 id="background-repeat"><a href="#background-repeat" class="headerlink" title="background-repeat"></a>background-repeat</h4><p>这个属性用于控制当容器的长宽大于背景的长宽的时候,是否要重复显示.默认是repeat,即可以重复显示.一般使用的是 no-repeat</p>
+<h4 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a>background-position</h4><p>background-position 为每一个背景图片设置初始位置.它的属性值可以是关键字,百分比或者像素.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-position</span>:center; <span class="hljs-comment">/*背景图片相对容器居中*/</span><br>    <span class="hljs-attribute">background-position</span>:bottom -<span class="hljs-number">50px</span> right <span class="hljs-number">10%</span> <span class="hljs-comment">/* 背景图片相对容器下移50px,图片底部的50px会消失  图片右侧距容器距离为 容器和图片的宽度差 *10%  */</span><br><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h4><p>background-clip 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-clip</span>:text <span class="hljs-comment">/*以区块内的文字作为裁剪区域向外裁剪,文字的背景即为区块的背景,文字之外的区域将被裁剪掉.实测兼容性很差,需要加-webkit前缀*/</span>）<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h4><p>background-image 可以为一个元素设置一个或者多个背景图像.图像以 Z 方向堆叠的方式进行.先指定的图像会在之后指定的图像上绘制.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-image</span>:<span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;../../media/examples/star.png&quot;</span>),<br>                     <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;../../media/examples/lizard.png&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient"></a>linear-gradient</h4><p>linear-gradient() 函数用于创建一个线性渐变的”图像”.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.test</span> &#123;<br>    <span class="hljs-attribute">background-image</span>:<span class="hljs-built_in">linear-gradient</span>(to right,red,yellow);<br>&#125;<br></code></pre></td></tr></table></figure>
+<hr>
+<p>参考链接：</p>
+<ol>
+<li><p> css3 text-fill-color 简介 - <a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiajia123/p/6493011.html">https://www.cnblogs.com/jiajia123/p/6493011.html</a></p>
+</li>
+<li><p>完整代码 -</p>
+<p>   <a target="_blank" rel="noopener" href="https://lichen404.github.io/FuckCSS/%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97.html">https://lichen404.github.io/FuckCSS/%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97.html</a></p>
+</li>
+<li><p>MDN-background - <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background#%3Cposition%3E">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background#%3Cposition%3E</a> </p>
+</li>
+<li><p>奇妙的-webkit-background-clip:text - <a target="_blank" rel="noopener" href="https://github.com/chokcoco/iCSS/issues/14">https://github.com/chokcoco/iCSS/issues/14</a></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/06/15/249/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/15/249/" class="post-title-link" itemprop="url">饥人谷分享</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-15 10:06:15" itemprop="dateCreated datePublished" datetime="2020-06-15T10:06:15+08:00">2020-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 22:12:15" itemprop="dateModified" datetime="2021-01-13T22:12:15+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>大家好,我是今天的分享者小晨~.我是19年毕业的,考研失败后家里蹲了将近一年,期间在饥人谷跟着方方老师学习前端.目前在深圳工作,刚上班没多久,姿势水平不高,还是要学习一个.所以就不分享太多技术内容了.我的分享主要分为三个部分,可能有些内容前边的同学已经分享过了或者有错误,还请见谅.</p>
+<h3 id="编程相关"><a href="#编程相关" class="headerlink" title="编程相关"></a>编程相关</h3><p>我个人其实比较喜欢Python,所以给大家推荐下Python的入门教程吧~ <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400">廖雪峰的Python教程</a></p>
+<ul>
+<li>  这个教程虽然不是很长,但是基本把Python的重要内容和特性都涉及到了,有的地方比如装饰器,异步,刚开始看可能不明白,学习一段时间后再回过头看可能就能理解了.</li>
+<li>  另外廖雪峰老师的JS 跟 Git 教程也非常形象和浅显易懂,很适合新手.</li>
+</ul>
+<h3 id="日常生活"><a href="#日常生活" class="headerlink" title="日常生活"></a>日常生活</h3><h4 id="健康相关"><a href="#健康相关" class="headerlink" title="健康相关"></a>健康相关</h4><ul>
+<li>  我在上大学期间经常打游戏久坐,有时就会出现腰疼的情况.所以我现在比较注意这件事.大家如果有同样情况的话,建议买一个智能手环或者手表之类的,基本都带有久坐提醒功能.便宜的手环可能就几十块钱,准不准另说,但是最起码确实能在久坐时间过长的时候提醒到你,可以站起来接杯水或者上个厕所.</li>
+<li>  另外也可以关注下丁香医生这个公众号,或者在知乎上关注 丁香医生 或 叔贵K.这两个账户经常分享一些办公室养生相关内容.</li>
+</ul>
+<h4 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a>油猴脚本</h4><p>油猴我看前面已经有同学分享过了,那我这里就分享个自己在用的脚本好了 - CSDN去广告 边栏净化<a target="_blank" rel="noopener" href="https://xiedaimala.com/short_links/101987">https://xiedaimala.com/short_links/101987</a></p>
+<h4 id="IOS-捷径"><a href="#IOS-捷径" class="headerlink" title="IOS 捷径"></a>IOS 捷径</h4><p>IOS的捷径其实就类似于简单的编程,你可以通过一些指令,完成一个脚本.我个人觉得是一个很有意思的工具.大家可以在<a target="_blank" rel="noopener" href="https://sharecuts.cn/">这个网站</a>上面找到一些别人分享的捷径,然后自己再去模仿学习,DIY出来适合自己用的.</p>
+<h4 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h4><p>分享一下我在 YouTube 上关注的两个博主吧.</p>
+<ul>
+<li>BigDongDong 主要是数码相关内容,博主本人好像是个演员,有拍过一些电视剧.</li>
+<li><ul>
+<li>罗宾 也是数码博主,我关注他是因为博主本人在武汉,疫情期间每天拍vlog,都是一些生活相关内容,感兴趣可以关注一下. - 他们在国内b站也有账户,不过有些视频没有上传.</li>
+</ul>
+</li>
+</ul>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li>  TLDR的web版本,Linux命令速查 <a target="_blank" rel="noopener" href="https://tldr.linux.cn/">https://tldr.linux.cn/</a></li>
+<li>  YouTube 视频下载 <a target="_blank" rel="noopener" href="https://en.savefrom.net/17/">https://en.savefrom.net/17/</a></li>
+<li>  安卓应用下载,上面可以直接下载谷歌和国外的一些应用,如果不想用谷歌商店可以试试这个.不过网站貌似需要代理才可以访问.<a target="_blank" rel="noopener" href="https://apkpure.com/cn/">https://apkpure.com/cn/</a></li>
+<li>  大家用安卓手机,如果觉得国内商店下载到的软件很臃肿的话,可以去上面这个网站或者Google Play下载,比如QQ在Google Play上的版本相比国内就少很多广告和无用内容.</li>
+<li>  少数派 数码科技相关内容,个人感觉文章内容质量很好~ <a target="_blank" rel="noopener" href="https://sspai.com/">https://sspai.com/</a></li>
+</ul>
+<h3 id="菜鸡个人工作之余的一点感想"><a href="#菜鸡个人工作之余的一点感想" class="headerlink" title="菜鸡个人工作之余的一点感想"></a>菜鸡个人工作之余的一点感想</h3><p>这部分内容主要是我自己的一些想法,如果有不对的地方,还请谅解！</p>
+<ul>
+<li>  我自己从来不用抖音,快手,头条之类的软件.我觉得采用类似推荐算法的软件都很容易让人陷入“信息茧房”.互联网越来越蓬勃发展,但是个人得到的信息却可能越来越封闭.传统的贴吧论坛在衰落,推荐算法越来越智能,我们能看到的却可能只有我们想看到的.我对新闻比较感兴趣,平时工作之余会去纽约时报中文,FT中文,多维新闻等看,也会去国内的微博,百度之类的看.多样的信息渠道我觉得有助于避免我们的观点变得偏激.</li>
+<li>  在参加工作之后,我发现自己手头正在做的事情经常会被打断,时间变得碎片化.一会领导可能就会在QQ上发信息找你,或者淘宝提醒我该抢啥了. 我感觉自己变得很健忘,刚才还在想的事情一被打断就忘了,搞得我很烦.现在我采用的方法是一有什么想法就在QQ上发给我的电脑或者手机（因为QQ在我的电脑,ipad,手机上都有安装）,记录下来.大家如果也有类似情况的话,可以分享下应对方法,这样时间久了,我觉得记性越来越差了…</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/05/29/214/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/214/" class="post-title-link" itemprop="url">pointer-events:none 和 cursor:not-allowed 踩坑</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-29 17:19:58" itemprop="dateCreated datePublished" datetime="2020-05-29T17:19:58+08:00">2020-05-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 22:19:24" itemprop="dateModified" datetime="2021-01-13T22:19:24+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="pointer-events-none-和-cursor-not-allowed-踩坑"><a href="#pointer-events-none-和-cursor-not-allowed-踩坑" class="headerlink" title="pointer-events:none 和 cursor:not-allowed 踩坑"></a>pointer-events:none 和 cursor:not-allowed 踩坑</h3><p>最近有一个需求是在卡片不可用时,禁用鼠标点击事件并把鼠标指针设置为禁用状态. 于是我通过在卡片上设置了 CSS 样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disable</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>结果鼠标指针的禁用样式一直无法生效,我在 a 标签的父元素上设置了 cursor:not-allowed 才有效果.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span>&#123;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>我看了下 MDN 上 cursor:not-allowed 和 pointer-events:none 的说明,也没看明白什么原因. 后来在博客上看到了产生这个问题的原因.在 a 标签上设置了 pointer-events:none 后,a 标签就无法再响应鼠标事件了,所以设置的指针样式也不会生效.因此把这两个属性放在一个元素上,是不能达到我们所需要的效果的.</p>
+<h4 id="pointer-events-none"><a href="#pointer-events-none" class="headerlink" title="pointer-events:none"></a>pointer-events:none</h4><p>MDN 文档的说法是元素设置 pointer-events:none 后将永远不会成为鼠标事件的 target,可以理解为你能看到这个元素,但却摸不到. 如下图所示,用一个 div 元素 把 a 标签挡住后,在 div 上设置 pointer-events:none 是可以点击到下面的 a 标签的:<img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/pointer-events-none.gif" alt="pointer-events-none"> 如果为 a 标签设置了 “pointer-events:none”,点击 a 标签,不会跳转到链接地址,而且也没有悬浮样式,但是通过 tab 键可以选中连接进行跳转,可以把 href 去掉,这样就无法选中了.</p>
+<hr>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ol>
+<li> MDN 文档 - <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events'">https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events</a></li>
+<li> pointer-events: none - <a href="'https://www.cnblogs.com/xiaonangua/p/10734573.html'">https://www.cnblogs.com/xiaonangua/p/10734573.html</a></li>
+<li> 浅谈 css3 有意思的属性 pointer-events: none - <a href="'https://www.cnblogs.com/teamemory/p/9889008.html'">https://www.cnblogs.com/teamemory/p/9889008.html</a></li>
+<li> 测试HTML - <a href="'https://github.com/lichen404/FuckCSS/blob/master/fuckCSS.html'">https://github.com/lichen404/FuckCSS/blob/master/fuckCSS.html</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/05/18/205/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/18/205/" class="post-title-link" itemprop="url">执行*.sh 文件的几种方式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-18 17:59:27" itemprop="dateCreated datePublished" datetime="2020-05-18T17:59:27+08:00">2020-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 22:20:17" itemprop="dateModified" datetime="2021-01-13T22:20:17+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="执行-sh-文件的几种方式"><a href="#执行-sh-文件的几种方式" class="headerlink" title="执行*.sh 文件的几种方式"></a>执行*.sh 文件的几种方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh filename.sh<br>./filename.sh(需要文件有执行权限)<br></code></pre></td></tr></table></figure>
+<p>上面的方法是通过建立子 shell 执行脚本中的语句,而以下方法是在当前 shell 中执行脚本内容.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<h4 id="source-命令"><a href="#source-命令" class="headerlink" title="source 命令"></a>source 命令</h4><p>source 命令也称为“点命令”,也就是一个点符号（.）,是 bash 的内部命令.</p>
+<h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><p>使 Shell 读入指定的 Shell 程序文件并依次执行文件中的所有语句</p>
+<h5 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br></code></pre></td></tr></table></figure>
+<h5 id="source-filename-与-sh-filename-及-filename-执行脚本的区别"><a href="#source-filename-与-sh-filename-及-filename-执行脚本的区别" class="headerlink" title="source filename 与 sh filename 及 ./filename 执行脚本的区别"></a>source filename 与 sh filename 及 ./filename 执行脚本的区别</h5><ol>
+<li> 当 shell 脚本具有可执行权限时,用 sh filename 与 ./filename 执行脚本是没有区别的. ./filename 是因为当前目录没有在 PATH 中,”.”是用来表示当前目录的.</li>
+<li> sh filename 重新建立了一个子 shell,在子 shell 中执行脚本里面的语句,该子 shell 继承父 shell 的环境变量,但子 shell 新建的,改变的变量不会被带回父 shell.</li>
+<li> source filename 或 . filename 只是简单地读取脚本里的语句依次在当前 shell 里面执行,并没有建立新的子 shell.那么脚本里面所有新建,改变变量的语句都会保存在当前 shell 里面.</li>
+</ol>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><ol>
+<li> 新建 test.sh 脚本,内容为:A=1</li>
+<li> 然后使其可执行 chmod +x test.sh</li>
+<li> 运行 sh test.sh,然后 echo $A,显示为空,因为 A=1 并没有传给当前的 shell</li>
+<li> 运行 ./test.sh 效果是一样的</li>
+<li> 运行 source test.sh 或者 . test.sh,然后 echo $A,则会显示 1,说明 A=1 的变量在当前 shell 中</li>
+</ol>
+<hr>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li>  linux 下的 source 命令 <a target="_blank" rel="noopener" href="https://blog.csdn.net/wangyangkobe/article/details/6595143">https://blog.csdn.net/wangyangkobe/article/details/6595143</a></li>
+<li>  执行*.sh 文件的 6 种方式 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37699336/article/details/80724700">https://blog.csdn.net/qq_37699336/article/details/80724700</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/14/199/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/14/199/" class="post-title-link" itemprop="url">JS高阶函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-14 14:33:30" itemprop="dateCreated datePublished" datetime="2020-04-14T14:33:30+08:00">2020-04-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-30 00:05:50" itemprop="dateModified" datetime="2021-01-30T00:05:50+08:00">2021-01-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h4><p>创建一个新数组,其中每一个元素由调用数组中的每一个元素执行的函数得来</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-keyword">let</span> newArr = arr.map(<span class="hljs-function">(<span class="hljs-params">value, index, array</span>) =&gt;</span> value * <span class="hljs-number">2</span>)<br><span class="hljs-built_in">console</span>.log(newArr) <span class="hljs-comment">//[2,4,6]</span><br></code></pre></td></tr></table></figure>
+<h4 id="forEach-和-map-的不同"><a href="#forEach-和-map-的不同" class="headerlink" title="forEach 和 map 的不同"></a>forEach 和 map 的不同</h4><p>forEach 不会返回新的数组,但 forEach()也不会改变原有的数组,但 callback 函数可能会改变原有的数组.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-keyword">let</span> newArr = arr.forEach(<span class="hljs-function">(<span class="hljs-params">value,index,array</span>) =&gt;</span> value * <span class="hljs-number">2</span>)<br><span class="hljs-built_in">console</span>.log(newArr) <span class="hljs-comment">//undefined</span><br></code></pre></td></tr></table></figure>
+<p>forEach 中的 callback 函数改变原数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>arr.forEach(<span class="hljs-function">(<span class="hljs-params">item,index</span>)=&gt;</span>a[index]=<span class="hljs-number">0</span>)<br><span class="hljs-built_in">console</span>.log(arr) <span class="hljs-comment">//[0,0,0]</span><br></code></pre></td></tr></table></figure>
+<h4 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h4><p>filter 接受一个函数,把传入的函数依次作用于每个元素,然后根据返回值是 true 还是 false 决定保留还是丢弃该元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><span class="hljs-keyword">let</span> newArr = arr.filter(<span class="hljs-function">(<span class="hljs-params">value, index, array</span>) =&gt;</span> value % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>) <span class="hljs-comment">//[1,3,5]</span><br></code></pre></td></tr></table></figure>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h4><p>sort 接收一个比较函数来实现自定义的排序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]<br>arr.sort(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">if</span> (x &lt; y) &#123;<br>    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span><br>  &#125;<br>  <span class="hljs-keyword">if</span> (x &gt; y) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>  &#125;<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>&#125;)<br><span class="hljs-built_in">console</span>.log(arr) <span class="hljs-comment">// [1,2,10,20]</span><br></code></pre></td></tr></table></figure>
+<p>这里多说一下,JS 的默认排序规则是根据字符的 ascii 码进行的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">[<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>].sort(); <span class="hljs-comment">// [1, 10, 2, 20]</span><br></code></pre></td></tr></table></figure>
+<p>sort 方法默认把所有元素转成String 再排序，结果 ‘10’ 排在 ‘2’ 前面，因为字符 ‘1’ 比 字符 ‘2’ 的 ASCII 码小。</p>
+<h4 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h4><p>reduce 把一个函数作用在 Array 的[x1,x2,x3 …]上,这个函数必须接收两个参数,reduce 把结果继续和序列的下一个元素做累积计算,相当于：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)<br></code></pre></td></tr></table></figure>
+<p>reduce 实现求和：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]<br>arr.reduce(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> x + y) <span class="hljs-comment">//25</span><br></code></pre></td></tr></table></figure>
+<p>也可以设置初始值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]<br>arr.reduce(<span class="hljs-function">(<span class="hljs-params">sum, x</span>) =&gt;</span> (sum += x), <span class="hljs-number">0</span>) <span class="hljs-comment">//25</span><br></code></pre></td></tr></table></figure>
+<h4 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h4><p>every()方法可以判断数组的所有元素是否满足测试条件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><span class="hljs-built_in">console</span>.log(arr.every(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> item &gt; <span class="hljs-number">3</span>)) <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure>
+<h4 id="find"><a href="#find" class="headerlink" title="find()"></a>find()</h4><p>find()方法用于查找符合条件的第一个元素,如果找到了,就返回这个元素,否则,返回 undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-built_in">console</span>.log(arr.find(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> item === <span class="hljs-number">3</span>)) <span class="hljs-comment">//3</span><br></code></pre></td></tr></table></figure>
+<h4 id="findIndex"><a href="#findIndex" class="headerlink" title="findIndex()"></a>findIndex()</h4><p>findIndex()和 find()类似,也是查找符合条件的第一个元素,不同之处在于 findIndex()会返回这个元素的索引,如果没有找到,返回 -1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-built_in">console</span>.log(arr.findIndex(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> item === <span class="hljs-number">3</span>)) <span class="hljs-comment">//2</span><br></code></pre></td></tr></table></figure>
+<h4 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h4><p>includes()  方法用来判断一个数组是否包含一个指定的值，如果是则返回 true，否则 false</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> site = [<span class="hljs-string">&#x27;runoob&#x27;</span>,<span class="hljs-string">&#x27;google&#x27;</span>,<span class="hljs-string">&#x27;taobao&#x27;</span>]<br>site.includes(<span class="hljs-string">&#x27;runoob&#x27;</span>) <span class="hljs-comment">//true</span><br>site.includes(<span class="hljs-string">&#x27;baidu&#x27;</span>)  <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure>
+<h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h4><p>indexOf() 方法可返回数组中某个指定的元素位置，如果在数组中没有找到指定的元素则返回 -1</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>,<span class="hljs-string">&quot;Orange&quot;</span>,<span class="hljs-string">&quot;Apple&quot;</span>,<span class="hljs-string">&quot;Mango&quot;</span>]<br><span class="hljs-built_in">console</span>.log(fruits.indexOf(<span class="hljs-string">&quot;Apple&quot;</span>)) <span class="hljs-comment">// 2</span><br></code></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/31/195/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/31/195/" class="post-title-link" itemprop="url">JS中typeof 和 instanceof 的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-31 19:58:55" itemprop="dateCreated datePublished" datetime="2020-03-31T19:58:55+08:00">2020-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 22:26:39" itemprop="dateModified" datetime="2021-01-13T22:26:39+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="JS-中-typeof-和-instanceof-的区别"><a href="#JS-中-typeof-和-instanceof-的区别" class="headerlink" title="JS 中 typeof 和 instanceof 的区别"></a>JS 中 typeof 和 instanceof 的区别</h3><h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><p>typeof 的返回值是一个字符串,一般是 “number”,”string”,”boolean”,”object”,”function” 和 “undefined”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-number">123</span>); <span class="hljs-comment">//&quot;number&quot;</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;123&quot;</span>); <span class="hljs-comment">//&quot;string&quot;</span><br></code></pre></td></tr></table></figure>
+<h4 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h4><p>instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><span class="hljs-built_in">console</span>.log(list <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>); <span class="hljs-comment">//true</span><br><span class="hljs-built_in">console</span>.log(list <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Object</span>); <span class="hljs-comment">//true</span><br><span class="hljs-comment">//因为 Array 是 Object 的子类</span><br></code></pre></td></tr></table></figure>
+<p>具体说就是可以从来判断一个变量是否是某个类的实例,也可以用来判断在继承关系中某个类是否是一个实例的父类.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">worpress本地更新方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-14 14:24:13" itemprop="dateCreated datePublished" datetime="2020-03-14T14:24:13+08:00">2020-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:56:38" itemprop="dateModified" datetime="2021-01-13T23:56:38+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>因为某些众所周知的原因,wordpress没有办法自动在线更新.只能手动更新,具体方法：<a target="_blank" rel="noopener" href="https://www.kufanyun.com/idcnews/244.html">https://www.kufanyun.com/idcnews/244.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/08/145/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/08/145/" class="post-title-link" itemprop="url">git 使用总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-08 16:58:28" itemprop="dateCreated datePublished" datetime="2020-03-08T16:58:28+08:00">2020-03-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-18 22:47:31" itemprop="dateModified" datetime="2021-02-18T22:47:31+08:00">2021-02-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="git-使用总结"><a href="#git-使用总结" class="headerlink" title="git 使用总结"></a>git 使用总结</h2><h3 id="git-用户配置"><a href="#git-用户配置" class="headerlink" title="git 用户配置"></a>git 用户配置</h3><p>先设置好用户名和邮箱,这些信息会在 commit 记录中出现.之后再添加其他配置,方便使用.详细命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;lichen404&quot;</span>     <span class="hljs-comment">#填写用户名</span><br>git config --global user.email <span class="hljs-string">&quot;f360family@gmail.com&quot;</span>   <span class="hljs-comment">#填写用户邮箱</span><br>git config --global push.default simple<br>git config --global core.quotepath <span class="hljs-literal">false</span>   <span class="hljs-comment">#避免中文乱码</span><br>git config --global core.editor <span class="hljs-string">&quot;vim&quot;</span>   <span class="hljs-comment">#使用vim编辑提交信息</span><br></code></pre></td></tr></table></figure>
+<h3 id="配置-github"><a href="#配置-github" class="headerlink" title="配置 github"></a>配置 github</h3><p>生成 SSH key 并把它添加到 Github</p>
+<ol>
+<li> 进入 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></li>
+<li> 点击 New SSH key,你需要输入 Title 和 Key,但是你现在没有 key,往下看</li>
+<li> 打开 Git Bash</li>
+<li> 复制并运行 <code>rm -rf ~/.ssh/*</code>把现有的 ssh key 都删掉.</li>
+<li> 运行 <code>ssh-keygen -t rsa -b 4096 -C &quot;f360family@gmail.com&quot;</code>.</li>
+<li> 按回车三次,运行<code>cat ~/.ssh/id_rsa.pub</code>,得到一串东西,完整的复制这串东西.</li>
+<li> 回到上面第 <strong>2</strong> 步的页面.</li>
+<li> 在 Key 里粘贴刚刚你你复制的那串东西.</li>
+<li> 点击 Add SSH key</li>
+<li> 回到 Git Bash</li>
+<li> 运行<code>ssh -T git@github.com</code></li>
+</ol>
+<h3 id="git-的一些概念"><a href="#git-的一些概念" class="headerlink" title="git 的一些概念"></a>git 的一些概念</h3><ul>
+<li>  工作区：就是你在电脑里能看到的目录.</li>
+<li>  版本库： 工作区有一个隐藏目录.git,这个不算工作区,而是Git的版本库.</li>
+</ul>
+<p>git add 就是把文件添加进版本库,实际上是把文件修改添加到暂存区；</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/0-300x153.jpg" alt="0-300x153"></p>
+<p>而git commit 实际上就是把暂存区的所有内容提交到当前分支. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1-300x152.jpg" alt="1-300x152"></p>
+<h3 id="常用-git-操作"><a href="#常用-git-操作" class="headerlink" title="常用 git 操作"></a>常用 git 操作</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git init</td>
+<td>初始化当前目录为 git 仓库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看显示当前仓库文件状态,-s (summary) -b (branch),-sb 就是显示当前所有文件的状态</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>将文件添加到「暂存区」,表示要加到仓库里,<code>git add .</code>意思是把当前目录（.表示当前目录）里面的变动都加到「暂存区」</td>
+</tr>
+<tr>
+<td>git commit -m “message”</td>
+<td>将你 add 过的内容提交到仓库里,并添加注释信息,方便日后查阅.  - v verbose 显示更多信息</td>
+</tr>
+<tr>
+<td>git merge</td>
+<td>合并分支 Ex: git merge test</td>
+</tr>
+<tr>
+<td>git switch(git checkout)</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>创建分支 Ex:git branch x 参数 - D 删除分支</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看版本提交历史</td>
+</tr>
+<tr>
+<td>git rm</td>
+<td>从版本库中删除该文件,作用和git add 相反</td>
+</tr>
+<tr>
+<td><code>git reset --hard 版本号</code></td>
+<td>版本回退,<strong>注意这个操作会使没有 commit 过的变动消失</strong></td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>查看所有版本提交历史,包含已经“删除”的版本</td>
+</tr>
+<tr>
+<td>git diff</td>
+<td>用于比较当前文件和暂存区文件的差异,暂存区文件就是你add过的文件</td>
+</tr>
+<tr>
+<td>git restore</td>
+<td>git restore 用来取代 git checkout 来实现撤销对工作区文件的修改,让文件回到最近一次git commit 或 git add 时的状态 Ex:git restore readme.txt.<code>git restore --staged</code>取代了 git reset HEAD ,可以把暂存区的修改撤销掉,重新放回工作区 Ex:git restore readme.txt –staged</td>
+</tr>
+</tbody></table>
+<h3 id="git-fetch-和-git-pull"><a href="#git-fetch-和-git-pull" class="headerlink" title="git fetch 和 git  pull"></a>git fetch 和 git  pull</h3><p>git fetch 是将远程主机的最新内容拉到本地但并不进行 merge，用户可以自行决定是否 merge。在取回更新后，会返回一个 FETCH_HEAD,指的是某个 branch 在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">log</span> -p FETCH_HEAD<br></code></pre></td></tr></table></figure>
+<p>可以通过这些信息来判断是否产生冲突，已确定是否将更新 merge 到当前分支。</p>
+<p>git pull 是将远程主机的最新内容拉到本地并直接合并，即 git pull = git fetch + git merge,这样可能会产生冲突,需要手动解决。</p>
+<h3 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h3><p>git rebase 可以把本地未 push 的分叉提交历史整理成直线</p>
+<h2 id="使用-Github"><a href="#使用-Github" class="headerlink" title="使用 Github"></a>使用 Github</h2><ul>
+<li><p>  关联远程仓库： Ex: <code>git remote add origin git@github.com:lichen404/jirengu.git</code> origin 为远程仓库的名称,可以修改,但通常使用这个</p>
+</li>
+<li><p>  提交代码： Ex: <code>git push origin master //提交本地 master 分支到远程仓库master分支</code> <code>git push origin master:test //提交本地 master 分支到远程仓库的test分支</code> 参数 -f 为强制提交,会覆盖远程仓库的版本 参数 -u 记住上次push的分支,下次避免重新输入,直接git push即可</p>
+</li>
+<li><p>  抓取远程仓库代码： Ex： <code>git pull origin master</code></p>
+</li>
+<li><p>  克隆仓库： Ex：<code>git clone git@github.com:lichen404/blog-test.git test</code> 克隆到 test 文件夹,为空则文件夹名称与 repo 名称相同</p>
+</li>
+</ul>
+<h3 id="Github-文件说明"><a href="#Github-文件说明" class="headerlink" title="Github 文件说明"></a>Github 文件说明</h3><ul>
+<li>  <strong>.gitingore</strong> 标识哪些文件应该被 git 忽略</li>
+<li>  <strong>README.md</strong> 代码说明</li>
+<li>  <strong>License</strong> 代码开源协议</li>
+</ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fix-conflict-300x192.png" alt="fix-conflict-300x192"></p>
+<p>当两条分支各自都有新的提交时,Git 无法执行”快速合并”(git merge),只能试图把各自的修改合并起来,但这种合并就可能会有冲突. 当 Git 无法自动合并分支时,就必须首先解决冲突.解决冲突后,再提交,合并完成. 解决冲突就是把 Git 合并失败的文件手动编辑为我们希望的内容,再提交.</p>
+<h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><p><strong>注意</strong>：工作区和暂存区是公共的.未 add 的内容不属于任何一个分支, 未 commit 的内容也不属于任何一个分支.当执行命令 <code>git checkout develop</code> 切换到 develop 分支时,如果之前的分支对文件有修改,也会将修改的文件信息带到 develop 分支上来. git stash 可以将你的修改临时储存起来,保证你的工作区是干净的,避免切换分支时你的修改被带到其他分支. <code>git stash list //查看被临时储存的修改</code></p>
+<h4 id="如何恢复："><a href="#如何恢复：" class="headerlink" title="如何恢复："></a>如何恢复：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git stash pop //恢复后,stash内容并不删除,你需要用git stash drop来删除<br>git stash apply //恢复的同时把stash内容也删了<br>git stash apply stash@&#123;0&#125;  //恢复指定的stash<br></code></pre></td></tr></table></figure>
+<p>####cherry-pick cherry-pick 命令让我们能复制一个特定的 commit 到当前分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git branch<br>* dev<br>  master<br>$ git cherry-pick 4c805e2<br>[master 1d4b803] fix bug 101<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br></code></pre></td></tr></table></figure>
+<h3 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h3><p>可以将 git 命令缩写,减少工作量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config --global alias.co checkout<br>$ git config --global alias.ci commit<br>$ git config --global alias.br branch<br>$ git config --global alias.unstage <span class="hljs-string">&#x27;reset HEAD&#x27;</span> //撤销add<br>$ git config --global alias.last <span class="hljs-string">&#x27;log -1&#x27;</span> //显示最近一次提交<br></code></pre></td></tr></table></figure>
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>配置Git的时候,加上<code>--global</code>是针对当前用户起作用的,如果不加,那只针对当前的仓库起作用. 每个仓库的Git配置文件都放在<code>.git/config</code>文件中. 当前用户的 Git 配置文件放在用户主目录下的一个隐藏文件<code>.gitconfig</code> 配置别名也可以直接修改这个文件,如果改错了,可以删掉文件重新通过命令配置.</p>
+<h3 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h3><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的 Git 教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://yonghaowu.github.io/2017/06/18/TheGitYouShouldKnow/">你们仍未掌握那天所学的 git 知识</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/" class="post-title-link" itemprop="url">Vue笔记 - 四个生命周期钩子</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-01 21:30:21" itemprop="dateCreated datePublished" datetime="2020-03-01T21:30:21+08:00">2020-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/Vue-%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">Vue 笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h3><p>每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如,需要设置数据监听、编译模板、将实例挂载到 DOM 并在数据变化时更新 DOM 等.同时在这个过程中也会运行一些叫做生命周期钩子的函数,这给了用户在不同阶段添加自己的代码的机会.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/lifecycle-404x1024.png" alt="lifecycle-404x1024"></p>
+<h4 id="验证四个生命周期钩子"><a href="#验证四个生命周期钩子" class="headerlink" title="验证四个生命周期钩子"></a>验证四个生命周期钩子</h4><p>通过具体的测试,证明四个生命周期钩子过程中,Vue都做了什么. <code>created</code> 实例出现在内存中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-title">created</span>(<span class="hljs-params"></span>)</span>&#123;<br>       store.commit(<span class="hljs-string">&#x27;fetchRecords&#x27;</span>);<br>       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;实例出现在内存中&#x27;</span>);<br>       <span class="hljs-keyword">debugger</span>;<br>   &#125;<br></code></pre></td></tr></table></figure>
+<p>页面中未渲染出任何元素</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/created-1-1024x702.png" alt="created-1-1024x702"></p>
+<p><code>mounted</code> 实例出现在页面中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span>&#123;<br>          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;实例出现在页面中&#x27;</span>);<br>          <span class="hljs-keyword">debugger</span>;<br>      &#125;<br><br></code></pre></td></tr></table></figure>
+<p>页面中元素已经被渲染出来了</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/mounted-1-1024x621.png" alt="mounted-1-1024x621"></p>
+<p> <code>updated</code> 实例更新了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-title">updated</span>(<span class="hljs-params"></span>)</span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;实例更新了&#x27;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>当我点击切换收入和支出时触发了data的更新,因此实例被重新局部渲染</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/updated-1-1024x529.png" alt="updated-1-1024x529"></p>
+<p><code>destroyed</code> 实例从页面和内存中消亡了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-title">destroyed</span>(<span class="hljs-params"></span>)</span>&#123;<br>          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;实例从页面和内存中消亡了&#x27;</span>)<br>      &#125;<br></code></pre></td></tr></table></figure>
+<p>刷新页面,实例重新生成和挂载</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/destroyed-1-1024x590.png" alt="destroyed-1-1024x590"></p>
+<h4 id="怎么证明Money实例在内存中也被销毁了"><a href="#怎么证明Money实例在内存中也被销毁了" class="headerlink" title="怎么证明Money实例在内存中也被销毁了"></a>怎么证明Money实例在内存中也被销毁了</h4><p>当我从 <code>/money</code>切换到 <code>/label</code> 时,Money 实例 destroyed ,从页面中消失了 </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/destroyed-2-1024x581.png" alt="destroyed-2-1024x581"></p>
+<p>而当我返回 <code>/money</code> ,Money实例重新生成和挂载了一遍,说明当 Money实例 destroyed 时,原来的 Money 实例在内存中也消失了.</p>
+<p> <img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/destroyed-3-1024x582.png" alt="destroyed-3-1024x582"></p>
+<hr>
+<p>参考： <a href="'https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90'">Vue官方文档：实例生命周期钩子</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/07/23/81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/23/81/" class="post-title-link" itemprop="url">Python待学习内容</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-23 17:19:00" itemprop="dateCreated datePublished" datetime="2019-07-23T17:19:00+08:00">2019-07-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 22:59:33" itemprop="dateModified" datetime="2021-01-13T22:59:33+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41020281/article/details/79638370">https://blog.csdn.net/qq_41020281/article/details/79638370</a> __new__方法与__init__方法</li>
+<li>  <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference?answertab=votes#tab-top">https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference?answertab=votes#tab-top</a> Python参数传递</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/doublexi/p/8745792.html">https://www.cnblogs.com/doublexi/p/8745792.html</a> 赋值与深浅拷贝</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c1e561d8ca7c">https://www.jianshu.com/p/c1e561d8ca7c</a> 深浅拷贝</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/Archmage/p/7569817.html">https://www.cnblogs.com/Archmage/p/7569817.html</a> python变量 闭包 变量作用域LEGB原则</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/huchong/p/8244279.html">https://www.cnblogs.com/huchong/p/8244279.html</a> 单例模式</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
 <script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
-            <div class="main">
-                
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/logo.png"></a>
+
         </div>
-        <div class="nickname">Li Chen</div>
-        <div class="description"><p>Tuyo:<em>El castillo, la torre yo soy.La espada que guarda el caudal</em>.</p>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Li Chen</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="RSS" href="/atom.xml">
-                        
-                        
-                            <i class="iconfont icon-rss"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/lichen404">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
 </div>
 
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
 
+      </div>
 
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
-
 </html>

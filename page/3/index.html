@@ -1,174 +1,1222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <meta name="author" content="Li Chen">
-
-
-
-
-
-<title>李晨的博客</title>
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
+  <meta property="og:type" content="website">
+<meta property="og:title" content="李晨的博客">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="李晨的博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Li Chen">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
+<link rel="canonical" href="http://example.com/page/3/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
 
-    
-    
-        
-    
+  <title>李晨的博客</title>
+  
 
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">李晨的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-</header>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/04/18/77/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/77/" class="post-title-link" itemprop="url">无线网卡监听模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-18 06:51:00" itemprop="dateCreated datePublished" datetime="2019-04-18T06:51:00+08:00">2019-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:03:37" itemprop="dateModified" datetime="2021-01-13T23:03:37+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>监听模式（monitor mode）,或 RFMON（Radio Frequency MONitor）,是指无线网卡可以接收所有经过它的数据流的工作方式,对应于IEEE 802.11网卡的其他模式,诸如Master（路由器）、Managed（普通模式的网卡）、Ad-hoc等.监听模式不区分所接收数据包的目标MAC地址,这点和混杂模式类似.然而,和混杂模式不同的是,监听模式的不需要和无线接入点（AP）或Ad-hoc网络建立连接.监听模式是无线网卡特有的特殊模式,而混杂模式应用于有线网卡和无线网卡.</p>
+<p>监听模式通常用于网络发现、流量监听和分组分析.Linux、Mac OS X、Windows以及其他Unix-like平台有使用监听模式的网络发现、抓包工具,如KisMAC、Kismet、Wireshark、Aircrack-NG等.</p>
+<p>无线网络的特性可能让人联想到古老的集线器（Hub）网络,在集线器网络中,所有通过集线器的数据都会被转发给该集线器所有的接口,也就是说,只要连接在该集线器上的机器,就可以监听该网络上的所有机器的网络通信.默认情况下,网卡只会接受发给自己的数据报文,将其他的报文统统丢弃.当然也可以让网卡接受所有的报文,这就是所谓的混杂模式（promiscuous mode）.</p>
+<p>无线网卡跟这个很类似,默认情况下无线网卡和无线接入点（Wireless Access Point,WAP）建立连接后,就处于托管模式（Managed mode）,在这个模式下,无线网卡只专注于接受从 WAP 发给自己的数据报文.如果想让无线网卡监听空气中所有的无线通信,则可以将无线网卡设置成监听模式（Monitor mode,也叫 RFMON 模式）,然后再使用诸如 Wireshark 之类的软件捕获数据报文进行分析.</p>
+<p>无线网卡除了 Managed mode 和 Monitor mode 这两个模式之外,其实还支持好几种其他的模式,譬如：Ad hoc（也叫 IBSS 模式） 和 Master mode ,Linux Wireless 站点上对此有详细的介绍,也可以参考 Chris 的 《Wireshark 数据包分析实战》第 11 章,下面附一张无线网卡的几种工作模式的示意图.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4107977739-190x300.png" alt="4107977739-190x300"></p>
+<hr>
+<p>转自</p>
+<ul>
+<li>  维基百科 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F">监听模式</a></li>
+<li>CSDN <a target="_blank" rel="noopener" href="https://blog.csdn.net/whatday/article/details/88796508">无线网络分析监听</a><br>  侵删</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/04/18/73/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/73/" class="post-title-link" itemprop="url">用pyecharts统计天气数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-18 06:24:00" itemprop="dateCreated datePublished" datetime="2019-04-18T06:24:00+08:00">2019-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:56:38" itemprop="dateModified" datetime="2021-01-13T23:56:38+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前在知乎上看到了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57783355">每天起床第一句,太阳公公在哪里——用pyecharts研究天气</a>这篇文章,我注意到了文中提及的<a target="_blank" rel="noopener" href="http://www.tianqihoubao.com/">天气后报</a>网站.我在上面看到了我家这边的天气数据,从2011年到今天的都有.so 我也想搞来做个图表之类的来看一下.Let’s do it. </p>
+<p>先搞个多线程爬虫,把数据格式化后存储在 MongoDB 里面. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3484431250.png" alt="3484431250"></p>
+<p>搞定了,然后写代码来生成与知乎文章类似的词云,折线图和饼图.代码太多,我这里只截取一小部分.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/966804010-768x356.png" alt="966804010-768x356"></p>
+<p> 然后让我们来看看生成的图表吧.我家这边算是地处中原吧,秦岭-淮河一线附近,按道理说算是不冷不热.不过在历年气温上也能看到历史温度高达39度,夏天基本也有很多时候是30多度的高温.冬天虽说温度不算很低,但是很多地方都没有暖气,其实也挺冷的.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/884598495-768x384.png" alt="884598495-768x384"></p>
+<p> 晴雨天数估计是BUG了,18年晴天数有点夸张.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2529365067-768x384.png" alt="2529365067-768x384"></p>
+<p> 再来看看天气占比,最近几年感觉我家这边冬季也会有那种雾霾天气.不过在雾霾天在图表上显示的占比很小,霾天在将近10年的时间内实际只有2天.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3159919581-768x384.png" alt="3159919581-768x384"></p>
+<p>最后看下六月份的天气词云吧.跟我想的有点不一样,我的印象里六月是经常下大雨,打雷闪电的季节.但是实际上下大雨打雷的次数并不多.下雨多是阵雨,小雨,大雨跟暴雨次数很少.这也比较符合地理位置的气候吧,毕竟年降雨量也就那么多.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3525669193-768x476.png" alt="3525669193-768x476"></p>
+<p> 不过我发现2015年6月份连着下了三天的大雨,不过我一点印象都没有…</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/563266257.png" alt="563266257"></p>
+<hr>
+<p>关于爬虫和生成图表的代码可以去我的GitHub下载,<a target="_blank" rel="noopener" href="https://github.com/lichen404/weatherSpider">链接</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/21/61/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/21/61/" class="post-title-link" itemprop="url">小诗一首</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-21 07:07:00" itemprop="dateCreated datePublished" datetime="2019-03-21T07:07:00+08:00">2019-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:18:23" itemprop="dateModified" datetime="2021-01-13T23:18:23+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="煤的对话"><a href="#煤的对话" class="headerlink" title="煤的对话"></a>煤的对话</h2><p>艾青</p>
+<p>你住在哪里？</p>
+<p>我住在万年的深山里</p>
+<p>我住在万年的岩石里</p>
+<p>你的年纪——</p>
+<p>我的年纪比山的更大</p>
+<p>你从什么时候沉默的？</p>
+<p>从恐龙统治了森林的年代</p>
+<p>从地壳第一次震动的年代</p>
+<p>你已死在过深的怨愤里了么？</p>
+<p>死？不,不,我还活着——</p>
+<p>请给我以火,给我以火！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/04/55/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/04/55/" class="post-title-link" itemprop="url">解决本地调试AJAX的跨域问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-04 05:29:00" itemprop="dateCreated datePublished" datetime="2019-03-04T05:29:00+08:00">2019-03-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:29:26" itemprop="dateModified" datetime="2021-01-13T23:29:26+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近在学习前端的过程中因为用到了AJAX,所以要在本地调试.但是令人X疼的是即使是在本地,也会遇到跨域问题.因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2666391080-300x98.png" alt="2666391080-300x98"></p>
+<p>但其实浏览器本身是接收到了数据的,但是出于浏览器<code>同源策略</code>的限制,我们不能看到数据.如果你不了解浏览器的同源策略,下面有简单的解释：<br>简单来说,同源策略就是浏览器出于安全考虑,限制了JavaScript 脚本在不同网站页面的运行,避免不同网站的代码相互影响.下面是同源页面的判定规则：</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Outcome</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://store.company/dir2/other.html">http://store.company/dir2/other.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com/dir/inner/another.html">http://store.company.com/dir/inner/another.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://store.company.com/secure.html">https://store.company.com/secure.html</a></td>
+<td>Failure</td>
+<td>Different protocol</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com:81/dir/etc.html">http://store.company.com:81/dir/etc.html</a></td>
+<td>Failure</td>
+<td>Different port</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://news.company.com/dir/other.html">http://news.company.com/dir/other.html</a></td>
+<td>Failure</td>
+<td>Different host</td>
+</tr>
+</tbody></table>
+<p>**简单来说就是要同域名,同端口,同协议才算是“同源”.**我在CSDN找到了我觉得比较完美解决本地调试的办法.</p>
+<ol>
+<li> 升级Chrome到最新版本或下载最新版本的浏览器</li>
+<li> 创建一个调试用的Chrome快捷方式,右键选择Chrome快捷方式,在弹出的右键菜单中选择”创建快捷方式”,重命名新建的快捷方式为Chrome-Debug.</li>
+<li> 打开Chrome-Debug快捷方式属性,右键选择Chrome-Debug快捷方式,右键菜单中选择”属性”,打开Chrome-Debug快捷方式属性设置对话框.</li>
+<li> 增加启动参数,在目标后面增加如下的启动参数：–user-data-dir=”c:ChromeDebug” –test-type –disable-web-security ,点”确定”按钮保存设置.完整的目标内容如下所示：”C:Program Files (x86)GoogleChromeApplicationchrome.exe” –user-data-dir=”c:ChromeDebug” –test-type –disable-web-security (注意 每个–前面都有一个空格)</li>
+<li> 打开Chrome-Debug.因为启动参数中增加了–user-data-dir=”c:ChromeDebug”,表示Chrome会从c:ChromeDebug中存取用户数据,因该目录可能为空,所以新打开的Chrome-Debug窗口是一个全新的Chrome,没有书签、历史、扩展程序等内容,需要再重新安装扩展程序.</li>
+<li> 再次打开之前出错的程序,就可以发现Ajax已经可以正常跨域访问了.</li>
+</ol>
+<hr>
+<p>具体内容可查看:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41802303/article/details/80666933">chrome浏览器开启Ajax跨域访问调试</a>,侵删.</p>
+<p> <strong>2020-3-1 更新：不应该使用file协议打开html文件,请使用 Parcel 建立本地服务器访问.同源问题可以通过JSONP或CORS解决.</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/02/16/48/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/16/48/" class="post-title-link" itemprop="url">罗技K480键盘使用指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-02-16 23:16:00" itemprop="dateCreated datePublished" datetime="2019-02-16T23:16:00+08:00">2019-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:54:19" itemprop="dateModified" datetime="2021-01-13T23:54:19+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="写在前面："><a href="#写在前面：" class="headerlink" title="写在前面："></a>写在前面：</h3><p>最近新买了 iPad pro 10.5+apple pencil,寻思着就差个键盘凑齐“生产力工具”了（手动滑稽）<br>加上我正好逛贴吧薅羊毛看到京东备件库有95新的K480键盘,比原价便宜四成,于是赶紧入手了一把.<br>入手价：82元+6元运费=88元,看下使用效果图：</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2035927978-300x225.jpg" alt="2035927978-300x225"></p>
+<p>使用效果确实不错,我用键盘蓝牙连接 iPad 和电脑,基本可以用按钮实现无缝切换.输入也感觉不到任何的延迟,用起来很流畅.</p>
+<hr>
+<p>我把罗技官网的快捷键提示搬运过来,方便查阅.顺便测试一下,看下 iPad 的快捷键是否都能正常使用.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fkey-table-german-0.png" alt="fkey-table-german-0"></p>
+<p>图中下面有叉号的即为不能正常使用.del 键不知道有什么用,删除字符用的是下面的 back 键,windows 跟 iOS 都是这样,有点奇怪.</p>
+<p>再来试试功能键：<img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fkey-table-german.png" title="功能键测试"></p>
+<p>功能键均能正常使用,iPad 对应最下面的 iOS.</p>
+<hr>
+<p>我是在 iPad pro 10.5 ,iOS 12的系统下测试得到的结果,不能保证所有 iPad 都是一样的效果.以上的测试结果仅供参考.总而言之,K480确实很适合在拥有多设备的情况下使用,切换几乎无延迟.电脑,手机,iPad,一个键盘就够了.最近我即使用电脑也在使用这个键盘,以前的机械键盘都已经在吃灰了.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/01/09/45/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/09/45/" class="post-title-link" itemprop="url">斐讯K3C路由器的一个安全漏洞</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-09 02:06:00" itemprop="dateCreated datePublished" datetime="2019-01-09T02:06:00+08:00">2019-01-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近偶然发下之前在转转上收的K3C竟然默认开启了WPS功能(Wi-Fi Protected Setup),而且我在官改的固件中也找不到关闭的按钮.正好我手上有块支持Kali linux无线破解的网卡,我决定测试一下,使用Kali linux上的reaver来爆破pin码,看看斐讯有没有做这方面的防护.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4131968415.jpg" alt="4131968415"></p>
+<p>可以看到,路由器默认开启了WPS功能,并且pin码竟然默认为12345670,直接跑出了密码.虽说现在使用这种方法破解路由器已经有点过时,但这也算是一个不大不小的漏洞.因为我手上只有一台刷了官改固件K3C,不知道这是我这一台机器的情况,还是都是这样的,也不清楚是官改固件的问题还是都是这样的.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1828136325.jpg" alt="1828136325"></p>
+<p>在cdlinux上使用minidwep也是一样的结果.后来我在恩山无线论坛上找到了比较靠谱的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">winscp找到&#x2F;opt&#x2F;lantiq&#x2F;wave&#x2F;confs&#x2F;hostapd_wlan0.conf、<br>&#x2F;opt&#x2F;lantiq&#x2F;wave&#x2F;confs&#x2F;hostapd_wlan2.conf这两个文件,<br>将里面的wps_state&#x3D;2改成wps_state&#x3D;0然后重启即可<br></code></pre></td></tr></table></figure>
+<hr>
+<p>附上原答案链接：<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=341654&page=2#pid3135592">K3C 如何关闭wps功能</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/09/13/35/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/13/35/" class="post-title-link" itemprop="url">最短路径问题：Floyd算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-13 06:57:00" itemprop="dateCreated datePublished" datetime="2018-09-13T06:57:00+08:00">2018-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/446556475.png" alt="446556475"></p>
+<p>暑假,小哼准备去一些城市旅游.有些城市之间有公路,有些城市之间则没有,如下图.为了节省经费以及方便计划旅程,小哼希望在出发之前知道任意两个城市之前的最短路程.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/673917683.png" alt="673917683"></p>
+<p>上图中有4个城市8条公路,公路上的数字表示这条公路的长短.请注意这些公路是单向的.我们现在需要求任意两个城市之间的最短路程,也就是求任意两个点之间的最短路径.这个问题这也被称为“多源最短路径”问题.  </p>
+<p>现在需要一个数据结构来存储图的信息,我们仍然可以用一个4*4的矩阵（二维数组e）来存储.比如1号城市到2号城市的路程为2,则设e[1] [3]的值为2.2号城市无法到达4号城市,则设置e[2] [4]的值为∞.另外此处约定一个城市自己是到自己的也是0,例如e[1] [5]为0,具体如下.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2450790867.png" alt="2450790867"></p>
+<p> 我们来想一想,根据我们以往的经验,如果要让任意两点（例如从顶点a点到顶点b）之间的路程变短,只能引入第三个点（顶点k）,并通过这个顶点k中转即a-&gt;k-&gt;b,才可能缩短原来从顶点a点到顶点b的路程.那么这个中转的顶点k是1~n中的哪个点呢？甚至有时候不只通过一个点,而是经过两个点或者更多点中转会更短,即a-&gt;k1-&gt;k2b-&gt;或者a-&gt;k1-&gt;k2…-&gt;k-&gt;i…-&gt;b.比如上图中从4号城市到3号城市（4-&gt;3）的路程e[4] [7]原本是12.如果只通过1号城市中转（4-&gt;1-&gt;3）,路程将缩短为11（e[4] [1]+e[1] [3]=5+6=11）.其实1号城市到3号城市也可以通过2号城市中转,使得1号到3号城市的路程缩短为5（e[1] [2]+e[2] [3]=2+3=5）.所以如果同时经过1号和2号两个城市中转的话,从4号城市到3号城市的路程会进一步缩短为10.通过这个的例子,我们发现每个顶点都有可能使得另外两个顶点之间的路程变短.好,下面我们将这个问题一般化. 当任意两点之间不允许经过第三个点时,这些城市之间最短路程就是初始路程,如下.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3738937906.png" alt="3738937906"></p>
+<p> 假如现在只允许经过1号顶点,求任意两点之间的最短路程,应该如何求呢？只需判断e[i] [1]+e[1] [j]是否比e[i] [j]要小即可.e[i] [j]表示的是从i号顶点到j号顶点之间的路程.e[i] [1]+e[1] [j]表示的是从i号顶点先到1号顶点,再从1号顶点到j号顶点的路程之和.其中i是1<del>n循环,j也是1</del>n循环,代码实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">for(i&#x3D;1;i3-&gt;…-&gt;1-&gt;2-&gt;3这样路径中,每绕一次1-&gt;-2&gt;3这样的环,最短路就会减少1,永远找不到最短路.其实如果一个图中带有“负权回路”那么这个图则没有最短路.<br></code></pre></td></tr></table></figure>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1975616114.png" alt="1975616114"></p>
+<p><strong>我理解的Floyd算法原理：通过遍历每一个结点与其他所有结点可能存在的路径,取其中的最小值（通过遍历其他所有结点,使其充当中介结点与当前路径比较来实现）,从而获得所有点之间的最短路径.原理说起来比较难懂,看前边的算法实现就明白了.</strong></p>
+<hr>
+<p>本文转自:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34374664/article/details/52261672">傻子也能看懂的弗洛伊德算法（转）</a> 侵删<br>本人水平有限,有错误的地方请指正,谢谢！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/09/12/33/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/12/33/" class="post-title-link" itemprop="url">最短路径问题：Dijkstra算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-12 08:53:00" itemprop="dateCreated datePublished" datetime="2018-09-12T08:53:00+08:00">2018-09-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><p>算法思路：</p>
+<ol>
+<li> Dijkstra算法采用的是一种贪心的策略,声明一个数组dis来保存源点到各个顶点的最短距离和一个保存已经找到了最短路径的顶点的集合：T,初始时,原点 s 的路径权重被赋为 0 （dis[s] = 0）.若对于顶点 s 存在能直接到达的边（s,m）,则把dis[m]设为w（s, m）,同时把所有其他（s不能直接到达的）顶点的路径长度设为无穷大.初始时,集合T只有顶点s.</li>
+<li> 然后,从dis数组选择最小值dis[i]（vi ∈V-S ）,则该值就是源点s到该值对应的顶点的最短路径,并且把该点加入到T中,OK,此时完成一个顶点.</li>
+<li> 然后,我们需要看看新加入的顶点是否可以到达其他顶点并且看看通过该顶点到达其他点的路径长度是否比源点直接到达短,如果是,那么就替换这些顶点在dis中的值.</li>
+<li> 然后,又从dis中找出最小值dis[i]（vi ∈V-S ）,重复上述动作,直到T中包含了图的所有顶点.</li>
+</ol>
+<p>个人理解原理：</p>
+<p><strong>直接连接的权值最小值一定比多结点连接小（权值均为正）,多结点连接的权值最小值一定比更多结点连接小</strong>,这样便可确定两点路径的最小值</p>
+<p>例如：</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/191263841.png" alt="191263841"></p>
+<p>首先第一步,我们先声明一个dis数组,该数组初始化的值为：  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3399450281.png" alt="3399450281"></p>
+<p>我们的顶点集T的初始化为：T={v1},选取dis数组中的最小值,将结点加入T,则V1到V3的最短距离即为10.因为是dis数组当前的最小值,对于比大的边来说,之后不可能让V1通过他们获得比值更小的路径,因为权值均为正.特别的,对于值为无穷大的路径,之后其路径值必大于当前的最小路径,因为这些结点间即使存在路径,也是通过当前存在路径的结点沟通起来的,其路径值必然大于当前的最小路径值.多结点连接同理.</p>
+<p><strong>为什么Dijkstra算法中不能有负权值？</strong><br>因为如果允许有负权值,可能出现当与S内某点（记作a）以负边相连的点（记作b）确定最短路径时,它的最短路径长度加上这条负边的权值结果小于a原先确定的最短路径长度.而此时a无法更新.因为新的vi 必须从顶点集合V-S中选出,因此a的dist不可能被刷新.</p>
+<hr>
+<p>部分内容转自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35644234/article/details/60870719">最短路径问题—Dijkstra算法详解</a> 侵删<br>本人水平有限,有错误的地方请指正,谢谢！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/04/20/29/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/20/29/" class="post-title-link" itemprop="url">下载站已开启（换服务器了,下载站已关闭）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-04-20 00:41:00" itemprop="dateCreated datePublished" datetime="2018-04-20T00:41:00+08:00">2018-04-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:56:38" itemprop="dateModified" datetime="2021-01-13T23:56:38+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="下载站域名：dl-stayw1thme-xyz"><a href="#下载站域名：dl-stayw1thme-xyz" class="headerlink" title="下载站域名：dl.stayw1thme.xyz"></a>下载站域名：dl.stayw1thme.xyz</h2><p>下载站用的是H5ai,在默认设置下我稍微做了一点点修改.必须吐槽下,这个软件的详细使用教程几乎没有,很多东西说的不明不白的.搞得我修改个Title都弄了半天.还有一些细节有待完善,比如添加目录说明等等. 下载站全站使用又拍云CDN缓存,不然我这腾讯云1M小水管根本不够用.反正又拍云的优惠券不用白不用,干脆就用来缓存下载站.另外我专门申请了泛域名的HTTPS证书,也就是 *.stayw1thme.xyz类型的域名全部可以使用.给我的下载站也加上了HTTPS小绿锁.</p>
+<hr>
+<p>泛域名HTTPS证书申请配置参考教程：<a target="_blank" rel="noopener" href="https://ffis.me/experience/1261.html">泛域名野卡证书配置笔记</a><br>H5ai安装配置教程参考：<a target="_blank" rel="noopener" href="http://www.senra.me/h5ai-a-modern-http-web-server-index-setup-and-modify/comment-page-1/">H5ai——一个强大美观的目录列表程序</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/03/27/24/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/27/24/" class="post-title-link" itemprop="url">黑板课爬虫闯关</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-03-27 23:08:00" itemprop="dateCreated datePublished" datetime="2018-03-27T23:08:00+08:00">2018-03-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>大一的时候发现的一个比较有意思的网站:<a target="_blank" rel="noopener" href="http://www.heibanke.com/lesson/crawler_ex00/">黑板课爬虫闯关</a>,可以用来Python练手.当时我只做了前两关,第三关因为觉得登陆完跳转莫名奇妙的,就没再做下去.最近又看到了这个闯关题目于是抽空通关了一下.</p>
+<hr>
+<p>先看下自己大一写的代码,真的惨不忍睹：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> request<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-keyword">import</span> re<br>num=<span class="hljs-number">1</span><br>url=<span class="hljs-string">&quot;http://www.heibanke.com/lesson/crawler_ex00/&quot;</span><br><span class="hljs-keyword">while</span>(num):f=request.Request(url)<br>page=request.urlopen(f)<br>soup=BeautifulSoup(page,<span class="hljs-string">&#x27;html.parser&#x27;</span>,from_encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>content=soup.find_all(<span class="hljs-string">&#x27;h3&#x27;</span>)<br>content=<span class="hljs-built_in">str</span>(content)<br>p=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">&#x27; ]+&gt;&#x27;</span>)<br>content=p.sub(<span class="hljs-string">&quot;&quot;</span>,content)<br>print(content)<br>num=re.findall(<span class="hljs-string">r&quot;\d+\.?\d*&quot;</span>,content)<br>num=<span class="hljs-built_in">str</span>(num)<br>print(num)<br>num=re.sub(<span class="hljs-string">r&quot;\D&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,num)<br>url=<span class="hljs-string">&#x27;http://www.heibanke.com/lesson/crawler_ex00/&#x27;</span><br>url+=num<br></code></pre></td></tr></table></figure>
+<ol>
+<li><p>第一关没啥好说的.就是不断的请求网页,拼接URL直到获得Flag就好了. </p>
+</li>
+<li><p>第二关加了账户和密码,也很简单,就是一个POST Method,怎么实现都行. </p>
+</li>
+<li><p>第三关,就是我当时放弃的那关.当时我发现登录后会跳转到黑板课记账的页面,不明所以,于是就没再做了,其实只要再按浏览器返回键就好了…  </p>
+<p>这一关加了CSRFTOKEN验证和登录操作.首先要登录黑板课网站,然后才能进行闯关.而闯关页面多两层保护的意思其实就是登录黑板课网站和闯关都需要CSRFTOKEN,CSRFTOKEN从cookies里取或者直接爬网页标签里的都可以. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2643224345.jpg" alt="2643224345"></p>
+<p>也就是说登录黑板课之前要获取CSRFTOKEN,然后与你的账户密码一块POST,闯关页面同理,也要先获取CSRF字段,注意两个CSRF字段值是不一样的.</p>
+</li>
+<li><p>第四关,在第三关的基础上又加了多线程.随便输一个账户密码进去,会提示你密码可以在一个链接里找,打开链接是密码位置与值对应的一个表,总共有13页.而这个网站载入又贼慢,就是想让你用多线程的方法去访问.<strong>注意访问不要太频繁,同时开的线程太多,网站会无法访问.</strong><br>拼接好密码再加上用户名和csrftoken访问即可.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/190579856.jpg" alt="190579856"></p>
+<p>Bingo!整100位的密码,不过为啥我用了多线程还是花了这么长时间… </p>
+</li>
+</ol>
+<p>​    5.最后一关,在第三关的基础上加了验证码.我不会图像识别,于是直接暴力人工打码了,希望以后能有更优雅的实现. 所有代码：</p>
+<ul>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/1.py">第一关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/2.py">第二关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/3.py">第三关</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/4.py">第四关</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/lichen404/Python/blob/master/5.py">第五关</a></p>
+<hr>
+</li>
+</ul>
+<p>因为很多时候只是为了得到运行结果,并且都是半夜写的！代码写的并不是很Pythonic.以后还是尽量要把代码写的简洁优雅,追求可读性高的写法.最起码以后看的时候不会那么难受,这也算是一个小小的目标吧.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
 <script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
-            <div class="main">
-                
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/logo.png"></a>
+
         </div>
-        <div class="nickname">Li Chen</div>
-        <div class="description"><p>Tuyo:<em>El castillo, la torre yo soy.La espada que guarda el caudal</em>.</p>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Li Chen</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="RSS" href="/atom.xml">
-                        
-                        
-                            <i class="iconfont icon-rss"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/lichen404">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
 </div>
 
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
 
+      </div>
 
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
-
 </html>

@@ -1,174 +1,1293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <meta name="author" content="Li Chen">
-
-
-
-
-
-<title>李晨的博客</title>
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
+  <meta property="og:type" content="website">
+<meta property="og:title" content="李晨的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="李晨的博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Li Chen">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
+<link rel="canonical" href="http://example.com/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
 
-    
-    
-        
-    
+  <title>李晨的博客</title>
+  
 
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Lichen&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">李晨的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Lichen&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-</header>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">mobX 学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-01 10:37:39" itemprop="dateCreated datePublished" datetime="2021-03-01T10:37:39+08:00">2021-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-02 15:08:35" itemprop="dateModified" datetime="2021-03-02T15:08:35+08:00">2021-03-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.ts<br>import &#123; observable, action &#125; from &#39;mobx&#39;;<br>export default class ActivityStore &#123;<br>  @observable activityList: Array &#x3D; [];<br><br>  @action.bound fetchActivityList() &#123;<br>    return fetch(&quot;&#x2F;activity&quot;).then(<br>      action(data &#x3D;&gt; &#123;                 &#x2F;&#x2F;用 action 在then后继续绑定当前实例<br>        this.activityList &#x3D; this.activityList.concat(data)<br>      &#125;)<br>    );<br>  &#125;<br><br>&#125;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 收集所有store于 stores.ts<br>import ActivityStore from &quot;.&#x2F;activityStore&quot;<br>const storeContext &#x3D; React.createContext(&#123;<br>  activityStore: new ActivityStore()<br>&#125;)<br>const useStores &#x3D; () &#x3D;&gt; React.useContext(storeContext);  &#x2F;&#x2F; 利用 context hook<br>export default useStores;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 任何一个需要store的组件,例如 Activity.tsx<br>import React, &#123; useEffect &#125; from &quot;react&quot;<br>import useStores from &#39;.&#x2F;stores&#39;<br>import &#123;observer&#125; from &quot;mobx-react&quot;<br><br>export default observer(function Activity() &#123;  &#x2F;&#x2F; 套上obeserver<br>  const &#123; activityStore &#125; &#x3D; useStores();  &#x2F;&#x2F; 在 React 里 use 一切<br><br>  useEffect(() &#x3D;&gt; &#123;<br>    activityStore.fetActivityList().then(() &#x3D;&gt;<br>      console.log(&quot;fetch OK!&quot;)<br>    &#125;)<br>  &#125;, [])<br><br>  return &lt;div&gt;activityStore.activityList.map(activity &#x3D;&gt; activity.name)&lt;&#x2F;div&gt;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<p>我在项目里采用的也是这种使用方式，接下来总结下 mobx 和 mobx-react 的主要 api：</p>
+<h3 id="observable"><a href="#observable" class="headerlink" title="@observable"></a>@observable</h3><p>observable 是一种让数据的变化可以被观察的方法，底层是通过和 Vue 2 相同的 Object.defineProperty() 来实现的，把该属性转化成 getter /setter。在 Mobx 5 中，使用 es6 中的 proxy 的来实现数据的变化监听，从而避免出现了跟 Vue2 中一样的问题。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/list.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">Vue不能检测数组和对象的变化</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html#mobx-4-%E5%8F%8A%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC-%E9%94%99%E8%AF%AF%E7%9A%84-%E4%BD%BF%E7%94%A8-observable-%E5%AF%B9%E8%B1%A1%E8%BF%98%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%B1%9E%E6%80%A7">[Mobx 4 及以下版本]错误的：使用 observable 对象还不存在的属性</a></li>
+</ul>
+<h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><p>计算值是可以根据现有的状态或其他计算值衍生出的值。如果任何影响计算值的值发生变化了，计算值将根据状态自动更新。</p>
+<h3 id="autorun"><a href="#autorun" class="headerlink" title="autorun"></a>autorun</h3><p>直译的意思就是自动运行，使用 autorun 时，所提供的函数会立即被触发一次，以观察哪些可观察数据被引用，然后每次它的依赖关系改变时会自动运行。autorun 的作用是在可观察数据被修改之后，自动去执行依赖可观察数据的行为，这个行为一直就是传入 autorun 的函数。</p>
+<p>传递给 autorun 的函数在调用后接受一个参数，即当前 reaction(autorun),可用于在执行期间清理 autorun</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> numbers = observable([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]);<br><span class="hljs-keyword">var</span> sum = computed(<span class="hljs-function">() =&gt;</span> numbers.reduce(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a + b, <span class="hljs-number">0</span>));<br><br><span class="hljs-keyword">var</span> disposer = autorun(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(sum.get()));<br><span class="hljs-comment">// 输出 &#x27;6&#x27;</span><br>numbers.push(<span class="hljs-number">4</span>);<br><span class="hljs-comment">// 输出 &#x27;10&#x27;</span><br><br>disposer();<br>numbers.push(<span class="hljs-number">5</span>);<br><span class="hljs-comment">// 不会再输出任何值。`sum` 不会再重新计算。</span><br></code></pre></td></tr></table></figure>
+<h3 id="autorun-和-computed"><a href="#autorun-和-computed" class="headerlink" title="autorun 和 computed"></a>autorun 和 computed</h3><ul>
+<li>它们都是响应式调用的表达式</li>
+<li>@computed 用于响应式的产生一个可以被其他 observer 使用的值,autorun 不产生新的值，而是达到一个效果(打印日志，发起网络请求等命令式的副作用)</li>
+<li>@computed 中如果一个计算值不再被观察了,MobX 可以自动地将其垃圾回收，而 autorun 中的值必须要手动清理才行</li>
+</ul>
+<h3 id="when"><a href="#when" class="headerlink" title="when"></a>when</h3><p>接收两个函数参数，第一个函数必须根据可观察数据来返回一个布尔值，当该布尔值为 true 时，才会去执行第二个函数，并且只会执行一次。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, when &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>when(<span class="hljs-function">() =&gt;</span> leo.bool, <span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;这是true&#x27;</span>)<br>&#125;)<br>leo.bool = <span class="hljs-literal">true</span><br><span class="hljs-comment">// 这是true</span><br></code></pre></td></tr></table></figure>
+<p><strong>注意</strong></p>
+<ol>
+<li>第一个参数，必须是根据<strong>可观察数据</strong>来返回的布尔值，而不是普通变量的布尔值。</li>
+<li>如果第一个参数默认值为 true ，则 when 函数会默认执行一次。</li>
+</ol>
+<h3 id="reaction"><a href="#reaction" class="headerlink" title="reaction"></a>reaction</h3><p>高级版的 autorun ，对于如何追踪 observable 赋予了更细粒度的控制。接受两个函数参数，第一个函数引用可观察数据，并返回一个可观察数据，作为第二个函数的参数。</p>
+<p>reaction 第一次渲染的时候，会先执行一次第一个函数，这样 MobX 就会知道哪些可观察数据被引用了。随后在这些数据被修改的时候，执行第二个函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, reaction &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>reaction(<span class="hljs-function">() =&gt;</span> [leo.str, leo.num], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>leo.str = <span class="hljs-string">&#x27;pingan&#x27;</span><br>leo.num = <span class="hljs-number">122</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br></code></pre></td></tr></table></figure>
+<p>这里我们依次修改 leo.str 和 leo.num 两个变量，会发现 reaction 方法被执行两次，在控制台输出两次结果 [“pingan”, 122] ，因为可观察数据 str 和 num 分别被修改了一次。</p>
+<p><strong>实际使用场景</strong></p>
+<p>当我们没有获取到数据的时候，没有必要去执行存缓存逻辑，当第一次获取到数据以后，就执行存缓存的逻辑。</p>
+<h3 id="action"><a href="#action" class="headerlink" title="@action"></a>@action</h3><p>action 是修改任何状态的东西，任何修改状态的函数都应该使用 @action。Mobx 6 的默认配置中 enforceActions 设置为 true，也就是说任何修改状态的操作都需要通过 action 来完成。</p>
+<h4 id="runInAction"><a href="#runInAction" class="headerlink" title="runInAction"></a>runInAction</h4><p>runInAction 是个简单的工具函数，它接收代码块并在(异步的)动作中执行。这对于即时创建和执行动作非常有用，例如在异步函数过程中。runInAction(f) 是 action(f)() 的语法糖。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, computed, reaction, action&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>&#123;<br>    @observable string = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable number = <span class="hljs-number">123</span>;<br>    @action.bound <span class="hljs-function"><span class="hljs-title">bar</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>        <span class="hljs-built_in">this</span>.number = <span class="hljs-number">100</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">let</span> store = <span class="hljs-keyword">new</span> Store()<br>reaction(<span class="hljs-function">() =&gt;</span> [store.string, store.number], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>runInAction(<span class="hljs-function">() =&gt;</span> &#123;<br>    store.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>    store.number = <span class="hljs-number">100</span><br>&#125;)<span class="hljs-comment">//[&quot;pingan&quot;, 100]</span><br></code></pre></td></tr></table></figure>
+<h3 id="observer"><a href="#observer" class="headerlink" title="observer"></a>observer</h3><p>observer 函数/装饰器 是由 mobx-react 提供的，可以把React 组件转换成响应式组件。它使用 autoRun 包装了组件的 render 函数以确保任何组件渲染中的使用的数据变化都可以强制刷新组件。而当数据没有变化时，它同样确保了组件不会重新渲染，类似于 React  PureComponent。</p>
+<p>所有渲染 observer 数据的组件都需要使用 observer 来确保数据变化时组件能够响应。需要注意的一个常见错误是：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html#mobx-%E5%8F%AA%E4%BC%9A%E4%B8%BA%E6%95%B0%E6%8D%AE%E6%98%AF%E7%9B%B4%E6%8E%A5%E9%80%9A%E8%BF%87-render-%E5%AD%98%E5%8F%96%E7%9A%84-observer-%E7%BB%84%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E8%BF%BD%E8%B8%AA">MobX 只会为数据是直接通过 render 存取的 observer 组件进行数据追踪</a></li>
+</ul>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>还有一些重要的内容我可能没有提及，文档中的这些部分也很有必要阅读</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mobx.js.org/react-integration.html">React 集成</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/pitfalls.html">常见陷阱与最佳实践</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react-performance.html">优化 React 组件渲染</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/best/react.html">MobX 会对什么作出反应</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/refguide/array.html">Observable 数组</a></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在使用了 mobx 之后，总有种在使用 Vue 的感觉。mobx 跟 Vue 的原理是很相似的,它们的数据响应式实现原理是一致的。Vue 2 跟 mobX 4 使用了 Object.defineProperty ,Vue 3 和 Mobx 5 使用了 Proxy。mobX 跟 Vue 的 api 也有点像，computed 跟 autorun，感觉有点类似 Vue 里的 computed 跟 watch。不过以上更多是个人的一点感想和总结,如果有不对的地方还请谅解，并给予指正。非常感谢！</p>
+<hr>
+<p>参考:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/">mobX 中文文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://mobx.js.org/README.html">mobX 英文文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/328612405/answer/928903420">Mobx真的好用吗？它有什么优缺点？主要适用于什么场景？ - Mayeths的回答 - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://mobx-react.js.org/recipes-context">React Context</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903977553756168#heading-22">MobX 简单入门教程</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">react-epic 笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-01 10:36:01" itemprop="dateCreated datePublished" datetime="2021-03-01T10:36:01+08:00">2021-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-02 15:08:35" itemprop="dateModified" datetime="2021-03-02T15:08:35+08:00">2021-03-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="解决控制台-MobX-警告"><a href="#解决控制台-MobX-警告" class="headerlink" title="解决控制台 MobX 警告"></a>解决控制台 MobX 警告</h3><p><code>MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed</code></p>
+<p>MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 action 包装的。在回调中修改 observable state 是无法通过 enforceActions 检查的。官方文档的解决办法是使用 Flow。但是因为需要用到 generator 和 yield，我选择使用了更简单的方法。</p>
+<p>使用  runInAction 包裹在回调函数中执行的修改操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs tsx">@action find() &#123;<br>        this.isLoading &#x3D; true;<br>        if (this.hasMore) &#123;<br>            Uploader.find(this.page, this.limit).then(<br>                (newList: any) &#x3D;&gt; &#123;<br>                    this.append(newList);<br>                    runInAction(()&#x3D;&gt;&#123;<br>                        this.page +&#x3D; 1;<br>                        if (newList.length &lt; this.limit) &#123;<br>                            this.hasMore &#x3D; false;<br>                        &#125;<br>                    &#125;)<br>                &#125;<br>            ).catch(() &#x3D;&gt; &#123;<br>                message.error(&#39;加载失败&#39;).then();<br>            &#125;)<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<h3 id="MobX-6-使用装饰器踩坑"><a href="#MobX-6-使用装饰器踩坑" class="headerlink" title="MobX 6 使用装饰器踩坑"></a>MobX 6 使用装饰器踩坑</h3><p>因为装饰器语法目前还不是 ES 的标准，所以 MobX 6  不再推荐使用，而更建议使用 makeObservable / makeAutoObservable 来代替。</p>
+<p>如果想要继续使用原来的写法，则需要在构造函数中添加 makeObservable(this)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs tsx">class Todo &#123;<br>    id &#x3D; Math.random()<br>    @observable title &#x3D; &quot;&quot;<br>    @observable finished &#x3D; false<br>    <br>    constructor() &#123;<br>        &#x2F;&#x2F; Mobx 6 版本需要加上这句话，才能实现响应式的状态更新<br>        makeObservable(this)<br>    &#125;<br><br>    @action<br>    toggle() &#123;<br>        this.finished &#x3D; !finished<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="React-lazy-和-suspense"><a href="#React-lazy-和-suspense" class="headerlink" title="React.lazy 和 suspense"></a>React.lazy 和 suspense</h3><p>React.lazy 可以实现组件的延迟加载，只有在组件渲染时再去加载包含引入路径的组件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tsx">const Home &#x3D; lazy(() &#x3D;&gt; import(&#39;.&#x2F;pages&#x2F;Home&#39;))<br></code></pre></td></tr></table></figure>
+<p>而在延迟加载的过程中会有 loading 的过程，suspend 可以控制在 loading 过程中的显示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&lt;Suspense fallback&#x3D;&#123;&lt;div&gt;Loading ...&lt;&#x2F;div&gt;&#125;&gt;<br>                    &lt;Switch&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;&quot; exact&gt;<br>                            &lt;Home&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;history&quot;&gt;<br>                            &lt;History&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;about&quot;&gt;<br>                            &lt;About&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;login&quot;&gt;<br>                            &lt;Login&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;register&quot;&gt;<br>                            &lt;Register&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                    &lt;&#x2F;Switch&gt;<br>                &lt;&#x2F;Suspense&gt;<br></code></pre></td></tr></table></figure>
+<h3 id="使用-antd"><a href="#使用-antd" class="headerlink" title="使用 antd"></a>使用 antd</h3><p>在使用 mobx 搭配 antd 时发现删除 HistoryStore.list 中的数据并没有触发 UI 更新。在 StackOverflow 我发现了这个<a href="%5Bhttps://stackoverflow.com/questions/64770762/mobx-since-strict-mode-is-enabled-changing-observed-observable-values-withou">回答</a>，解决了我的问题。</p>
+<p>原因是对于 mobx 来说，使用 proxy 的方式来监听数据变化。数据本身其实是不变的。在这种情况下，List 组件接受到的 props 内存地址并没有发生变化，所以并不会重新 render。所以使用  toJS 包裹参数，就能在每次 mobx 监听到 HistoryStore.list 变化，重新渲染 Table 组件时给 List 组件传一个新的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs tsx">const Table &#x3D; observer(() &#x3D;&gt; &#123;<br>    const &#123;HistoryStore&#125; &#x3D; useStore();<br>    const loadMore &#x3D; () &#x3D;&gt; &#123;<br>        HistoryStore.find();<br>    &#125;;<br>    useEffect(() &#x3D;&gt; &#123;<br>        return () &#x3D;&gt; &#123;<br>            HistoryStore.reset();<br>        &#125;;<br>    &#125;, [HistoryStore]);<br>    return (<br>        &lt;InfiniteScroll initialLoad&#x3D;&#123;true&#125; pageStart&#x3D;&#123;1&#125; loadMore&#x3D;&#123;loadMore&#125;<br>                        hasMore&#x3D;&#123;!HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore&#125; useWindow&#x3D;&#123;true&#125;&gt;<br>            &lt;ListWrapper dataSource&#x3D;&#123;toJS(HistoryStore.list)&#125; renderItem&#x3D;&#123;(item: any) &#x3D;&gt; &#123;<br>                return (&lt;List.Item key&#x3D;&#123;item.id&#125;&gt;<br><br>                    &lt;Img src&#x3D;&#123;item.attributes.image.attributes.url&#125; alt&#x3D;&quot;&quot;&#x2F;&gt;<br><br><br>                    &lt;h5&gt;&#123;item.attributes.filename&#125;&lt;&#x2F;h5&gt;<br><br><br>                    &lt;Href href&#x3D;&#123;item.attributes.image.attributes.url&#125; target&#x3D;&quot;_blank&quot;<br>                       rel&#x3D;&quot;noreferrer&quot;&gt;&#123;item.attributes.image.attributes.url&#125;&lt;&#x2F;Href&gt;<br>                    &lt;div &gt;<br>                        &lt;Button type&#x3D;&quot;primary&quot; onClick&#x3D;&#123;() &#x3D;&gt; HistoryStore.remove(item.id)&#125;&gt;删除图片&lt;&#x2F;Button&gt;<br>                    &lt;&#x2F;div&gt;<br>                &lt;&#x2F;List.Item&gt;);<br>            &#125;&#125;&gt;<br>                &#123;HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore &amp;&amp; (<br>                    &lt;Loading&gt;<br>                        &lt;Spin tip&#x3D;&quot;加载中&quot;&#x2F;&gt;<br>                    &lt;&#x2F;Loading&gt;<br>                )&#125;<br>            &lt;&#x2F;ListWrapper&gt;<br>        &lt;&#x2F;InfiniteScroll&gt;<br><br><br>    );<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="学习使用-MobX"><a href="#学习使用-MobX" class="headerlink" title="学习使用 MobX"></a>学习使用 MobX</h3><hr>
+<p>总结</p>
+<ul>
+<li>[<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/64770762/mobx-since-strict-mode-is-enabled-changing-observed-observable-values-withou">https://stackoverflow.com/questions/64770762/mobx-since-strict-mode-is-enabled-changing-observed-observable-values-withou</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/" class="post-title-link" itemprop="url">小程序踩坑</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-25 22:13:01 / Modified: 22:22:51" itemprop="dateCreated datePublished" datetime="2021-02-25T22:13:01+08:00">2021-02-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="小程序踩坑"><a href="#小程序踩坑" class="headerlink" title="小程序踩坑"></a>小程序踩坑</h3><p>之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。</p>
+<h4 id="小程序云开发"><a href="#小程序云开发" class="headerlink" title="小程序云开发"></a>小程序云开发</h4><p>云开发简单的来说就是能够快速给前端提供数据库和后端接口，不需要去搭建后端框架，运维。数据库类似 mongo DB，是文档型的数据库。云函数则是执行在云端的一段代码，可以提供给前端调用，可以理解成一个远程的接口，但是却不需要我们关心具体的后端框架或鉴权等。</p>
+<h5 id="云函数执行后数据库未存储数据"><a href="#云函数执行后数据库未存储数据" class="headerlink" title="云函数执行后数据库未存储数据"></a>云函数执行后数据库未存储数据</h5><p>原因是我没有上传部署更新后的云函数，在云端的云函数是旧的。这样的话在本地调试是OK的，但就是在云端环境无法存储数据。右键点击云函数，选择上传并部署即可。</p>
+<h5 id="数据库-watch-无效"><a href="#数据库-watch-无效" class="headerlink" title="数据库 watch 无效"></a>数据库 watch 无效</h5><p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102111285.png" alt="image-20210210102111285"></p>
+<p>在本地设置了对云端数据库的监听，但实际上没有生效。原因是没有赋予正确的数据权限。</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102319650.png" alt="image-20210210102319650"></p>
+<h4 id="小程序写法"><a href="#小程序写法" class="headerlink" title="小程序写法"></a>小程序写法</h4><p>小程序的写法类似于 Vue 和 React 的结合体。需要特别注意的是，小程序的数据更新方式类似于 React，使用 setData 函数来更新数据（异步),但是与 React 不同的是，它也会同时改变 this.data 中的值。</p>
+<p>React</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">const</span> [data,setData] = useState(<span class="hljs-number">0</span>)<br>setData(data + <span class="hljs-number">1</span>)<br><span class="hljs-built_in">console</span>.log(data) <span class="hljs-comment">// 0</span><br><br></code></pre></td></tr></table></figure>
+<p>小程序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">Page(&#123;<br>    data:&#123;<br>        num:<span class="hljs-number">0</span><br>	&#125;,<br>    <span class="hljs-function"><span class="hljs-title">onLoad</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.setData(&#123;<span class="hljs-attr">num</span>:<span class="hljs-built_in">this</span>.data.num + <span class="hljs-number">1</span>&#125;)<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">this</span>.data.num) <span class="hljs-comment">// 1</span><br>    &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<hr>
+<p>微信官方也有详细的开发文档，介绍了更多内容。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">https://developers.weixin.qq.com/miniprogram/dev/framework/</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">翻译时遇到的一个语法问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-30 00:31:01 / Modified: 00:31:37" itemprop="dateCreated datePublished" datetime="2021-01-30T00:31:01+08:00">2021-01-30</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前翻译了一下 GitHub 的说明文档，遇到了一个不太明白的地方，今天来回顾记录一下。</p>
+<p>翻译的文档里有这样一句话</p>
+<p><code>Only do this if you want the new branch to become the base against which all future pull requests and commits will be made.</code></p>
+<p>这里的 “against which” 让人有点摸不着头脑。 百度了一下这两个词发现了相似的句子。</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210126152503984.png" alt="image-20210126152503984"></p>
+<p>下面有人给出了正确的答案</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210126152547145.png" alt="image-20210126152547145"></p>
+<p>这个句子也是这样，正常的语序其实是：</p>
+<p><code>Only do this if you want the new branch to become the base which all future pull requests and commits will be made against.</code></p>
+<p>这样就可以很明显的看出后面的 which 接的是一个定语从句，句子的意思是“只有你希望新的分支成为所有未来拉取请求和提交的基础时才执行此操作”</p>
+<hr>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile">GitHub Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6902319214678573070#heading-1">我的翻译</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000004426086">这句话里 against which 是什么意思？</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">to 和 towards 的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-01-19 18:02:15" itemprop="dateCreated datePublished" datetime="2021-01-19T18:02:15+08:00">2021-01-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-30 00:29:31" itemprop="dateModified" datetime="2021-01-30T00:29:31+08:00">2021-01-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>Look at these 2 sentences:</p>
+<ul>
+<li>Jane is walking <strong>to</strong> the library.</li>
+<li>Sarah is walking <strong>towards</strong> the library.</li>
+</ul>
+<p><strong>to</strong> and <strong>towards</strong> are <code>prepositions</code> to describe movement.</p>
+<p>Both of these sentences are grammatically correct. But there is a <code>slight</code> difference in the meaning. In this lesson, you will learn the difference.</p>
+<h3 id="towards"><a href="#towards" class="headerlink" title="towards"></a>towards</h3><p>Let’s look at a sentence:</p>
+<p>Sarah is walking <strong>towards</strong> the library.</p>
+<p>In this sentence, “<strong>towards</strong> the library” means “in the direction of the library”.</p>
+<p>When we use “<strong>towards</strong>“, we are not describing the destination. Maybe the destination is the library. But we are not certain.</p>
+<p>Maybe Sarah will stop before the library. Maybe Sarah will walk past the library.</p>
+<p>We know only that Sarah is walking in the direction of the library.</p>
+<p>We do not know the result of the movement.</p>
+<h3 id="towards-or-toward"><a href="#towards-or-toward" class="headerlink" title="towards or toward ?"></a>towards or toward ?</h3><p>Sometimes you will see the word “toward” instead of “towards”. So what is the difference between towards and toward ?</p>
+<p>“towards” is British English.<br>“toward” is American English.</p>
+<p>Examples:</p>
+<p>Sarah is walking <strong>toward</strong> the library. (American English)<br>Sarah is walking <strong>towards</strong> the library. (British English)</p>
+<p>The meaning of towards and toward is the same.</p>
+<h3 id="to"><a href="#to" class="headerlink" title="to"></a>to</h3><p>Look at this sentence:</p>
+<p>Jane is walking <strong>to</strong> the library.</p>
+<p>“to the library” means that the destination of the journey is the library.</p>
+<p>Jane’s exact direction at any moment during the journey is not important. When we use “to”, we are describing the destination of the movement. Only Jane’s final destination is important.</p>
+<p>We are describing the result of the movement.</p>
+<hr>
+<p>简单的翻译 &amp; 总结:</p>
+<h2 id="TO-跟-TOWARDS-的不同"><a href="#TO-跟-TOWARDS-的不同" class="headerlink" title="TO 跟 TOWARDS 的不同"></a>TO 跟 TOWARDS 的不同</h2><p>来看这两个句子:</p>
+<ul>
+<li>Jane is walking <strong>to</strong> the library.</li>
+<li>Sarah is walking <strong>towards</strong> the library.</li>
+</ul>
+<p><strong>to</strong> 跟 <strong>towards</strong> 都是用于描述运动的介词. 这两个句子在语法上都是正确的,但时有一些细微的差别.这节课里，你将会了解到这些。</p>
+<h3 id="towards-1"><a href="#towards-1" class="headerlink" title="towards"></a>towards</h3><p>让我们来看这个句子:</p>
+<p>Sarah is walking <strong>towards</strong> the library.</p>
+<p>在这句话里,”towards the library”指的是朝着图书馆的方向.可能图书馆是目的地,但我们并不能确定.也许 Sarah 将会在图书馆前停住，也有可能 Sarah 会走过图书馆.我们知道的只是 Sarah 在朝着图书馆的方向走.但并不知道 Sarah 的目的地.</p>
+<h3 id="towards-or-toward-1"><a href="#towards-or-toward-1" class="headerlink" title="towards or toward ?"></a>towards or toward ?</h3><p>towards 是英式英语,toward 是美式英语.</p>
+<h3 id="to-1"><a href="#to-1" class="headerlink" title="to"></a>to</h3><p>来看这个句子:</p>
+<p>Jane is walking <strong>to</strong> the library.</p>
+<p>“to the library”指目的地是图书馆. Jane 在任意时间的移动方向是不重要的. 当我们使用 “to”,我们在描述移动的目的地.只有 Jane 的最终目的地才是重要的.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>toward 更多强调目前移动的方向，朝着…走去</li>
+<li>to 则强调移动的目的地，走到…</li>
+<li>toward 跟 towards 只是美式,英式英语的区别</li>
+</ul>
+<hr>
+<p>原文链接:<a target="_blank" rel="noopener" href="https://www.crownacademyenglish.com/difference-between-to-towards/">https://www.crownacademyenglish.com/difference-between-to-towards/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/06/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/06/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-01-06 22:42:51" itemprop="dateCreated datePublished" datetime="2021-01-06T22:42:51+08:00">2021-01-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/" class="post-title-link" itemprop="url">Chrome调试里的FormData 和 Request Payload 有什么不同</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-15 10:29:06" itemprop="dateCreated datePublished" datetime="2020-10-15T10:29:06+08:00">2020-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index"><span itemprop="name">network</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720201014170628.png"></p>
+<p> 刚开始我以为可能只是 Chrome 的一个显示 bug 之类的,也没有发现有什么规律.后来百度一下才发现里面还是有些门道的. 我在思否的这篇<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">文章</a>里找到了答案,这篇文章里的答案也是从 StackOverflow 上贴过去的. 原问题和回答如下：</p>
+<p> What’s the difference between “Request Payload” vs “Form Data” as seen in Chrome dev tools Network tab? The Request Payload - or to be more precise: payload body of a HTTP Request - is the data normally send by a POST or PUT Request. It’s the part after the headers and the CRLF of a HTTP Request. A request with Content-Type: application/json may look like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;json<br><br>&#123; &quot;foo&quot; : &quot;bar&quot;, &quot;name&quot; : &quot;John&quot; &#125;<br></code></pre></td></tr></table></figure>
+<p>If you submit this per AJAX the browser simply shows you what it is submitting as payload body. That’s all it can do because it has no idea where the data is coming from. If you submit a HTML-Form with method=”POST” and Content-Type: application/x-www-form-urlencoded or Content-Type: multipart/form-data your request may look like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;x-www-form-urlencoded<br><br>foo&#x3D;bar&amp;name&#x3D;John<br></code></pre></td></tr></table></figure>
+<p>In this case the form-data is the request payload. Here the Browser knows more: it knows that bar is the value of the input-field foo of the submitted form. And that’s what it is showing to you. So, they differ in the Content-Type but not in the way data is submitted. In both cases the data is in the message-body. And Chrome distinguishes how the data is presented to you in the Developer Tools. 所以 chrome 显示 Request Payload 或者 FormData 的原因就在于 Content-Type 请求头设置的不同.</p>
+<h3 id="Content-Type"><a href="#Content-Type" class="headerlink" title="Content-Type"></a>Content-Type</h3><p>Content-Type 实体头部用于指示资源的 MIME 类型（media type）</p>
+<h4 id="常见的几种-Content-Type"><a href="#常见的几种-Content-Type" class="headerlink" title="常见的几种 Content-Type"></a>常见的几种 Content-Type</h4><ul>
+<li>  aplication/x-www-form-urlencode （原生form表单默认提交数据的格式,form表单数据被编码成key/value 格式发送到服务器）</li>
+<li>  multipart/form-data (表单上传文件时使用此格式)</li>
+<li>  application/json （axios 传递对象默认,JSON数据格式）</li>
+<li>  text/html （HTML格式）</li>
+<li>  text/plain (纯文本格式)</li>
+</ul>
+<h4 id="不同请求方式默认-Content-Type-的差异"><a href="#不同请求方式默认-Content-Type-的差异" class="headerlink" title="不同请求方式默认 Content-Type 的差异"></a>不同请求方式默认 Content-Type 的差异</h4><ul>
+<li>  使用原生 AJAX 方式发送请求,Content-Type 默认为 text/plain </li>
+<li>  使用原生 Form 表单形式发送请求,Content-Type 默认为 application/x-www-form-urlencode</li>
+<li>  使用 axios 传递对象时,Content-Type 默认为 application/json</li>
+<li>  使用 axios 传递字符串形如key1=value1&amp;key2=value2时,默认为 application/x-www-form-urlencode</li>
+</ul>
+<hr>
+<p>参考链接： </p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">前后端联调之Form Data 与 Request Payload,你真的了解吗？</a> </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/klb561/p/10090540.html">https://www.cnblogs.com/klb561/p/10090540.html</a></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">Vue Router query 和 params 传参的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-04 18:31:41" itemprop="dateCreated datePublished" datetime="2020-09-04T18:31:41+08:00">2020-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="params-query-是什么？"><a href="#params-query-是什么？" class="headerlink" title="params,query 是什么？"></a>params,query 是什么？</h3><ul>
+<li>  <strong>params</strong>: /router1/:id, /router1/123, /router1/789,这里的id叫做 params,需要通过 route.params.id 获取</li>
+<li>  <strong>query</strong>: /router1/?id=123 ,/router1?id=456,这里的id叫做 query,需要通过 route.query.id 获取</li>
+</ul>
+<h3 id="params-query-传参的区别"><a href="#params-query-传参的区别" class="headerlink" title="params,query 传参的区别"></a>params,query 传参的区别</h3><p>使用params传参需要在路由后面加参数名,并且在传参的时候,参数名需要跟路由后面设置的参数名对应.具体如下图. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/params.png" alt="params"></p>
+<p> <strong>注意</strong>：如果路由上面不声明参数,参数也是可以传过去的,但不会在 url 上面显示出参数.而当你刷新页面的时候参数就会丢失,那么依赖这个参数的其他操作也将失败. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/params%E4%B8%8D%E5%A3%B0%E6%98%8E%E5%8F%82%E6%95%B0.gif" alt="params不声明参数"></p>
+<p>使用query 方法,就没有以上限制,直接在跳转里面使用即可,刷新页面参数也不会丢失. 有 <a href="'https://segmentfault.com/a/1190000012735168'">文章</a> 的说法是 query 相当于get 请求,页面跳转的时候在地址栏可以看到请求参数,而 params 相当于 post 请求,参数不会在地址栏中显示.经过上面的测试,这种说法是不准确的.正常情况下params和query都会出现在地址栏上.不同的是,params 是作为路由的一部分,而 query 是路由后面的参数.</p>
+<h4 id="使用router-push"><a href="#使用router-push" class="headerlink" title="使用router.push()"></a>使用router.push()</h4><p>如果使用 params 传参,则不能使用 path,而是要使用 name</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">router.push(&#123;<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;user&#x27;</span>,<span class="hljs-attr">params</span>:&#123;<span class="hljs-attr">id</span>:<span class="hljs-string">&#x27;123&#x27;</span>&#125;&#125;) <span class="hljs-comment">// -&gt; /user/123</span><br>router.push(&#123;<span class="hljs-attr">path</span>:<span class="hljs-string">&#x27;register&#x27;</span>,<span class="hljs-attr">query</span>:&#123;<span class="hljs-attr">plan</span>:<span class="hljs-string">&#x27;private&#x27;</span>&#125;&#125;) <span class="hljs-comment">// -&gt; /register?plan=private</span><br><span class="hljs-comment">// 这里的 params 不生效</span><br>router.push(&#123;<span class="hljs-attr">path</span>:<span class="hljs-string">&#x27;/user&#x27;</span>,<span class="hljs-attr">params</span>:&#123;<span class="hljs-attr">id</span>:<span class="hljs-string">&#x27;123&#x27;</span>&#125;&#125;) <span class="hljs-comment">// -&gt; /user</span><br></code></pre></td></tr></table></figure>
+<h4 id="this-router-和-this-route-的区别"><a href="#this-router-和-this-route-的区别" class="headerlink" title="this.$router 和 this.$route 的区别"></a>this.$router 和 this.$route 的区别</h4><ul>
+<li><p>  $router 为VueRouter 实例,可以理解为”路由器”,负责导航到不同URL</p>
+</li>
+<li><p>$route 为当前 router 跳转对象,里面可以获取当前路由的一些信息,如 name,path,query,params 等</p>
+<hr>
+</li>
+</ul>
+<p>参考链接：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/6844903510719348749">vue router 如何使用params query传参,以及有什么区别</a> </li>
+<li> <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000012735168">vue-router query和params传参(接收参数)$router $route的区别</a> </li>
+<li> <a target="_blank" rel="noopener" href="https://codesandbox.io/s/distracted-shannon-yypfi">CodeSandbox 代码演示</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-title-link" itemprop="url">font-family学习笔记（二）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-01 22:55:00" itemprop="dateCreated datePublished" datetime="2020-09-01T22:55:00+08:00">2020-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="目前各个网站使用的font-family"><a href="#目前各个网站使用的font-family" class="headerlink" title="目前各个网站使用的font-family"></a>目前各个网站使用的font-family</h3><ul>
+<li>  知乎</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Helvetica</span> <span class="hljs-selector-tag">Neue</span>,<span class="hljs-selector-tag">PingFang</span> <span class="hljs-selector-tag">SC</span>,<span class="hljs-selector-tag">Microsoft</span> <span class="hljs-selector-tag">YaHei</span>,<span class="hljs-selector-tag">Source</span> <span class="hljs-selector-tag">Han</span> <span class="hljs-selector-tag">Sans</span> <span class="hljs-selector-tag">SC</span>,<span class="hljs-selector-tag">Noto</span> <span class="hljs-selector-tag">Sans</span> <span class="hljs-selector-tag">CJK</span> <span class="hljs-selector-tag">SC</span>,<span class="hljs-selector-tag">WenQuanYi</span> <span class="hljs-selector-tag">Micro</span> <span class="hljs-selector-tag">Hei</span>,<span class="hljs-selector-tag">sans-serif</span>;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>  Github</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span>: <span class="hljs-selector-tag">-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span>,<span class="hljs-selector-tag">Helvetica</span>,<span class="hljs-selector-tag">Arial</span>,<span class="hljs-selector-tag">sans-serif</span>,<span class="hljs-selector-tag">Apple</span> <span class="hljs-selector-tag">Color</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Emoji</span>;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>  CSS-Tricks</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span>: <span class="hljs-selector-tag">Sentinel</span> <span class="hljs-selector-tag">SSm</span> <span class="hljs-selector-tag">A</span>,<span class="hljs-selector-tag">Sentinel</span> <span class="hljs-selector-tag">SSm</span> <span class="hljs-selector-tag">B</span>,<span class="hljs-selector-tag">system-ui</span>,<span class="hljs-selector-tag">-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span>,<span class="hljs-selector-tag">Roboto</span>,<span class="hljs-selector-tag">Helvetica</span>,<span class="hljs-selector-tag">Arial</span>,<span class="hljs-selector-tag">sans-serif</span>,<span class="hljs-selector-tag">Apple</span> <span class="hljs-selector-tag">Color</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Symbol</span><br></code></pre></td></tr></table></figure>
+<h3 id="font-family-关键字"><a href="#font-family-关键字" class="headerlink" title="font-family 关键字"></a>font-family 关键字</h3><p>对于CSS中的font-family而言,它有两类取值. 1. 一类是类似这样的具体的字体族名定义:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:&quot;Arial&quot;</span> <span class="hljs-comment">/* 这里定义了一个具体的字体样式,字体族名为Arial */</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li> 一类是通用字体族名,它是一种备选机制,用于在指定的字体不可用时给出较好的字体,类似这样:</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span><span class="hljs-selector-pseudo">:sans-serif</span> <span class="hljs-comment">/* sans-serif表示无衬线字体族,例如 &quot;Open Sans&quot;,&quot;Arial&quot;,&quot;微软雅黑&quot; */</span><br></code></pre></td></tr></table></figure>
+<p>关于通用字体族名,在CSS Fonts Module Level 3 – Basic Font Properties 中,定义了5个,也就是我们熟知的几个通用字体族名： 1. serif衬线字体族 2. sans-serif非衬线字体族 3. monospace 等宽字体,即字体中每个字宽度相等 4. cursive 草书字体 5. fantasy 主要是那些具有特殊艺术效果的字体</p>
+<h3 id="新增通用字体族关键字"><a href="#新增通用字体族关键字" class="headerlink" title="新增通用字体族关键字"></a>新增通用字体族关键字</h3><hr>
+<p>在 CSS Fonts Module Level 4 – Generic font families 中,新增了几个关键字：</p>
+<ul>
+<li>  system-ui 系统默认字体</li>
+<li>  emoji 用于兼容emoji表情符号字符</li>
+<li>  math 适用于数字表达式</li>
+<li>  fangsong 此字体系列用于中文的（仿宋）字体</li>
+</ul>
+<h4 id="system-ui"><a href="#system-ui" class="headerlink" title="system-ui"></a>system-ui</h4><p>简单而言,font-family：system-ui 的目的就是在不同的操作系统的Web页面下,自动选择本操作系统下的默认系统字体. 默认适用特定操作系统的系统字体可以提高性能,因为浏览器或者 webview 不必去下载任何字体,而是使用已有的字体文件.font-family：system-ui 字体设置的优势之处在于它与当前操作系统使用的字体相匹配,对于文本内容而言,它可以得到最恰当的展示.</p>
+<h5 id="apple-system-BlinkMacSystemFont"><a href="#apple-system-BlinkMacSystemFont" class="headerlink" title="--apple-system/BlinkMacSystemFont"></a>--apple-system/BlinkMacSystemFont</h5><p>在 macOS 和 ios 上,我们需要使用 -apple-system 及 BlinkMacSystemFont 来兼容适配 system-ui 标准.</p>
+<h5 id="Segoe-UI"><a href="#Segoe-UI" class="headerlink" title="Segoe UI"></a>Segoe UI</h5><p>Segoe UI 是 Windows 从 Vista 开始的默认西文字体族,只有西文,不支持汉字,属于无衬线字体. 它也表示一个系列而不是某一款单一字体.使用 font-family：segoe UI 可以在Windows 平台及Windows Phone 上选取最佳的西文字体展示.</p>
+<h5 id="Roboto"><a href="#Roboto" class="headerlink" title="Roboto"></a>Roboto</h5><p>Roboto 是为 Android 操作系统设计的一个无衬线字体家族.这个字体家族包含Thin,Light,Regular,Medium,Bold,Black六种粗细及相配的斜体.</p>
+<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><p>@font-face 允许网页开发者为其网页指定在线或本地字体. 通过这种作者自备字体的方式,@font-face 可以消除对用户电脑字体的依赖.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@font-face</span> &#123;<br>  <span class="hljs-attribute">font-family</span>: MyHelvetica;<br>  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">local</span>(<span class="hljs-string">&quot;Helvetica Neue Bold&quot;</span>),<br>  <span class="hljs-built_in">local</span>(<span class="hljs-string">&quot;HelveticaNeue-Bold&quot;</span>),<br>  <span class="hljs-built_in">url</span>(MgOpenModernaBold.ttf);<br>  <span class="hljs-attribute">font-weight</span>: bold;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="font-css"><a href="#font-css" class="headerlink" title="font.css"></a>font.css</h3><p>github 上的一个项目,可以保证在不同平台上都显示为质量最高的黑体.可以参考下它的写法： <a target="_blank" rel="noopener" href="https://zenozeng.github.io/fonts.css/">https://zenozeng.github.io/fonts.css/</a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>以 Github 的 font-family 设置为例:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">font-family</span>: <span class="hljs-selector-tag">-apple-system</span>,<span class="hljs-selector-tag">BlinkMacSystemFont</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span>,<span class="hljs-selector-tag">Helvetica</span>,<span class="hljs-selector-tag">Arial</span>,<span class="hljs-selector-tag">sans-serif</span>,<span class="hljs-selector-tag">Apple</span> <span class="hljs-selector-tag">Color</span> <span class="hljs-selector-tag">Emoji</span>,<span class="hljs-selector-tag">Segoe</span> <span class="hljs-selector-tag">UI</span> <span class="hljs-selector-tag">Emoji</span>;<br></code></pre></td></tr></table></figure>
+<ol>
+<li> -apple-system, 在一些稍低版本 Mac OS X 和 iOS 上,它针对旧版上的 Neue Helvetica 和 Lucida Grande 字体,升级使用更为合适的 San Francisco Fonts</li>
+<li> BlinkMacSystemFont,针对一些 Mac OS X 上的 Chrome 浏览器,使用系统默认字体</li>
+<li> segoe ui,在 Windows 上选取系统默认字体</li>
+<li> Helvetica,Arial,在针对不同操作系统不同平台设定采用默认系统字体后,针对一些低版本浏览器的降级方案</li>
+<li> sans-serif,兜底方案,保证字体风格统一,至少也得是无衬线字体</li>
+<li> 兼容 emoji 表情符号</li>
+</ol>
+<hr>
+<p>参考链接： </p>
+<ol>
+<li><p><a href="'https://segmentfault.com/a/1190000006110417'">如何优雅的选择字体 font-family</a> </p>
+</li>
+<li><p><a href="'https://ixu.me/font-family-chinese.html'">中文环境下中文排版的font-family 字体选择</a> </p>
+</li>
+<li><p><a href="'https://juejin.im/post/6844903912760147982'">Web 字体 font-family 再探秘</a> </p>
+</li>
+<li><p><a href="'http://www.woshipm.com/pd/2900904.html'">让你的设计更好看：10款常用的数字字体推荐</a> </p>
+</li>
+<li><p><a href="'http://www.woshipm.com/pd/2807007.html'">界面好看,字体当然不能拖后腿</a> </p>
+</li>
+<li><p> <a href="'https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face'">@font-face MDN</a></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">font-family学习笔记（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-18 17:19:18" itemprop="dateCreated datePublished" datetime="2020-08-18T17:19:18+08:00">2020-08-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="字体分类"><a href="#字体分类" class="headerlink" title="字体分类"></a>字体分类</h4><ul>
+<li>  serif（衬线）</li>
+<li>  sans-serif（无衬线）</li>
+<li>  monospace （等宽）</li>
+<li>  fantasy（不常用）</li>
+<li>  cuisive（不常用）</li>
+</ul>
+<p>其实大体上分为<strong>衬线字体</strong>和<strong>无衬线字体</strong>,等宽字体中也有衬线等宽和无衬线等宽字体,这五个分类是font-family的5个可用字体系列取值.它代表的并不是某一款特定字体,而是一系列字体,这些通用名称允许浏览器从相应的集合中选择一款字体.</p>
+<h4 id="serif-衬线字体"><a href="#serif-衬线字体" class="headerlink" title="serif 衬线字体"></a>serif 衬线字体</h4><p>serif,意为有衬线的字体,衬线指的是在字符笔画的末端有叫做衬线的细节额外装饰,而且笔画的粗细有所不同,这些细节在大写字母中特别明显. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/%E8%A1%AC%E7%BA%BF%E4%BD%93%E5%92%8C%E6%97%A0%E8%A1%AC%E7%BA%BF%E4%BD%93.jpg" alt="衬线体和无衬线体"></p>
+<p>常见的衬线字体,中文有宋体（SimSun）,西文有 Times New Roman .</p>
+<p><img src="C:\Users\genew\Documents\uploads\2020\08\宋体.png" alt="宋体"></p>
+<h4 id="sans-serif-无衬线字体"><a href="#sans-serif-无衬线字体" class="headerlink" title="sans-serif 无衬线字体"></a>sans-serif 无衬线字体</h4><p>sans的意思是无,sans-serif也就是无衬线的意思.专指西文中没有衬线的字体,跟中文字体中的黑体相对应.跟衬线字体相反 ,这类字体通常是机械的和统一线条的,它们往往拥有相同的曲率,笔直的线条,锐利的转角. 中文下,无衬线字体就是黑体,黑体字又称方体或者等线体,没有衬线装饰,笔画横平竖直,笔迹全部一样粗细. 常见的无衬线字体,微软雅黑,冬青黑体,西文字体Arial,拉丁字母和西里尔字母Helvetica. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91.png" alt="微软雅黑"></p>
+<h4 id="monospace-等宽字体"><a href="#monospace-等宽字体" class="headerlink" title="monospace 等宽字体"></a>monospace 等宽字体</h4><p>等宽字体是指字符宽度相同的电脑字体,常用于IDE或者编辑器中,每个字母的宽度相同. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93.jpg" alt="等宽字体"></p>
+<p>常见的等宽字体Consolas,为 github 代码区块的默认字体. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93-300x103.jpg" alt="等宽字体-300x103"></p>
+<h4 id="中文字体的兼容写法"><a href="#中文字体的兼容写法" class="headerlink" title="中文字体的兼容写法"></a>中文字体的兼容写法</h4><p>一些中文字体写法,比如 font-family:’宋体’,由于字符编码的问题,少部分浏览器解释这个代码的时候,中文出现乱码,这个时候设定的字体就无法正常显示. 所以更常用的做法是转化成对应的英文写法或者是对应的Unicode编码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">font-family:&#x27;\5b8b\4f53&#x27; <br>//font-family:&#x27;宋体&#x27;<br></code></pre></td></tr></table></figure>
+<p>另外当字体名字中间有空格,中文名字体及Unicode字符编码标识的中文字体,为了保证兼容性,都建议在字体两端添加单引号或者双引号.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">p</span>&#123;<br><span class="hljs-attribute">font-family</span>:<span class="hljs-string">&#x27;Microsoft YaHei&#x27;</span>,<span class="hljs-string">&#x27;黑体-简&#x27;</span>,<span class="hljs-string">&#x27;\5b8b\4f53&#x27;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="字体定义顺序"><a href="#字体定义顺序" class="headerlink" title="字体定义顺序"></a>字体定义顺序</h4><p>淘宝首页的字体定义如下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span>&#123;<br>    <span class="hljs-attribute">font-family</span>:tahoma,arial,<span class="hljs-string">&#x27;Hiragino Sans GB&#x27;</span>,<span class="hljs-string">&#x27;\5b8b\4f53&#x27;</span>,sans-serif;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>上述定义的含义是： 1. 使用 tohoma 作为首选的西文字体,小字号下结构清晰端正,阅读辨识容易； 2. 用户电脑未预装 tohoma,则选择 arial 作为替代的西文字体,覆盖windows 和 Mac OS； 3. Hiragino Sans GB 为冬青黑体,首选的中文字体,保证了MAC用户的观看体验； 4. Windows下没有预装冬青黑体,则使用’\5b8b\4f53’宋体为替代的中文字体方案,小字号下有着不错的效果； 5. 最后使用无衬线系列字体 sans-serif 结尾,保证旧版本操作系统用户能选中一款电脑预装的无衬线字体,向下兼容.</p>
+<h4 id="字体书写规则"><a href="#字体书写规则" class="headerlink" title="字体书写规则"></a>字体书写规则</h4><ol>
+<li> <strong>兼顾中西</strong> 中文或者西文都要考虑到</li>
+<li> <strong>西文在前,中文在后</strong> 由于大部分中文字体也是带有英文部分的,但是英文部分又不怎么好看,同理英文字体中又大多不包括中文.所以通常会先进行英文字体的声明,选择最优的英文字体,这样不会影响到中文字体的选择,中文字体声明则紧随其次.</li>
+<li> <strong>兼顾多操作系统</strong> 选择字体的时候要考虑多操作系统.比如 Mac OS 下的很多中文字体在Windows 都没有预装,为了保证 Mac 用户的体验,在定义中文字体的时候,先定义 Mac 用户的中文字体,再定义 Windows 用户的中文字体；</li>
+<li> <strong>兼顾旧操作系统,以字体族系列 serif 和 sans-serif 结尾</strong> 当使用一些非常新的字体时,要考虑向下兼容,兼顾到一些极旧的操作系统,使用字体族系列 serif 和 sans-serif 结尾总归是不错的选择；</li>
+<li> <strong>关于数字字体</strong> 通常西文字体和中文字体都会带有数字字体,取决于字体声明的顺序.</li>
+<li> <strong>其他</strong> 声明中文字体时,可以考虑把中英文名称都写上；可以考虑使用system-ui,Segoe UI等最新写法.</li>
+</ol>
+<hr>
+<p>参考链接： 1. <a target="_blank" rel="noopener" href="https://github.com/chokcoco/iCSS/issues/6">https://github.com/chokcoco/iCSS/issues/6</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
 <script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
-            <div class="main">
-                
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/logo.png"></a>
+
         </div>
-        <div class="nickname">Li Chen</div>
-        <div class="description"><p>Tuyo:<em>El castillo, la torre yo soy.La espada que guarda el caudal</em>.</p>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Li Chen</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="RSS" href="/atom.xml">
-                        
-                        
-                            <i class="iconfont icon-rss"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/lichen404">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
 </div>
 
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Li Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
 
+      </div>
 
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
-
 </html>
