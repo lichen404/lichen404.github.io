@@ -17,20 +17,20 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="小程序踩坑之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。 小程序云开发云开发简单的来说就是能够快速给前端提供数据库和后端接口，不需要去搭建后端框架，运维。数据库类似 mongo DB，是文档型的数据库。云函数则是执行在云端的一段代码，可以提供给前端调用，可以理解成一个远程的接口，但是却不需要我们关心具体的后端框架或鉴权等。 云函数执行后数据库未存储数据原因是我没有">
+  <meta name="description" content="小程序踩坑之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序踩坑">
 <meta property="og:url" content="http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="小程序踩坑之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。 小程序云开发云开发简单的来说就是能够快速给前端提供数据库和后端接口，不需要去搭建后端框架，运维。数据库类似 mongo DB，是文档型的数据库。云函数则是执行在云端的一段代码，可以提供给前端调用，可以理解成一个远程的接口，但是却不需要我们关心具体的后端框架或鉴权等。 云函数执行后数据库未存储数据原因是我没有">
+<meta property="og:description" content="小程序踩坑之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102111285.png">
 <meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102319650.png">
 <meta property="article:published_time" content="2021-02-25T14:13:01.000Z">
-<meta property="article:modified_time" content="2021-02-25T14:22:51.972Z">
+<meta property="article:modified_time" content="2021-03-02T15:11:26.476Z">
 <meta property="article:author" content="Li Chen">
 <meta property="article:tag" content="小程序">
 <meta name="twitter:card" content="summary">
@@ -122,6 +122,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -177,10 +192,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-02-25 22:13:01 / Modified: 22:22:51" itemprop="dateCreated datePublished" datetime="2021-02-25T22:13:01+08:00">2021-02-25</time>
+              <time title="Created: 2021-02-25 22:13:01" itemprop="dateCreated datePublished" datetime="2021-02-25T22:13:01+08:00">2021-02-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-02 23:11:26" itemprop="dateModified" datetime="2021-03-02T23:11:26+08:00">2021-03-02</time>
+              </span>
 
           
 
@@ -194,6 +215,8 @@
 
       
         <h3 id="小程序踩坑"><a href="#小程序踩坑" class="headerlink" title="小程序踩坑"></a>小程序踩坑</h3><p>之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。</p>
+<a id="more"></a>
+
 <h4 id="小程序云开发"><a href="#小程序云开发" class="headerlink" title="小程序云开发"></a>小程序云开发</h4><p>云开发简单的来说就是能够快速给前端提供数据库和后端接口，不需要去搭建后端框架，运维。数据库类似 mongo DB，是文档型的数据库。云函数则是执行在云端的一段代码，可以提供给前端调用，可以理解成一个远程的接口，但是却不需要我们关心具体的后端框架或鉴权等。</p>
 <h5 id="云函数执行后数据库未存储数据"><a href="#云函数执行后数据库未存储数据" class="headerlink" title="云函数执行后数据库未存储数据"></a>云函数执行后数据库未存储数据</h5><p>原因是我没有上传部署更新后的云函数，在云端的云函数是旧的。这样的话在本地调试是OK的，但就是在云端环境无法存储数据。右键点击云函数，选择上传并部署即可。</p>
 <h5 id="数据库-watch-无效"><a href="#数据库-watch-无效" class="headerlink" title="数据库 watch 无效"></a>数据库 watch 无效</h5><p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102111285.png" alt="image-20210210102111285"></p>
@@ -201,9 +224,9 @@
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210210102319650.png" alt="image-20210210102319650"></p>
 <h4 id="小程序写法"><a href="#小程序写法" class="headerlink" title="小程序写法"></a>小程序写法</h4><p>小程序的写法类似于 Vue 和 React 的结合体。需要特别注意的是，小程序的数据更新方式类似于 React，使用 setData 函数来更新数据（异步),但是与 React 不同的是，它也会同时改变 this.data 中的值。</p>
 <p>React</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">const</span> [data,setData] = useState(<span class="hljs-number">0</span>)<br>setData(data + <span class="hljs-number">1</span>)<br><span class="hljs-built_in">console</span>.log(data) <span class="hljs-comment">// 0</span><br><br></code></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [data,setData] = useState(<span class="number">0</span>)</span><br><span class="line">setData(data + <span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(data) <span class="comment">// 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>小程序</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">Page(&#123;<br>    data:&#123;<br>        num:<span class="hljs-number">0</span><br>	&#125;,<br>    <span class="hljs-function"><span class="hljs-title">onLoad</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.setData(&#123;<span class="hljs-attr">num</span>:<span class="hljs-built_in">this</span>.data.num + <span class="hljs-number">1</span>&#125;)<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">this</span>.data.num) <span class="hljs-comment">// 1</span><br>    &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data:&#123;</span><br><span class="line">        num:<span class="number">0</span></span><br><span class="line">	&#125;,</span><br><span class="line">    <span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;<span class="attr">num</span>:<span class="built_in">this</span>.data.num + <span class="number">1</span>&#125;)</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.data.num) <span class="comment">// 1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <hr>
 <p>微信官方也有详细的开发文档，介绍了更多内容。</p>
 <ul>
@@ -246,6 +269,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -311,15 +341,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -401,6 +443,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/",
+      identifier: "2021/02/25/小程序踩坑/",
+      title     : "小程序踩坑",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

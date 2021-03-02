@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="解决控制台 MobX 警告MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 act">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="解决控制台 MobX 警告MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 act">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-01T02:36:01.000Z">
-<meta property="article:modified_time" content="2021-03-02T07:08:35.238Z">
+<meta property="article:modified_time" content="2021-03-02T15:10:37.937Z">
 <meta property="article:author" content="Li Chen">
 <meta property="article:tag" content="React">
 <meta name="twitter:card" content="summary">
@@ -119,6 +119,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -182,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-02 15:08:35" itemprop="dateModified" datetime="2021-03-02T15:08:35+08:00">2021-03-02</time>
+                <time title="Modified: 2021-03-02 23:10:37" itemprop="dateModified" datetime="2021-03-02T23:10:37+08:00">2021-03-02</time>
               </span>
 
           
@@ -198,18 +213,20 @@
       
         <h3 id="解决控制台-MobX-警告"><a href="#解决控制台-MobX-警告" class="headerlink" title="解决控制台 MobX 警告"></a>解决控制台 MobX 警告</h3><p><code>MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed</code></p>
 <p>MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 action 包装的。在回调中修改 observable state 是无法通过 enforceActions 检查的。官方文档的解决办法是使用 Flow。但是因为需要用到 generator 和 yield，我选择使用了更简单的方法。</p>
+<a id="more"></a>
+
 <p>使用  runInAction 包裹在回调函数中执行的修改操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs tsx">@action find() &#123;<br>        this.isLoading &#x3D; true;<br>        if (this.hasMore) &#123;<br>            Uploader.find(this.page, this.limit).then(<br>                (newList: any) &#x3D;&gt; &#123;<br>                    this.append(newList);<br>                    runInAction(()&#x3D;&gt;&#123;<br>                        this.page +&#x3D; 1;<br>                        if (newList.length &lt; this.limit) &#123;<br>                            this.hasMore &#x3D; false;<br>                        &#125;<br>                    &#125;)<br>                &#125;<br>            ).catch(() &#x3D;&gt; &#123;<br>                message.error(&#39;加载失败&#39;).then();<br>            &#125;)<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@action find() &#123;</span><br><span class="line">        this.isLoading &#x3D; true;</span><br><span class="line">        if (this.hasMore) &#123;</span><br><span class="line">            Uploader.find(this.page, this.limit).then(</span><br><span class="line">                (newList: any) &#x3D;&gt; &#123;</span><br><span class="line">                    this.append(newList);</span><br><span class="line">                    runInAction(()&#x3D;&gt;&#123;</span><br><span class="line">                        this.page +&#x3D; 1;</span><br><span class="line">                        if (newList.length &lt; this.limit) &#123;</span><br><span class="line">                            this.hasMore &#x3D; false;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">            ).catch(() &#x3D;&gt; &#123;</span><br><span class="line">                message.error(&#39;加载失败&#39;).then();</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="MobX-6-使用装饰器踩坑"><a href="#MobX-6-使用装饰器踩坑" class="headerlink" title="MobX 6 使用装饰器踩坑"></a>MobX 6 使用装饰器踩坑</h3><p>因为装饰器语法目前还不是 ES 的标准，所以 MobX 6  不再推荐使用，而更建议使用 makeObservable / makeAutoObservable 来代替。</p>
 <p>如果想要继续使用原来的写法，则需要在构造函数中添加 makeObservable(this)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs tsx">class Todo &#123;<br>    id &#x3D; Math.random()<br>    @observable title &#x3D; &quot;&quot;<br>    @observable finished &#x3D; false<br>    <br>    constructor() &#123;<br>        &#x2F;&#x2F; Mobx 6 版本需要加上这句话，才能实现响应式的状态更新<br>        makeObservable(this)<br>    &#125;<br><br>    @action<br>    toggle() &#123;<br>        this.finished &#x3D; !finished<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Todo &#123;</span><br><span class="line">    id &#x3D; Math.random()</span><br><span class="line">    @observable title &#x3D; &quot;&quot;</span><br><span class="line">    @observable finished &#x3D; false</span><br><span class="line">    </span><br><span class="line">    constructor() &#123;</span><br><span class="line">        &#x2F;&#x2F; Mobx 6 版本需要加上这句话，才能实现响应式的状态更新</span><br><span class="line">        makeObservable(this)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @action</span><br><span class="line">    toggle() &#123;</span><br><span class="line">        this.finished &#x3D; !finished</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="React-lazy-和-suspense"><a href="#React-lazy-和-suspense" class="headerlink" title="React.lazy 和 suspense"></a>React.lazy 和 suspense</h3><p>React.lazy 可以实现组件的延迟加载，只有在组件渲染时再去加载包含引入路径的组件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tsx">const Home &#x3D; lazy(() &#x3D;&gt; import(&#39;.&#x2F;pages&#x2F;Home&#39;))<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const Home &#x3D; lazy(() &#x3D;&gt; import(&#39;.&#x2F;pages&#x2F;Home&#39;))</span><br></pre></td></tr></table></figure>
 <p>而在延迟加载的过程中会有 loading 的过程，suspend 可以控制在 loading 过程中的显示。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&lt;Suspense fallback&#x3D;&#123;&lt;div&gt;Loading ...&lt;&#x2F;div&gt;&#125;&gt;<br>                    &lt;Switch&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;&quot; exact&gt;<br>                            &lt;Home&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;history&quot;&gt;<br>                            &lt;History&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;about&quot;&gt;<br>                            &lt;About&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;login&quot;&gt;<br>                            &lt;Login&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                        &lt;Route path&#x3D;&quot;&#x2F;register&quot;&gt;<br>                            &lt;Register&#x2F;&gt;<br>                        &lt;&#x2F;Route&gt;<br>                    &lt;&#x2F;Switch&gt;<br>                &lt;&#x2F;Suspense&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;Suspense fallback&#x3D;&#123;&lt;div&gt;Loading ...&lt;&#x2F;div&gt;&#125;&gt;</span><br><span class="line">                    &lt;Switch&gt;</span><br><span class="line">                        &lt;Route path&#x3D;&quot;&#x2F;&quot; exact&gt;</span><br><span class="line">                            &lt;Home&#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;Route&gt;</span><br><span class="line">                        &lt;Route path&#x3D;&quot;&#x2F;history&quot;&gt;</span><br><span class="line">                            &lt;History&#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;Route&gt;</span><br><span class="line">                        &lt;Route path&#x3D;&quot;&#x2F;about&quot;&gt;</span><br><span class="line">                            &lt;About&#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;Route&gt;</span><br><span class="line">                        &lt;Route path&#x3D;&quot;&#x2F;login&quot;&gt;</span><br><span class="line">                            &lt;Login&#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;Route&gt;</span><br><span class="line">                        &lt;Route path&#x3D;&quot;&#x2F;register&quot;&gt;</span><br><span class="line">                            &lt;Register&#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;Route&gt;</span><br><span class="line">                    &lt;&#x2F;Switch&gt;</span><br><span class="line">                &lt;&#x2F;Suspense&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="使用-antd"><a href="#使用-antd" class="headerlink" title="使用 antd"></a>使用 antd</h3><p>在使用 mobx 搭配 antd 时发现删除 HistoryStore.list 中的数据并没有触发 UI 更新。在 StackOverflow 我发现了这个<a href="%5Bhttps://stackoverflow.com/questions/64770762/mobx-since-strict-mode-is-enabled-changing-observed-observable-values-withou">回答</a>，解决了我的问题。</p>
 <p>原因是对于 mobx 来说，使用 proxy 的方式来监听数据变化。数据本身其实是不变的。在这种情况下，List 组件接受到的 props 内存地址并没有发生变化，所以并不会重新 render。所以使用  toJS 包裹参数，就能在每次 mobx 监听到 HistoryStore.list 变化，重新渲染 Table 组件时给 List 组件传一个新的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs tsx">const Table &#x3D; observer(() &#x3D;&gt; &#123;<br>    const &#123;HistoryStore&#125; &#x3D; useStore();<br>    const loadMore &#x3D; () &#x3D;&gt; &#123;<br>        HistoryStore.find();<br>    &#125;;<br>    useEffect(() &#x3D;&gt; &#123;<br>        return () &#x3D;&gt; &#123;<br>            HistoryStore.reset();<br>        &#125;;<br>    &#125;, [HistoryStore]);<br>    return (<br>        &lt;InfiniteScroll initialLoad&#x3D;&#123;true&#125; pageStart&#x3D;&#123;1&#125; loadMore&#x3D;&#123;loadMore&#125;<br>                        hasMore&#x3D;&#123;!HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore&#125; useWindow&#x3D;&#123;true&#125;&gt;<br>            &lt;ListWrapper dataSource&#x3D;&#123;toJS(HistoryStore.list)&#125; renderItem&#x3D;&#123;(item: any) &#x3D;&gt; &#123;<br>                return (&lt;List.Item key&#x3D;&#123;item.id&#125;&gt;<br><br>                    &lt;Img src&#x3D;&#123;item.attributes.image.attributes.url&#125; alt&#x3D;&quot;&quot;&#x2F;&gt;<br><br><br>                    &lt;h5&gt;&#123;item.attributes.filename&#125;&lt;&#x2F;h5&gt;<br><br><br>                    &lt;Href href&#x3D;&#123;item.attributes.image.attributes.url&#125; target&#x3D;&quot;_blank&quot;<br>                       rel&#x3D;&quot;noreferrer&quot;&gt;&#123;item.attributes.image.attributes.url&#125;&lt;&#x2F;Href&gt;<br>                    &lt;div &gt;<br>                        &lt;Button type&#x3D;&quot;primary&quot; onClick&#x3D;&#123;() &#x3D;&gt; HistoryStore.remove(item.id)&#125;&gt;删除图片&lt;&#x2F;Button&gt;<br>                    &lt;&#x2F;div&gt;<br>                &lt;&#x2F;List.Item&gt;);<br>            &#125;&#125;&gt;<br>                &#123;HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore &amp;&amp; (<br>                    &lt;Loading&gt;<br>                        &lt;Spin tip&#x3D;&quot;加载中&quot;&#x2F;&gt;<br>                    &lt;&#x2F;Loading&gt;<br>                )&#125;<br>            &lt;&#x2F;ListWrapper&gt;<br>        &lt;&#x2F;InfiniteScroll&gt;<br><br><br>    );<br>&#125;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">const Table &#x3D; observer(() &#x3D;&gt; &#123;</span><br><span class="line">    const &#123;HistoryStore&#125; &#x3D; useStore();</span><br><span class="line">    const loadMore &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">        HistoryStore.find();</span><br><span class="line">    &#125;;</span><br><span class="line">    useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">        return () &#x3D;&gt; &#123;</span><br><span class="line">            HistoryStore.reset();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;, [HistoryStore]);</span><br><span class="line">    return (</span><br><span class="line">        &lt;InfiniteScroll initialLoad&#x3D;&#123;true&#125; pageStart&#x3D;&#123;1&#125; loadMore&#x3D;&#123;loadMore&#125;</span><br><span class="line">                        hasMore&#x3D;&#123;!HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore&#125; useWindow&#x3D;&#123;true&#125;&gt;</span><br><span class="line">            &lt;ListWrapper dataSource&#x3D;&#123;toJS(HistoryStore.list)&#125; renderItem&#x3D;&#123;(item: any) &#x3D;&gt; &#123;</span><br><span class="line">                return (&lt;List.Item key&#x3D;&#123;item.id&#125;&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;Img src&#x3D;&#123;item.attributes.image.attributes.url&#125; alt&#x3D;&quot;&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    &lt;h5&gt;&#123;item.attributes.filename&#125;&lt;&#x2F;h5&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    &lt;Href href&#x3D;&#123;item.attributes.image.attributes.url&#125; target&#x3D;&quot;_blank&quot;</span><br><span class="line">                       rel&#x3D;&quot;noreferrer&quot;&gt;&#123;item.attributes.image.attributes.url&#125;&lt;&#x2F;Href&gt;</span><br><span class="line">                    &lt;div &gt;</span><br><span class="line">                        &lt;Button type&#x3D;&quot;primary&quot; onClick&#x3D;&#123;() &#x3D;&gt; HistoryStore.remove(item.id)&#125;&gt;删除图片&lt;&#x2F;Button&gt;</span><br><span class="line">                    &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;&#x2F;List.Item&gt;);</span><br><span class="line">            &#125;&#125;&gt;</span><br><span class="line">                &#123;HistoryStore.isLoading &amp;&amp; HistoryStore.hasMore &amp;&amp; (</span><br><span class="line">                    &lt;Loading&gt;</span><br><span class="line">                        &lt;Spin tip&#x3D;&quot;加载中&quot;&#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;Loading&gt;</span><br><span class="line">                )&#125;</span><br><span class="line">            &lt;&#x2F;ListWrapper&gt;</span><br><span class="line">        &lt;&#x2F;InfiniteScroll&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <h3 id="学习使用-MobX"><a href="#学习使用-MobX" class="headerlink" title="学习使用 MobX"></a>学习使用 MobX</h3><hr>
@@ -254,6 +271,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -319,15 +343,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -409,6 +445,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/",
+      identifier: "2021/03/01/react-epic-笔记/",
+      title     : "react-epic 笔记",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

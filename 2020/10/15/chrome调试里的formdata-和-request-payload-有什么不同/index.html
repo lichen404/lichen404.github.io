@@ -17,19 +17,19 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData.    刚开始我以为可能只是 Chrome 的一个显示 bug 之类的,也没有发现有什么规律.后来百度一下才发现里面还是有些门道的. 我在思否的这篇文章里找到了答案,这篇文章里的答案也是从 StackOverflow 上贴过去的. 原问题和回答如下：  What’s th">
+  <meta name="description" content="最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome调试里的FormData 和 Request Payload 有什么不同">
 <meta property="og:url" content="http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData.    刚开始我以为可能只是 Chrome 的一个显示 bug 之类的,也没有发现有什么规律.后来百度一下才发现里面还是有些门道的. 我在思否的这篇文章里找到了答案,这篇文章里的答案也是从 StackOverflow 上贴过去的. 原问题和回答如下：  What’s th">
+<meta property="og:description" content="最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720201014170628.png">
 <meta property="article:published_time" content="2020-10-15T02:29:06.000Z">
-<meta property="article:modified_time" content="2021-01-18T13:40:35.832Z">
+<meta property="article:modified_time" content="2021-03-02T15:13:11.815Z">
 <meta property="article:author" content="Li Chen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720201014170628.png">
@@ -120,6 +120,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -183,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+                <time title="Modified: 2021-03-02 23:13:11" itemprop="dateModified" datetime="2021-03-02T23:13:11+08:00">2021-03-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,12 +226,14 @@
 
       
         <p>最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. </p>
+<a id="more"></a>
+
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720201014170628.png"></p>
 <p> 刚开始我以为可能只是 Chrome 的一个显示 bug 之类的,也没有发现有什么规律.后来百度一下才发现里面还是有些门道的. 我在思否的这篇<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018774494">文章</a>里找到了答案,这篇文章里的答案也是从 StackOverflow 上贴过去的. 原问题和回答如下：</p>
 <p> What’s the difference between “Request Payload” vs “Form Data” as seen in Chrome dev tools Network tab? The Request Payload - or to be more precise: payload body of a HTTP Request - is the data normally send by a POST or PUT Request. It’s the part after the headers and the CRLF of a HTTP Request. A request with Content-Type: application/json may look like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;json<br><br>&#123; &quot;foo&quot; : &quot;bar&quot;, &quot;name&quot; : &quot;John&quot; &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/some-path</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/json</span><br><span class="line"></span><br><span class="line">&#123; &quot;foo&quot; : &quot;bar&quot;, &quot;name&quot; : &quot;John&quot; &#125;</span><br></pre></td></tr></table></figure>
 <p>If you submit this per AJAX the browser simply shows you what it is submitting as payload body. That’s all it can do because it has no idea where the data is coming from. If you submit a HTML-Form with method=”POST” and Content-Type: application/x-www-form-urlencoded or Content-Type: multipart/form-data your request may look like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">POST &#x2F;some-path HTTP&#x2F;1.1<br>Content-Type: application&#x2F;x-www-form-urlencoded<br><br>foo&#x3D;bar&amp;name&#x3D;John<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/some-path</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">foo=bar&amp;name=John</span><br></pre></td></tr></table></figure>
 <p>In this case the form-data is the request payload. Here the Browser knows more: it knows that bar is the value of the input-field foo of the submitted form. And that’s what it is showing to you. So, they differ in the Content-Type but not in the way data is submitted. In both cases the data is in the message-body. And Chrome distinguishes how the data is presented to you in the Developer Tools. 所以 chrome 显示 Request Payload 或者 FormData 的原因就在于 Content-Type 请求头设置的不同.</p>
 <h3 id="Content-Type"><a href="#Content-Type" class="headerlink" title="Content-Type"></a>Content-Type</h3><p>Content-Type 实体头部用于指示资源的 MIME 类型（media type）</p>
 <h4 id="常见的几种-Content-Type"><a href="#常见的几种-Content-Type" class="headerlink" title="常见的几种 Content-Type"></a>常见的几种 Content-Type</h4><ul>
@@ -259,8 +276,8 @@
       <i class="fa fa-chevron-left"></i> Vue Router query 和 params 传参的区别
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/01/06/hello-world/" rel="next" title="Hello World">
-      Hello World <i class="fa fa-chevron-right"></i>
+    <a href="/2021/01/06/hello-world/" rel="next" title="博客搭建记录">
+      博客搭建记录 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -274,6 +291,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -339,15 +363,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -429,6 +465,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/",
+      identifier: "2020/10/15/chrome调试里的formdata-和-request-payload-有什么不同/",
+      title     : "Chrome调试里的FormData 和 Request Payload 有什么不同",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

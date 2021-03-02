@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="pointer-events:none 和 cursor:not-allowed 踩坑最近有一个需求是在卡片不可用时,禁用鼠标点击事件并把鼠标指针设置为禁用状态. 于是我通过在卡片上设置了 CSS 样式 1234.appCard.disable a&amp;#123;    pointer-events:none;    cursor:not-allowed;&amp;#125; 结果鼠标指针的禁用样式一直无法生">
@@ -121,6 +121,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -208,9 +223,9 @@
 
       
         <h3 id="pointer-events-none-和-cursor-not-allowed-踩坑"><a href="#pointer-events-none-和-cursor-not-allowed-踩坑" class="headerlink" title="pointer-events:none 和 cursor:not-allowed 踩坑"></a>pointer-events:none 和 cursor:not-allowed 踩坑</h3><p>最近有一个需求是在卡片不可用时,禁用鼠标点击事件并把鼠标指针设置为禁用状态. 于是我通过在卡片上设置了 CSS 样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disable</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.appCard</span><span class="selector-class">.disable</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">pointer-events</span>:none;</span><br><span class="line">    <span class="attribute">cursor</span>:not-allowed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果鼠标指针的禁用样式一直无法生效,我在 a 标签的父元素上设置了 cursor:not-allowed 才有效果.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span>&#123;<br>    <span class="hljs-attribute">cursor</span>:not-allowed;<br>&#125;<br><span class="hljs-selector-class">.appCard</span><span class="hljs-selector-class">.disabled</span> <span class="hljs-selector-tag">a</span>&#123;<br>    <span class="hljs-attribute">pointer-events</span>:none;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.appCard</span><span class="selector-class">.disabled</span>&#123;</span><br><span class="line">    <span class="attribute">cursor</span>:not-allowed;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.appCard</span><span class="selector-class">.disabled</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">pointer-events</span>:none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>我看了下 MDN 上 cursor:not-allowed 和 pointer-events:none 的说明,也没看明白什么原因. 后来在博客上看到了产生这个问题的原因.在 a 标签上设置了 pointer-events:none 后,a 标签就无法再响应鼠标事件了,所以设置的指针样式也不会生效.因此把这两个属性放在一个元素上,是不能达到我们所需要的效果的.</p>
 <h4 id="pointer-events-none"><a href="#pointer-events-none" class="headerlink" title="pointer-events:none"></a>pointer-events:none</h4><p>MDN 文档的说法是元素设置 pointer-events:none 后将永远不会成为鼠标事件的 target,可以理解为你能看到这个元素,但却摸不到. 如下图所示,用一个 div 元素 把 a 标签挡住后,在 div 上设置 pointer-events:none 是可以点击到下面的 a 标签的:<img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/pointer-events-none.gif" alt="pointer-events-none"> 如果为 a 标签设置了 “pointer-events:none”,点击 a 标签,不会跳转到链接地址,而且也没有悬浮样式,但是通过 tab 键可以选中连接进行跳转,可以把 href 去掉,这样就无法选中了.</p>
 <hr>
@@ -257,6 +272,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -322,15 +344,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -412,6 +446,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2020/05/29/214/",
+      identifier: "2020/05/29/214/",
+      title     : "pointer-events:none 和 cursor:not-allowed 踩坑",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

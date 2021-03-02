@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="git 使用总结git 用户配置先设置好用户名和邮箱,这些信息会在 commit 记录中出现.之后再添加其他配置,方便使用.详细命令如下： 12345git config --global user.name &quot;lichen404&quot;     #填写用户名git config --global user.email &quot;f360family@gmail.com&quot;">
@@ -122,6 +122,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -209,7 +224,7 @@
 
       
         <h2 id="git-使用总结"><a href="#git-使用总结" class="headerlink" title="git 使用总结"></a>git 使用总结</h2><h3 id="git-用户配置"><a href="#git-用户配置" class="headerlink" title="git 用户配置"></a>git 用户配置</h3><p>先设置好用户名和邮箱,这些信息会在 commit 记录中出现.之后再添加其他配置,方便使用.详细命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;lichen404&quot;</span>     <span class="hljs-comment">#填写用户名</span><br>git config --global user.email <span class="hljs-string">&quot;f360family@gmail.com&quot;</span>   <span class="hljs-comment">#填写用户邮箱</span><br>git config --global push.default simple<br>git config --global core.quotepath <span class="hljs-literal">false</span>   <span class="hljs-comment">#避免中文乱码</span><br>git config --global core.editor <span class="hljs-string">&quot;vim&quot;</span>   <span class="hljs-comment">#使用vim编辑提交信息</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;lichen404&quot;</span>     <span class="comment">#填写用户名</span></span><br><span class="line">git config --global user.email <span class="string">&quot;f360family@gmail.com&quot;</span>   <span class="comment">#填写用户邮箱</span></span><br><span class="line">git config --global push.default simple</span><br><span class="line">git config --global core.quotepath <span class="literal">false</span>   <span class="comment">#避免中文乱码</span></span><br><span class="line">git config --global core.editor <span class="string">&quot;vim&quot;</span>   <span class="comment">#使用vim编辑提交信息</span></span><br></pre></td></tr></table></figure>
 <h3 id="配置-github"><a href="#配置-github" class="headerlink" title="配置 github"></a>配置 github</h3><p>生成 SSH key 并把它添加到 Github</p>
 <ol>
 <li> 进入 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></li>
@@ -293,7 +308,7 @@
 </tr>
 </tbody></table>
 <h3 id="git-fetch-和-git-pull"><a href="#git-fetch-和-git-pull" class="headerlink" title="git fetch 和 git  pull"></a>git fetch 和 git  pull</h3><p>git fetch 是将远程主机的最新内容拉到本地但并不进行 merge，用户可以自行决定是否 merge。在取回更新后，会返回一个 FETCH_HEAD,指的是某个 branch 在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">log</span> -p FETCH_HEAD<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> -p FETCH_HEAD</span><br></pre></td></tr></table></figure>
 <p>可以通过这些信息来判断是否产生冲突，已确定是否将更新 merge 到当前分支。</p>
 <p>git pull 是将远程主机的最新内容拉到本地并直接合并，即 git pull = git fetch + git merge,这样可能会产生冲突,需要手动解决。</p>
 <h3 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h3><p>git rebase 可以把本地未 push 的分叉提交历史整理成直线</p>
@@ -315,11 +330,11 @@
 <h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fix-conflict-300x192.png" alt="fix-conflict-300x192"></p>
 <p>当两条分支各自都有新的提交时,Git 无法执行”快速合并”(git merge),只能试图把各自的修改合并起来,但这种合并就可能会有冲突. 当 Git 无法自动合并分支时,就必须首先解决冲突.解决冲突后,再提交,合并完成. 解决冲突就是把 Git 合并失败的文件手动编辑为我们希望的内容,再提交.</p>
 <h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><p><strong>注意</strong>：工作区和暂存区是公共的.未 add 的内容不属于任何一个分支, 未 commit 的内容也不属于任何一个分支.当执行命令 <code>git checkout develop</code> 切换到 develop 分支时,如果之前的分支对文件有修改,也会将修改的文件信息带到 develop 分支上来. git stash 可以将你的修改临时储存起来,保证你的工作区是干净的,避免切换分支时你的修改被带到其他分支. <code>git stash list //查看被临时储存的修改</code></p>
-<h4 id="如何恢复："><a href="#如何恢复：" class="headerlink" title="如何恢复："></a>如何恢复：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git stash pop //恢复后,stash内容并不删除,你需要用git stash drop来删除<br>git stash apply //恢复的同时把stash内容也删了<br>git stash apply stash@&#123;0&#125;  //恢复指定的stash<br></code></pre></td></tr></table></figure>
+<h4 id="如何恢复："><a href="#如何恢复：" class="headerlink" title="如何恢复："></a>如何恢复：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash pop //恢复后,stash内容并不删除,你需要用git stash drop来删除</span><br><span class="line">git stash apply //恢复的同时把stash内容也删了</span><br><span class="line">git stash apply stash@&#123;0&#125;  //恢复指定的stash</span><br></pre></td></tr></table></figure>
 <p>####cherry-pick cherry-pick 命令让我们能复制一个特定的 commit 到当前分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git branch<br>* dev<br>  master<br>$ git cherry-pick 4c805e2<br>[master 1d4b803] fix bug 101<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">$ git cherry-pick 4c805e2</span><br><span class="line">[master 1d4b803] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
 <h3 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h3><p>可以将 git 命令缩写,减少工作量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config --global alias.co checkout<br>$ git config --global alias.ci commit<br>$ git config --global alias.br branch<br>$ git config --global alias.unstage <span class="hljs-string">&#x27;reset HEAD&#x27;</span> //撤销add<br>$ git config --global alias.last <span class="hljs-string">&#x27;log -1&#x27;</span> //显示最近一次提交<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br><span class="line">$ git config --global alias.unstage <span class="string">&#x27;reset HEAD&#x27;</span> //撤销add</span><br><span class="line">$ git config --global alias.last <span class="string">&#x27;log -1&#x27;</span> //显示最近一次提交</span><br></pre></td></tr></table></figure>
 <h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>配置Git的时候,加上<code>--global</code>是针对当前用户起作用的,如果不加,那只针对当前的仓库起作用. 每个仓库的Git配置文件都放在<code>.git/config</code>文件中. 当前用户的 Git 配置文件放在用户主目录下的一个隐藏文件<code>.gitconfig</code> 配置别名也可以直接修改这个文件,如果改错了,可以删掉文件重新通过命令配置.</p>
 <h3 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h3><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的 Git 教程</a></p>
 <p><a target="_blank" rel="noopener" href="https://yonghaowu.github.io/2017/06/18/TheGitYouShouldKnow/">你们仍未掌握那天所学的 git 知识</a></p>
@@ -357,6 +372,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -422,15 +444,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -512,6 +546,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2020/03/08/145/",
+      identifier: "2020/03/08/145/",
+      title     : "git 使用总结",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

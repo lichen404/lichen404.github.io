@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="大一的时候发现的一个比较有意思的网站:黑板课爬虫闯关,可以用来Python练手.当时我只做了前两关,第三关因为觉得登陆完跳转莫名奇妙的,就没再做下去.最近又看到了这个闯关题目于是抽空通关了一下.  先看下自己大一写的代码,真的惨不忍睹： 12345678910111213141516171819from urllib import requestfrom bs4 import BeautifulS">
@@ -121,6 +121,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -210,7 +225,7 @@
         <p>大一的时候发现的一个比较有意思的网站:<a target="_blank" rel="noopener" href="http://www.heibanke.com/lesson/crawler_ex00/">黑板课爬虫闯关</a>,可以用来Python练手.当时我只做了前两关,第三关因为觉得登陆完跳转莫名奇妙的,就没再做下去.最近又看到了这个闯关题目于是抽空通关了一下.</p>
 <hr>
 <p>先看下自己大一写的代码,真的惨不忍睹：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> request<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-keyword">import</span> re<br>num=<span class="hljs-number">1</span><br>url=<span class="hljs-string">&quot;http://www.heibanke.com/lesson/crawler_ex00/&quot;</span><br><span class="hljs-keyword">while</span>(num):f=request.Request(url)<br>page=request.urlopen(f)<br>soup=BeautifulSoup(page,<span class="hljs-string">&#x27;html.parser&#x27;</span>,from_encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>content=soup.find_all(<span class="hljs-string">&#x27;h3&#x27;</span>)<br>content=<span class="hljs-built_in">str</span>(content)<br>p=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">&#x27; ]+&gt;&#x27;</span>)<br>content=p.sub(<span class="hljs-string">&quot;&quot;</span>,content)<br>print(content)<br>num=re.findall(<span class="hljs-string">r&quot;\d+\.?\d*&quot;</span>,content)<br>num=<span class="hljs-built_in">str</span>(num)<br>print(num)<br>num=re.sub(<span class="hljs-string">r&quot;\D&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,num)<br>url=<span class="hljs-string">&#x27;http://www.heibanke.com/lesson/crawler_ex00/&#x27;</span><br>url+=num<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">num=<span class="number">1</span></span><br><span class="line">url=<span class="string">&quot;http://www.heibanke.com/lesson/crawler_ex00/&quot;</span></span><br><span class="line"><span class="keyword">while</span>(num):f=request.Request(url)</span><br><span class="line">page=request.urlopen(f)</span><br><span class="line">soup=BeautifulSoup(page,<span class="string">&#x27;html.parser&#x27;</span>,from_encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">content=soup.find_all(<span class="string">&#x27;h3&#x27;</span>)</span><br><span class="line">content=<span class="built_in">str</span>(content)</span><br><span class="line">p=re.<span class="built_in">compile</span>(<span class="string">&#x27; ]+&gt;&#x27;</span>)</span><br><span class="line">content=p.sub(<span class="string">&quot;&quot;</span>,content)</span><br><span class="line">print(content)</span><br><span class="line">num=re.findall(<span class="string">r&quot;\d+\.?\d*&quot;</span>,content)</span><br><span class="line">num=<span class="built_in">str</span>(num)</span><br><span class="line">print(num)</span><br><span class="line">num=re.sub(<span class="string">r&quot;\D&quot;</span>,<span class="string">&quot;&quot;</span>,num)</span><br><span class="line">url=<span class="string">&#x27;http://www.heibanke.com/lesson/crawler_ex00/&#x27;</span></span><br><span class="line">url+=num</span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>第一关没啥好说的.就是不断的请求网页,拼接URL直到获得Flag就好了. </p>
 </li>
@@ -275,6 +290,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -339,15 +361,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -429,6 +463,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2018/03/27/24/",
+      identifier: "2018/03/27/24/",
+      title     : "黑板课爬虫闯关",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

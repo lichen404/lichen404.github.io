@@ -17,18 +17,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="学习使用 Mobx在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子： 123456789101112131415161718192021222324252627282930313233343536373839&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.tsimport &amp;#123; observab">
+  <meta name="description" content="学习使用 Mobx在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mobX 学习笔记">
 <meta property="og:url" content="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="学习使用 Mobx在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子： 123456789101112131415161718192021222324252627282930313233343536373839&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.tsimport &amp;#123; observab">
+<meta property="og:description" content="学习使用 Mobx在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-01T02:37:39.000Z">
-<meta property="article:modified_time" content="2021-03-02T07:08:35.234Z">
+<meta property="article:modified_time" content="2021-03-02T15:11:07.177Z">
 <meta property="article:author" content="Li Chen">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="mobX">
@@ -120,6 +120,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -183,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-02 15:08:35" itemprop="dateModified" datetime="2021-03-02T15:08:35+08:00">2021-03-02</time>
+                <time title="Modified: 2021-03-02 23:11:07" itemprop="dateModified" datetime="2021-03-02T23:11:07+08:00">2021-03-02</time>
               </span>
 
           
@@ -198,7 +213,9 @@
 
       
         <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs tsx">&#x2F;&#x2F;&#x2F;&#x2F; 假设我们有一个Activity store 于activityStore.ts<br>import &#123; observable, action &#125; from &#39;mobx&#39;;<br>export default class ActivityStore &#123;<br>  @observable activityList: Array &#x3D; [];<br><br>  @action.bound fetchActivityList() &#123;<br>    return fetch(&quot;&#x2F;activity&quot;).then(<br>      action(data &#x3D;&gt; &#123;                 &#x2F;&#x2F;用 action 在then后继续绑定当前实例<br>        this.activityList &#x3D; this.activityList.concat(data)<br>      &#125;)<br>    );<br>  &#125;<br><br>&#125;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 收集所有store于 stores.ts<br>import ActivityStore from &quot;.&#x2F;activityStore&quot;<br>const storeContext &#x3D; React.createContext(&#123;<br>  activityStore: new ActivityStore()<br>&#125;)<br>const useStores &#x3D; () &#x3D;&gt; React.useContext(storeContext);  &#x2F;&#x2F; 利用 context hook<br>export default useStores;<br><br>&#x2F;&#x2F;&#x2F;&#x2F; 任何一个需要store的组件,例如 Activity.tsx<br>import React, &#123; useEffect &#125; from &quot;react&quot;<br>import useStores from &#39;.&#x2F;stores&#39;<br>import &#123;observer&#125; from &quot;mobx-react&quot;<br><br>export default observer(function Activity() &#123;  &#x2F;&#x2F; 套上obeserver<br>  const &#123; activityStore &#125; &#x3D; useStores();  &#x2F;&#x2F; 在 React 里 use 一切<br><br>  useEffect(() &#x3D;&gt; &#123;<br>    activityStore.fetActivityList().then(() &#x3D;&gt;<br>      console.log(&quot;fetch OK!&quot;)<br>    &#125;)<br>  &#125;, [])<br><br>  return &lt;div&gt;activityStore.activityList.map(activity &#x3D;&gt; activity.name)&lt;&#x2F;div&gt;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设我们有一个Activity store 于activityStore.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; observable, action &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">ActivityStore</span> </span>&#123;</span><br><span class="line">  @observable activityList: <span class="built_in">Array</span> = [];</span><br><span class="line"></span><br><span class="line">  @action.bound <span class="function"><span class="title">fetchActivityList</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> fetch(<span class="string">&quot;/activity&quot;</span>).then(</span><br><span class="line">      action(<span class="function"><span class="params">data</span> =&gt;</span> &#123;                 <span class="comment">//用 action 在then后继续绑定当前实例</span></span><br><span class="line">        <span class="built_in">this</span>.activityList = <span class="built_in">this</span>.activityList.concat(data)</span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 收集所有store于 stores.ts</span></span><br><span class="line"><span class="keyword">import</span> ActivityStore <span class="keyword">from</span> <span class="string">&quot;./activityStore&quot;</span></span><br><span class="line"><span class="keyword">const</span> storeContext = React.createContext(&#123;</span><br><span class="line">  activityStore: <span class="keyword">new</span> ActivityStore()</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">const</span> useStores = <span class="function">() =&gt;</span> React.useContext(storeContext);  <span class="comment">// 利用 context hook</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useStores;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 任何一个需要store的组件,例如 Activity.tsx</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> useStores <span class="keyword">from</span> <span class="string">&#x27;./stores&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123;observer&#125; <span class="keyword">from</span> <span class="string">&quot;mobx-react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> observer(<span class="function"><span class="keyword">function</span> <span class="title">Activity</span>(<span class="params"></span>) </span>&#123;  <span class="comment">// 套上obeserver</span></span><br><span class="line">  <span class="keyword">const</span> &#123; activityStore &#125; = useStores();  <span class="comment">// 在 React 里 use 一切</span></span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    activityStore.fetActivityList().then(<span class="function">() =&gt;</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;fetch OK!&quot;</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;, [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>activityStore.activityList.map(activity =&gt; activity.name)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>我在项目里采用的也是这种使用方式，接下来总结下 mobx 和 mobx-react 的主要 api：</p>
 <h3 id="observable"><a href="#observable" class="headerlink" title="@observable"></a>@observable</h3><p>observable 是一种让数据的变化可以被观察的方法，底层是通过和 Vue 2 相同的 Object.defineProperty() 来实现的，把该属性转化成 getter /setter。在 Mobx 5 中，使用 es6 中的 proxy 的来实现数据的变化监听，从而避免出现了跟 Vue2 中一样的问题。</p>
 <ul>
@@ -208,14 +225,14 @@
 <h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><p>计算值是可以根据现有的状态或其他计算值衍生出的值。如果任何影响计算值的值发生变化了，计算值将根据状态自动更新。</p>
 <h3 id="autorun"><a href="#autorun" class="headerlink" title="autorun"></a>autorun</h3><p>直译的意思就是自动运行，使用 autorun 时，所提供的函数会立即被触发一次，以观察哪些可观察数据被引用，然后每次它的依赖关系改变时会自动运行。autorun 的作用是在可观察数据被修改之后，自动去执行依赖可观察数据的行为，这个行为一直就是传入 autorun 的函数。</p>
 <p>传递给 autorun 的函数在调用后接受一个参数，即当前 reaction(autorun),可用于在执行期间清理 autorun</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> numbers = observable([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]);<br><span class="hljs-keyword">var</span> sum = computed(<span class="hljs-function">() =&gt;</span> numbers.reduce(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a + b, <span class="hljs-number">0</span>));<br><br><span class="hljs-keyword">var</span> disposer = autorun(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(sum.get()));<br><span class="hljs-comment">// 输出 &#x27;6&#x27;</span><br>numbers.push(<span class="hljs-number">4</span>);<br><span class="hljs-comment">// 输出 &#x27;10&#x27;</span><br><br>disposer();<br>numbers.push(<span class="hljs-number">5</span>);<br><span class="hljs-comment">// 不会再输出任何值。`sum` 不会再重新计算。</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = observable([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</span><br><span class="line"><span class="keyword">var</span> sum = computed(<span class="function">() =&gt;</span> numbers.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> disposer = autorun(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(sum.get()));</span><br><span class="line"><span class="comment">// 输出 &#x27;6&#x27;</span></span><br><span class="line">numbers.push(<span class="number">4</span>);</span><br><span class="line"><span class="comment">// 输出 &#x27;10&#x27;</span></span><br><span class="line"></span><br><span class="line">disposer();</span><br><span class="line">numbers.push(<span class="number">5</span>);</span><br><span class="line"><span class="comment">// 不会再输出任何值。`sum` 不会再重新计算。</span></span><br></pre></td></tr></table></figure>
 <h3 id="autorun-和-computed"><a href="#autorun-和-computed" class="headerlink" title="autorun 和 computed"></a>autorun 和 computed</h3><ul>
 <li>它们都是响应式调用的表达式</li>
 <li>@computed 用于响应式的产生一个可以被其他 observer 使用的值,autorun 不产生新的值，而是达到一个效果(打印日志，发起网络请求等命令式的副作用)</li>
 <li>@computed 中如果一个计算值不再被观察了,MobX 可以自动地将其垃圾回收，而 autorun 中的值必须要手动清理才行</li>
 </ul>
 <h3 id="when"><a href="#when" class="headerlink" title="when"></a>when</h3><p>接收两个函数参数，第一个函数必须根据可观察数据来返回一个布尔值，当该布尔值为 true 时，才会去执行第二个函数，并且只会执行一次。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, when &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>when(<span class="hljs-function">() =&gt;</span> leo.bool, <span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;这是true&#x27;</span>)<br>&#125;)<br>leo.bool = <span class="hljs-literal">true</span><br><span class="hljs-comment">// 这是true</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, when &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leo</span> </span>&#123;</span><br><span class="line">    @observable str = <span class="string">&#x27;leo&#x27;</span>;</span><br><span class="line">    @observable num = <span class="number">123</span>;</span><br><span class="line">    @observable bool = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> leo = <span class="keyword">new</span> Leo()</span><br><span class="line">when(<span class="function">() =&gt;</span> leo.bool, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;这是true&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">leo.bool = <span class="literal">true</span></span><br><span class="line"><span class="comment">// 这是true</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong></p>
 <ol>
 <li>第一个参数，必须是根据<strong>可观察数据</strong>来返回的布尔值，而不是普通变量的布尔值。</li>
@@ -223,13 +240,13 @@
 </ol>
 <h3 id="reaction"><a href="#reaction" class="headerlink" title="reaction"></a>reaction</h3><p>高级版的 autorun ，对于如何追踪 observable 赋予了更细粒度的控制。接受两个函数参数，第一个函数引用可观察数据，并返回一个可观察数据，作为第二个函数的参数。</p>
 <p>reaction 第一次渲染的时候，会先执行一次第一个函数，这样 MobX 就会知道哪些可观察数据被引用了。随后在这些数据被修改的时候，执行第二个函数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, reaction &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leo</span> </span>&#123;<br>    @observable str = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable num = <span class="hljs-number">123</span>;<br>    @observable bool = <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">let</span> leo = <span class="hljs-keyword">new</span> Leo()<br>reaction(<span class="hljs-function">() =&gt;</span> [leo.str, leo.num], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>leo.str = <span class="hljs-string">&#x27;pingan&#x27;</span><br>leo.num = <span class="hljs-number">122</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br><span class="hljs-comment">// [&quot;pingan&quot;, 122]</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, reaction &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leo</span> </span>&#123;</span><br><span class="line">    @observable str = <span class="string">&#x27;leo&#x27;</span>;</span><br><span class="line">    @observable num = <span class="number">123</span>;</span><br><span class="line">    @observable bool = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> leo = <span class="keyword">new</span> Leo()</span><br><span class="line">reaction(<span class="function">() =&gt;</span> [leo.str, leo.num], <span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;)</span><br><span class="line">leo.str = <span class="string">&#x27;pingan&#x27;</span></span><br><span class="line">leo.num = <span class="number">122</span></span><br><span class="line"><span class="comment">// [&quot;pingan&quot;, 122]</span></span><br><span class="line"><span class="comment">// [&quot;pingan&quot;, 122]</span></span><br></pre></td></tr></table></figure>
 <p>这里我们依次修改 leo.str 和 leo.num 两个变量，会发现 reaction 方法被执行两次，在控制台输出两次结果 [“pingan”, 122] ，因为可观察数据 str 和 num 分别被修改了一次。</p>
 <p><strong>实际使用场景</strong></p>
 <p>当我们没有获取到数据的时候，没有必要去执行存缓存逻辑，当第一次获取到数据以后，就执行存缓存的逻辑。</p>
 <h3 id="action"><a href="#action" class="headerlink" title="@action"></a>@action</h3><p>action 是修改任何状态的东西，任何修改状态的函数都应该使用 @action。Mobx 6 的默认配置中 enforceActions 设置为 true，也就是说任何修改状态的操作都需要通过 action 来完成。</p>
 <h4 id="runInAction"><a href="#runInAction" class="headerlink" title="runInAction"></a>runInAction</h4><p>runInAction 是个简单的工具函数，它接收代码块并在(异步的)动作中执行。这对于即时创建和执行动作非常有用，例如在异步函数过程中。runInAction(f) 是 action(f)() 的语法糖。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; observable, computed, reaction, action&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mobx&#x27;</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>&#123;<br>    @observable string = <span class="hljs-string">&#x27;leo&#x27;</span>;<br>    @observable number = <span class="hljs-number">123</span>;<br>    @action.bound <span class="hljs-function"><span class="hljs-title">bar</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>        <span class="hljs-built_in">this</span>.number = <span class="hljs-number">100</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">let</span> store = <span class="hljs-keyword">new</span> Store()<br>reaction(<span class="hljs-function">() =&gt;</span> [store.string, store.number], <span class="hljs-function"><span class="hljs-params">arr</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(arr)<br>&#125;)<br>runInAction(<span class="hljs-function">() =&gt;</span> &#123;<br>    store.string = <span class="hljs-string">&#x27;pingan&#x27;</span><br>    store.number = <span class="hljs-number">100</span><br>&#125;)<span class="hljs-comment">//[&quot;pingan&quot;, 100]</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, computed, reaction, action&#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Store</span> </span>&#123;</span><br><span class="line">    @observable string = <span class="string">&#x27;leo&#x27;</span>;</span><br><span class="line">    @observable number = <span class="number">123</span>;</span><br><span class="line">    @action.bound <span class="function"><span class="title">bar</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.string = <span class="string">&#x27;pingan&#x27;</span></span><br><span class="line">        <span class="built_in">this</span>.number = <span class="number">100</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> store = <span class="keyword">new</span> Store()</span><br><span class="line">reaction(<span class="function">() =&gt;</span> [store.string, store.number], <span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;)</span><br><span class="line">runInAction(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    store.string = <span class="string">&#x27;pingan&#x27;</span></span><br><span class="line">    store.number = <span class="number">100</span></span><br><span class="line">&#125;)<span class="comment">//[&quot;pingan&quot;, 100]</span></span><br></pre></td></tr></table></figure>
 <h3 id="observer"><a href="#observer" class="headerlink" title="observer"></a>observer</h3><p>observer 函数/装饰器 是由 mobx-react 提供的，可以把React 组件转换成响应式组件。它使用 autoRun 包装了组件的 render 函数以确保任何组件渲染中的使用的数据变化都可以强制刷新组件。而当数据没有变化时，它同样确保了组件不会重新渲染，类似于 React  PureComponent。</p>
 <p>所有渲染 observer 数据的组件都需要使用 observer 来确保数据变化时组件能够响应。需要注意的一个常见错误是：</p>
 <ul>
@@ -288,6 +305,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -353,15 +377,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -443,6 +479,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
+      identifier: "2021/03/01/mobX-学习笔记/",
+      title     : "mobX 学习笔记",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

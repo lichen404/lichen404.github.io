@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-02T07:08:35.234Z</updated>
+  <updated>2021-03-02T15:11:07.177Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-03-01T02:37:39.000Z</published>
-    <updated>2021-03-02T07:08:35.234Z</updated>
+    <updated>2021-03-02T15:11:07.177Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;学习使用-Mobx&quot;&gt;&lt;a href=&quot;#学习使用-Mobx&quot; class=&quot;headerlink&quot; title=&quot;学习使用 Mobx&quot;&gt;&lt;/a&gt;学习使用 Mobx&lt;/h2&gt;&lt;p&gt;在知乎上看到了一个很好的使用 mobx 配合 hooks</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;学习使用-Mobx&quot;&gt;&lt;a href=&quot;#学习使用-Mobx&quot; class=&quot;headerlink&quot; title=&quot;学习使用 Mobx&quot;&gt;&lt;/a&gt;学习使用 Mobx&lt;/h2&gt;&lt;p&gt;在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：&lt;/p&gt;</summary>
     
     
     
@@ -46,16 +40,11 @@
     <link href="http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/</id>
     <published>2021-03-01T02:36:01.000Z</published>
-    <updated>2021-03-02T07:08:35.238Z</updated>
+    <updated>2021-03-02T15:10:37.937Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;解决控制台-MobX-警告&quot;&gt;&lt;a href=&quot;#解决控制台-MobX-警告&quot; class=&quot;headerlink&quot; title=&quot;解决控制台 MobX 警告&quot;&gt;&lt;/a&gt;解决控制台 MobX 警告&lt;/h3&gt;&lt;p&gt;&lt;code&gt;MobX: Since</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;解决控制台-MobX-警告&quot;&gt;&lt;a href=&quot;#解决控制台-MobX-警告&quot; class=&quot;headerlink&quot; title=&quot;解决控制台 MobX 警告&quot;&gt;&lt;/a&gt;解决控制台 MobX 警告&lt;/h3&gt;&lt;p&gt;&lt;code&gt;MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 action 包装的。在回调中修改 observable state 是无法通过 enforceActions 检查的。官方文档的解决办法是使用 Flow。但是因为需要用到 generator 和 yield，我选择使用了更简单的方法。&lt;/p&gt;</summary>
     
     
     
@@ -69,17 +58,10 @@
     <link href="http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
     <id>http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
     <published>2021-02-25T14:13:01.000Z</published>
-    <updated>2021-02-25T14:22:51.972Z</updated>
+    <updated>2021-03-02T15:11:26.476Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;小程序踩坑&quot;&gt;&lt;a href=&quot;#小程序踩坑&quot; class=&quot;headerlink&quot; title=&quot;小程序踩坑&quot;&gt;&lt;/a&gt;小程序踩坑&lt;/h3&gt;&lt;p&gt;之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。&lt;/p&gt;
-&lt;h4</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;小程序踩坑&quot;&gt;&lt;a href=&quot;#小程序踩坑&quot; class=&quot;headerlink&quot; title=&quot;小程序踩坑&quot;&gt;&lt;/a&gt;小程序踩坑&lt;/h3&gt;&lt;p&gt;之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。&lt;/p&gt;</summary>
     
     
     
@@ -93,18 +75,10 @@
     <link href="http://example.com/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2021/01/30/%E7%BF%BB%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/</id>
     <published>2021-01-29T16:31:01.000Z</published>
-    <updated>2021-01-29T16:31:37.156Z</updated>
+    <updated>2021-03-02T15:11:38.518Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;之前翻译了一下 GitHub 的说明文档，遇到了一个不太明白的地方，今天来回顾记录一下。&lt;/p&gt;
-&lt;p&gt;翻译的文档里有这样一句话&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Only do this if you want the new branch to become the base</summary>
-        
-      
+    <summary type="html">&lt;p&gt;之前翻译了一下 GitHub 的说明文档，遇到了一个不太明白的地方，今天来回顾记录一下。&lt;/p&gt;</summary>
     
     
     
@@ -116,18 +90,16 @@
     <link href="http://example.com/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://example.com/2021/01/19/to%20%E5%92%8C%20towards%20%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
     <published>2021-01-19T10:02:15.000Z</published>
-    <updated>2021-01-29T16:29:31.576Z</updated>
+    <updated>2021-03-02T15:12:33.711Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Look at these 2 sentences:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Jane is walking &lt;strong&gt;to&lt;/strong&gt;</summary>
-        
-      
+&lt;li&gt;Jane is walking &lt;strong&gt;to&lt;/strong&gt; the library.&lt;/li&gt;
+&lt;li&gt;Sarah is walking &lt;strong&gt;towards&lt;/strong&gt; the library.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;to&lt;/strong&gt; and &lt;strong&gt;towards&lt;/strong&gt; are &lt;code&gt;prepositions&lt;/code&gt; to describe movement.&lt;/p&gt;
+&lt;p&gt;Both of these sentences are grammatically correct. But there is a &lt;code&gt;slight&lt;/code&gt; difference in the meaning. In this lesson, you will learn the difference.&lt;/p&gt;</summary>
     
     
     
@@ -135,11 +107,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>博客搭建记录</title>
     <link href="http://example.com/2021/01/06/hello-world/"/>
     <id>http://example.com/2021/01/06/hello-world/</id>
-    <published>2021-01-06T14:42:51.600Z</published>
-    <updated>2021-01-06T14:42:51.601Z</updated>
+    <published>2021-01-06T14:42:51.000Z</published>
+    <updated>2021-03-02T15:32:13.952Z</updated>
     
     
       
@@ -160,17 +132,10 @@
     <link href="http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/"/>
     <id>http://example.com/2020/10/15/chrome%E8%B0%83%E8%AF%95%E9%87%8C%E7%9A%84formdata-%E5%92%8C-request-payload-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</id>
     <published>2020-10-15T02:29:06.000Z</published>
-    <updated>2021-01-18T13:40:35.832Z</updated>
+    <updated>2021-03-02T15:13:11.815Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. &lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
+    <summary type="html">&lt;p&gt;最近注意到 Chrome 的开发工具里有时这个地方有时显示的是 Request Payload,有时显示的是 FormData. &lt;/p&gt;</summary>
     
     
     
@@ -186,17 +151,13 @@
     <link href="http://example.com/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://example.com/2020/09/04/vue-router-query-%E5%92%8C-params-%E4%BC%A0%E5%8F%82%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
     <published>2020-09-04T10:31:41.000Z</published>
-    <updated>2021-01-18T13:40:35.844Z</updated>
+    <updated>2021-03-02T15:13:32.367Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;h3 id=&quot;params-query-是什么？&quot;&gt;&lt;a href=&quot;#params-query-是什么？&quot; class=&quot;headerlink&quot; title=&quot;params,query 是什么？&quot;&gt;&lt;/a&gt;params,query 是什么？&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt; </summary>
-        
-      
+&lt;li&gt;  &lt;strong&gt;params&lt;/strong&gt;: /router1/:id, /router1/123, /router1/789,这里的id叫做 params,需要通过 route.params.id 获取&lt;/li&gt;
+&lt;li&gt;  &lt;strong&gt;query&lt;/strong&gt;: /router1/?id=123 ,/router1?id=456,这里的id叫做 query,需要通过 route.query.id 获取&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -214,21 +175,28 @@
     <link href="http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2020-09-01T14:55:00.000Z</published>
-    <updated>2021-01-18T13:40:35.841Z</updated>
+    <updated>2021-03-02T15:31:14.482Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;目前各个网站使用的font-family&quot;&gt;&lt;a href=&quot;#目前各个网站使用的font-family&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;目前各个网站使用的font-family&quot;&gt;&lt;a href=&quot;#目前各个网站使用的font-family&quot; class=&quot;headerlink&quot; title=&quot;目前各个网站使用的font-family&quot;&gt;&lt;/a&gt;目前各个网站使用的font-family&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;  知乎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:-apple-system&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;BlinkMacSystemFont&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Helvetica&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Neue&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;PingFang&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;SC&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Microsoft&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;YaHei&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Source&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Han&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Sans&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;SC&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Noto&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Sans&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;CJK&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;SC&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;WenQuanYi&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Micro&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Hei&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;sans-serif&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;  Github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;font-family&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;-apple-system&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;BlinkMacSystemFont&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Segoe&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;UI&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Helvetica&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Arial&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;sans-serif&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Apple&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Color&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Emoji&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Segoe&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Emoji&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;  CSS-Tricks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;font-family&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;Sentinel&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;SSm&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;A&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Sentinel&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;SSm&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;B&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;system-ui&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;-apple-system&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;BlinkMacSystemFont&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Segoe&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;UI&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Roboto&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Helvetica&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Arial&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;sans-serif&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Apple&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Color&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Emoji&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Segoe&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Emoji&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;Segoe&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;Symbol&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
     <category term="CSS" scheme="http://example.com/categories/CSS/"/>
     
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -237,24 +205,26 @@
     <link href="http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-08-18T09:19:18.000Z</published>
-    <updated>2021-01-18T13:40:35.838Z</updated>
+    <updated>2021-03-02T15:30:22.621Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;h4 id=&quot;字体分类&quot;&gt;&lt;a href=&quot;#字体分类&quot; class=&quot;headerlink&quot; title=&quot;字体分类&quot;&gt;&lt;/a&gt;字体分类&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;  serif（衬线）&lt;/li&gt;
-&lt;li&gt;  sans-serif（无衬线）&lt;/li&gt;
-&lt;li&gt; </summary>
-        
-      
+&lt;li&gt;&lt;p&gt;serif（衬线）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sans-serif（无衬线）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;monospace （等宽）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;fantasy（不常用）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cuisive（不常用）&lt;/p&gt;</summary>
     
     
     
     <category term="CSS" scheme="http://example.com/categories/CSS/"/>
     
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -469,9 +439,9 @@
     <category term="Vue 笔记" scheme="http://example.com/categories/JavaScript/Vue-%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
-    
     <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
     
   </entry>
   

@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="暑假,小哼准备去一些城市旅游.有些城市之间有公路,有些城市之间则没有,如下图.为了节省经费以及方便计划旅程,小哼希望在出发之前知道任意两个城市之前的最短路程.    上图中有4个城市8条公路,公路上的数字表示这条公路的长短.请注意这些公路是单向的.我们现在需要求任意两个城市之间的最短路程,也就是求任意两个点之间的最短路径.这个问题这也被称为“多源最短路径”问题.   现在需要一个数据结构来存储图">
@@ -124,6 +124,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -219,7 +234,7 @@
 <p> 我们来想一想,根据我们以往的经验,如果要让任意两点（例如从顶点a点到顶点b）之间的路程变短,只能引入第三个点（顶点k）,并通过这个顶点k中转即a-&gt;k-&gt;b,才可能缩短原来从顶点a点到顶点b的路程.那么这个中转的顶点k是1~n中的哪个点呢？甚至有时候不只通过一个点,而是经过两个点或者更多点中转会更短,即a-&gt;k1-&gt;k2b-&gt;或者a-&gt;k1-&gt;k2…-&gt;k-&gt;i…-&gt;b.比如上图中从4号城市到3号城市（4-&gt;3）的路程e[4] [7]原本是12.如果只通过1号城市中转（4-&gt;1-&gt;3）,路程将缩短为11（e[4] [1]+e[1] [3]=5+6=11）.其实1号城市到3号城市也可以通过2号城市中转,使得1号到3号城市的路程缩短为5（e[1] [2]+e[2] [3]=2+3=5）.所以如果同时经过1号和2号两个城市中转的话,从4号城市到3号城市的路程会进一步缩短为10.通过这个的例子,我们发现每个顶点都有可能使得另外两个顶点之间的路程变短.好,下面我们将这个问题一般化. 当任意两点之间不允许经过第三个点时,这些城市之间最短路程就是初始路程,如下.  </p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3738937906.png" alt="3738937906"></p>
 <p> 假如现在只允许经过1号顶点,求任意两点之间的最短路程,应该如何求呢？只需判断e[i] [1]+e[1] [j]是否比e[i] [j]要小即可.e[i] [j]表示的是从i号顶点到j号顶点之间的路程.e[i] [1]+e[1] [j]表示的是从i号顶点先到1号顶点,再从1号顶点到j号顶点的路程之和.其中i是1<del>n循环,j也是1</del>n循环,代码实现如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">for(i&#x3D;1;i3-&gt;…-&gt;1-&gt;2-&gt;3这样路径中,每绕一次1-&gt;-2&gt;3这样的环,最短路就会减少1,永远找不到最短路.其实如果一个图中带有“负权回路”那么这个图则没有最短路.<br></code></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">for</span>(i=<span class="number">1</span>;i<span class="number">3</span>-&gt;…-&gt;<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>这样路径中,每绕一次<span class="number">1</span>-&gt;-<span class="number">2</span>&gt;<span class="number">3</span>这样的环,最短路就会减少<span class="number">1</span>,永远找不到最短路.其实如果一个图中带有“负权回路”那么这个图则没有最短路.</span><br></pre></td></tr></table></figure>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1975616114.png" alt="1975616114"></p>
 <p><strong>我理解的Floyd算法原理：通过遍历每一个结点与其他所有结点可能存在的路径,取其中的最小值（通过遍历其他所有结点,使其充当中介结点与当前路径比较来实现）,从而获得所有点之间的最短路径.原理说起来比较难懂,看前边的算法实现就明白了.</strong></p>
 <hr>
@@ -258,6 +273,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -322,15 +344,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -412,6 +446,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2018/09/13/35/",
+      identifier: "2018/09/13/35/",
+      title     : "最短路径问题：Floyd算法",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>

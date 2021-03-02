@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="执行*.sh 文件的几种方式12sh filename.sh.&#x2F;filename.sh(需要文件有执行权限) 上面的方法是通过建立子 shell 执行脚本中的语句,而以下方法是在当前 shell 中执行脚本内容. 12. filenamesource filename source 命令source 命令也称为“点命令”,也就是一个点符号（.）,是 bash 的内部命令. 功能使 Shell 读入">
@@ -118,6 +118,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -204,14 +219,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="执行-sh-文件的几种方式"><a href="#执行-sh-文件的几种方式" class="headerlink" title="执行*.sh 文件的几种方式"></a>执行*.sh 文件的几种方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh filename.sh<br>./filename.sh(需要文件有执行权限)<br></code></pre></td></tr></table></figure>
+        <h3 id="执行-sh-文件的几种方式"><a href="#执行-sh-文件的几种方式" class="headerlink" title="执行*.sh 文件的几种方式"></a>执行*.sh 文件的几种方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sh filename.sh</span><br><span class="line">./filename.sh(需要文件有执行权限)</span><br></pre></td></tr></table></figure>
 <p>上面的方法是通过建立子 shell 执行脚本中的语句,而以下方法是在当前 shell 中执行脚本内容.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. filename</span><br><span class="line"><span class="built_in">source</span> filename</span><br></pre></td></tr></table></figure>
 <h4 id="source-命令"><a href="#source-命令" class="headerlink" title="source 命令"></a>source 命令</h4><p>source 命令也称为“点命令”,也就是一个点符号（.）,是 bash 的内部命令.</p>
 <h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><p>使 Shell 读入指定的 Shell 程序文件并依次执行文件中的所有语句</p>
-<h5 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> filename<br></code></pre></td></tr></table></figure>
+<h5 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> filename</span><br></pre></td></tr></table></figure>
 <p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. filename<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. filename</span><br></pre></td></tr></table></figure>
 <h5 id="source-filename-与-sh-filename-及-filename-执行脚本的区别"><a href="#source-filename-与-sh-filename-及-filename-执行脚本的区别" class="headerlink" title="source filename 与 sh filename 及 ./filename 执行脚本的区别"></a>source filename 与 sh filename 及 ./filename 执行脚本的区别</h5><ol>
 <li> 当 shell 脚本具有可执行权限时,用 sh filename 与 ./filename 执行脚本是没有区别的. ./filename 是因为当前目录没有在 PATH 中,”.”是用来表示当前目录的.</li>
 <li> sh filename 重新建立了一个子 shell,在子 shell 中执行脚本里面的语句,该子 shell 继承父 shell 的环境变量,但子 shell 新建的,改变的变量不会被带回父 shell.</li>
@@ -263,6 +278,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -328,15 +350,27 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -418,6 +452,23 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2020/05/18/205/",
+      identifier: "2020/05/18/205/",
+      title     : "执行*.sh 文件的几种方式",
+    });
+  }, window.DisqusJS);
+});
+</script>
 
 </body>
 </html>
