@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Hexo 使用 和部署Hexo 简介Hexo 是一个依赖 Node.js 的博客框架，可以在本地生成静态的博客网页再上传到自己的服务器或者 Github，非常的简单方便。 Hexo 使用Hexo 主题本来我使用的主题是 Chic ，但是因为我想要使用 DisqusJS 作为评论系统，自己搞了半天也没搞定，于是使用更主流的 next 主题。next 主题内置了许多功能，包括 DisqusJS 评论，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客搭建记录">
 <meta property="og:url" content="http://example.com/2021/01/06/hello-world/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Hexo 使用 和部署Hexo 简介Hexo 是一个依赖 Node.js 的博客框架，可以在本地生成静态的博客网页再上传到自己的服务器或者 Github，非常的简单方便。 Hexo 使用Hexo 主题本来我使用的主题是 Chic ，但是因为我想要使用 DisqusJS 作为评论系统，自己搞了半天也没搞定，于是使用更主流的 next 主题。next 主题内置了许多功能，包括 DisqusJS 评论，">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-06T14:42:51.000Z">
-<meta property="article:modified_time" content="2021-03-02T16:45:10.062Z">
+<meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210303205022356.png">
+<meta property="article:published_time" content="2021-01-06T14:42:50.000Z">
+<meta property="article:modified_time" content="2021-03-07T16:34:50.206Z">
 <meta property="article:author" content="Li Chen">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210303205022356.png">
 
 <link rel="canonical" href="http://example.com/2021/01/06/hello-world/">
 
@@ -189,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-01-06 22:42:51" itemprop="dateCreated datePublished" datetime="2021-01-06T22:42:51+08:00">2021-01-06</time>
+              <time title="Created: 2021-01-06 22:42:50" itemprop="dateCreated datePublished" datetime="2021-01-06T22:42:50+08:00">2021-01-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-03 00:45:10" itemprop="dateModified" datetime="2021-03-03T00:45:10+08:00">2021-03-03</time>
+                <time title="Modified: 2021-03-08 00:34:50" itemprop="dateModified" datetime="2021-03-08T00:34:50+08:00">2021-03-08</time>
               </span>
 
           
@@ -210,15 +212,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="重新生成静态文件并部署到-服务器"><a href="#重新生成静态文件并部署到-服务器" class="headerlink" title="重新生成静态文件并部署到 服务器"></a>重新生成静态文件并部署到 服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h2 id="Hexo-使用-和部署"><a href="#Hexo-使用-和部署" class="headerlink" title="Hexo 使用 和部署"></a>Hexo 使用 和部署</h2><h3 id="Hexo-简介"><a href="#Hexo-简介" class="headerlink" title="Hexo 简介"></a>Hexo 简介</h3><p>Hexo 是一个依赖 Node.js 的博客框架，可以在本地生成静态的博客网页再上传到自己的服务器或者 Github，非常的简单方便。</p>
+<h3 id="Hexo-使用"><a href="#Hexo-使用" class="headerlink" title="Hexo 使用"></a>Hexo 使用</h3><h4 id="Hexo-主题"><a href="#Hexo-主题" class="headerlink" title="Hexo 主题"></a>Hexo 主题</h4><p>本来我使用的主题是 Chic ，但是因为我想要使用 DisqusJS 作为评论系统，自己搞了半天也没搞定，于是使用更主流的 next 主题。next 主题内置了许多功能，包括 DisqusJS 评论，简单设置下就可以使用了。</p>
+<h5 id="使用-DisqusJS"><a href="#使用-DisqusJS" class="headerlink" title="使用 DisqusJS"></a>使用 DisqusJS</h5><p>为什么我想要使用 Disqus 作为评论系统？因为我发现在 Valine，GitTalk，Disqus 中只有 Disqus 是需要注册账户的。可以看到有账户的人在其他使用 Disqus 评论系统的博客下的评论，这样的话也可以顺藤摸瓜找到更多有意思的博客。</p>
+<p>在 next 主题下使用 DisqusJS 很简单，只要按照以下设置就可以了：</p>
+<ul>
+<li><p>在主题配置文件中将comments 字段将 active 设置为 disqusjs</p>
+</li>
+<li><p>按照<a target="_blank" rel="noopener" href="https://github.com/SukkaW/DisqusJS">DisqusJS文档</a>操作，得到 api，apiKey（api使用作者提供的）</p>
+</li>
+<li><p>在主题配置文件中将 disqusjs 字段中的 enable 设为 true，并填写 api，apiKey 字段。shortname 字段填写注册 disqus  site 填写的 shortname</p>
+</li>
+</ul>
+<p>  <img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210303205022356.png" alt="image-20210303205022356"></p>
+<h5 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h5><p>Next 主题用的人非常多，相关的文章也挺多。我也懒得改太多东西，简单设置了一下。这个<a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/">网站</a>有解释各项配置，可以参考下。</p>
+<h5 id="代码高亮踩坑"><a href="#代码高亮踩坑" class="headerlink" title="代码高亮踩坑"></a>代码高亮踩坑</h5><p>我按照那个网站的方法设置了代码高亮但却没有生效，原因是我没有重置在 hexo 配置文件里的代码配置并执行 hexo clean。具体见<a target="_blank" rel="noopener" href="https://blog.wudinaonao.com/2020/04/27/Next-%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">这篇文章</a>。</p>
+<h5 id="生成-categories-和-tags-页面"><a href="#生成-categories-和-tags-页面" class="headerlink" title="生成 categories 和 tags 页面"></a>生成 categories 和 tags 页面</h5><ol>
+<li><code>hexo new page categories</code></li>
+<li>编辑  source/categories 目录下的 index.md</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-12-25 09:36:12</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>tags 页面同理</li>
+</ol>
+<h5 id="生成-RSS"><a href="#生成-RSS" class="headerlink" title="生成 RSS"></a>生成 RSS</h5><p>安装 hexo-generator-feed 插件，按照 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">Github 说明</a>配置即可。</p>
+<h5 id="图片图床"><a href="#图片图床" class="headerlink" title="图片图床"></a>图片图床</h5><p>为了方便解决在写文章时要插入图片的问题，我使用了阿里云的图床。参考这篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138878534">文章</a>，在用 typora 写 markdown 时就可以实现阿里云图片链接的插入，非常方便。</p>
+<h3 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h3><p>这部分我也是参考了网上的一篇<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jie-fang/p/13445939.html">博客</a>，注意本地 Hexo 配置的部分 root用户应该改为你创建的 git 用户，否则会提示无权限或仓库不存在。 </p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找到deploy配置部分</span></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@xxx.xx.xxx.xxx:/var/repo/blog.git</span> <span class="comment"># IP填写自己服务器的IP即可</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>生成静态页面并部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>参考：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://yooooex.com/2020/05/20/disqusjs-nginx-config/">从 disqus 切换到 disqusjs 过程及反代配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lcyaiym/article/details/84905961?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control">hexo的next主题创建categories</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jie-fang/p/13445939.html">将 Hexo 部署到自己的服务器上</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138878534">最强markdown编辑器typora图床教程- 阿里云版</a></li>
+</ul>
 
     </div>
 
@@ -306,7 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">重新生成静态文件并部署到 服务器</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E4%BD%BF%E7%94%A8-%E5%92%8C%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">Hexo 使用 和部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">Hexo 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo-%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.1.</span> <span class="nav-text">Hexo 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-DisqusJS"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">使用 DisqusJS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">主题配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%B8%A9%E5%9D%91"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">代码高亮踩坑</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%9F%E6%88%90-categories-%E5%92%8C-tags-%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">生成 categories 和 tags 页面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%9F%E6%88%90-RSS"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">生成 RSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">图片图床</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-%E9%83%A8%E7%BD%B2"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo 部署</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
