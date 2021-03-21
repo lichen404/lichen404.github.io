@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-21T07:07:12.132Z</updated>
+  <updated>2021-03-21T12:52:17.913Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>极客时间 Electron 课程学习笔记</title>
+    <link href="http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-03-21T12:46:32.000Z</published>
+    <updated>2021-03-21T12:52:17.913Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210321163931126.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Electron" scheme="http://example.com/tags/Electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Electron 项目笔记</title>
+    <link href="http://example.com/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-03-21T12:19:47.000Z</published>
+    <updated>2021-03-21T12:52:17.913Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;配置项目&quot;&gt;&lt;a href=&quot;#配置项目&quot; class=&quot;headerlink&quot; title=&quot;配置项目&quot;&gt;&lt;/a&gt;配置项目&lt;/h3&gt;&lt;h4 id=&quot;如何在-CRA-中引入-Electron&quot;&gt;&lt;a href=&quot;#如何在-CRA-中引入-Electron&quot; class=&quot;headerlink&quot; title=&quot;如何在 CRA  中引入 Electron&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://juejin.cn/post/6891926135630725128#heading-5&quot;&gt;如何在 CRA  中引入 Electron&lt;/a&gt;&lt;/h4&gt;&lt;h4 id=&quot;根据环境信息加载本地或者-devServer-URL&quot;&gt;&lt;a href=&quot;#根据环境信息加载本地或者-devServer-URL&quot; class=&quot;headerlink&quot; title=&quot;根据环境信息加载本地或者 devServer URL&quot;&gt;&lt;/a&gt;根据环境信息加载本地或者 devServer URL&lt;/h4&gt;&lt;p&gt;使用 electron-is-dev 来进行判断&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Electron" scheme="http://example.com/tags/Electron/"/>
+    
+  </entry>
   
   <entry>
     <title>mobX 学习笔记</title>
@@ -407,59 +453,6 @@
     
     
     <category term="Git" scheme="http://example.com/categories/Git/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue笔记 - 四个生命周期钩子</title>
-    <link href="http://example.com/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/"/>
-    <id>http://example.com/2020/03/01/vue%E7%AC%94%E8%AE%B0-%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/</id>
-    <published>2020-03-01T13:30:21.000Z</published>
-    <updated>2021-03-08T11:48:12.881Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;生命周期钩子&quot;&gt;&lt;a href=&quot;#生命周期钩子&quot; class=&quot;headerlink&quot; title=&quot;生命周期钩子&quot;&gt;&lt;/a&gt;生命周期钩子&lt;/h3&gt;&lt;p&gt;每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如,需要设置数据监听、编译模板、将实例挂载到</summary>
-        
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
-    
-    <category term="Vue 笔记" scheme="http://example.com/categories/JavaScript/Vue-%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python待学习内容</title>
-    <link href="http://example.com/2019/07/23/81/"/>
-    <id>http://example.com/2019/07/23/81/</id>
-    <published>2019-07-23T09:19:00.000Z</published>
-    <updated>2021-01-13T14:59:33.704Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;  &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://example.com/categories/Python/"/>
     
     
   </entry>

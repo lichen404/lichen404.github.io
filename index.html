@@ -161,6 +161,180 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">极客时间 Electron 课程学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-21 20:46:32 / Modified: 20:52:17" itemprop="dateCreated datePublished" datetime="2021-03-21T20:46:32+08:00">2021-03-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <a id="more"></a>
+
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210321163931126.png" alt="image-20210321163931126"></p>
+<h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><ul>
+<li>Electron 运行 package.json 的 main 脚本的进程被称为主进程</li>
+<li>每个应用只有一个主进程</li>
+<li>管理原生 GUI，典型的窗口(BrowserWindow,Tray,Dock,Menu)</li>
+<li>创建渲染进程</li>
+<li>控制应用生命周期</li>
+</ul>
+<h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><ul>
+<li>展示 Web 页面的进程被称为渲染进程</li>
+<li>通过 Node.js Electron 提供的 API 可以跟系统底层打交道</li>
+<li>一个 Electron 应用可以有多个渲染进程</li>
+</ul>
+<h3 id="IPC-模块通信"><a href="#IPC-模块通信" class="headerlink" title="IPC 模块通信"></a>IPC 模块通信</h3><ul>
+<li>Electron 提供了 IPC 通信模块，主进程的 ipcMain 和 渲染进程的 ipcRenderer</li>
+<li>ipcMain,ipcRenderer 都是 EventEmitter 对象</li>
+</ul>
+<h4 id="渲染进程到主进程"><a href="#渲染进程到主进程" class="headerlink" title="渲染进程到主进程"></a>渲染进程到主进程</h4><ul>
+<li>ipcRenderer.send  和 ipcMain.on</li>
+<li>ipcRenderer.invoke 和 ipcMain.handle,它们和上面的区别是 handle 可以返回一个结果给渲染进程。</li>
+</ul>
+<h4 id="从主进程到渲染进程"><a href="#从主进程到渲染进程" class="headerlink" title="从主进程到渲染进程"></a>从主进程到渲染进程</h4><ul>
+<li>ipcRenderer.on</li>
+<li>webContents.send</li>
+</ul>
+<h4 id="页面间（渲染进程与渲染进程间）通信"><a href="#页面间（渲染进程与渲染进程间）通信" class="headerlink" title="页面间（渲染进程与渲染进程间）通信"></a>页面间（渲染进程与渲染进程间）通信</h4><ul>
+<li>通知事件<ul>
+<li>ipcRenderer.sendTo</li>
+</ul>
+</li>
+<li>数据共享<ul>
+<li> Web 技术(localStorage,sessionStorage,indexedDB)</li>
+<li>使用 remote(不推荐)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Electron-优缺点"><a href="#Electron-优缺点" class="headerlink" title="Electron 优缺点"></a>Electron 优缺点</h3><ul>
+<li>性能较差，包体积大</li>
+<li>跨平台，使用前端技术构建，没有浏览器的兼容问题，支持 ES6/7 和浏览器最新 Feature ，比如纯天然的 <a target="_blank" rel="noopener" href="https://mathiasbynens.be/demo/img-loading-lazy">lazyLoad</a></li>
+<li>使用Node.js 或 Electron net 模块发送请求不存在 web 的跨域问题 </li>
+</ul>
+<h3 id="Electron-学习资源"><a href="#Electron-学习资源" class="headerlink" title="Electron 学习资源"></a>Electron 学习资源</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/geektime-geekbang/geektime-electron/blob/master/PDF/Electron%20%E5%B7%A5%E7%A8%8B%E7%AF%87.pdf">Electron 工程相关</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/geektime-geekbang/geektime-electron">Electron 开发实战</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/357927866">electron 桌面端业务中的小结(坑)</a></li>
+</ul>
+<hr>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>因为Electron 工程篇的部分内容我没有实际的应用，后续如果有用到的话也会再去总结。因此本篇内容会持续进行更新。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Electron 项目笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-21 20:19:47 / Modified: 20:52:17" itemprop="dateCreated datePublished" datetime="2021-03-21T20:19:47+08:00">2021-03-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><h4 id="如何在-CRA-中引入-Electron"><a href="#如何在-CRA-中引入-Electron" class="headerlink" title="如何在 CRA  中引入 Electron"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/6891926135630725128#heading-5">如何在 CRA  中引入 Electron</a></h4><h4 id="根据环境信息加载本地或者-devServer-URL"><a href="#根据环境信息加载本地或者-devServer-URL" class="headerlink" title="根据环境信息加载本地或者 devServer URL"></a>根据环境信息加载本地或者 devServer URL</h4><p>使用 electron-is-dev 来进行判断</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -774,188 +948,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-title-link" itemprop="url">font-family学习笔记（二）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-01 22:55:00" itemprop="dateCreated datePublished" datetime="2020-09-01T22:55:00+08:00">2020-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-02 23:31:14" itemprop="dateModified" datetime="2021-03-02T23:31:14+08:00">2021-03-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="目前各个网站使用的font-family"><a href="#目前各个网站使用的font-family" class="headerlink" title="目前各个网站使用的font-family"></a>目前各个网站使用的font-family</h3><ul>
-<li>  知乎</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:-apple-system</span>,<span class="selector-tag">BlinkMacSystemFont</span>,<span class="selector-tag">Helvetica</span> <span class="selector-tag">Neue</span>,<span class="selector-tag">PingFang</span> <span class="selector-tag">SC</span>,<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>,<span class="selector-tag">Source</span> <span class="selector-tag">Han</span> <span class="selector-tag">Sans</span> <span class="selector-tag">SC</span>,<span class="selector-tag">Noto</span> <span class="selector-tag">Sans</span> <span class="selector-tag">CJK</span> <span class="selector-tag">SC</span>,<span class="selector-tag">WenQuanYi</span> <span class="selector-tag">Micro</span> <span class="selector-tag">Hei</span>,<span class="selector-tag">sans-serif</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>  Github</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">-apple-system</span>,<span class="selector-tag">BlinkMacSystemFont</span>,<span class="selector-tag">Segoe</span> <span class="selector-tag">UI</span>,<span class="selector-tag">Helvetica</span>,<span class="selector-tag">Arial</span>,<span class="selector-tag">sans-serif</span>,<span class="selector-tag">Apple</span> <span class="selector-tag">Color</span> <span class="selector-tag">Emoji</span>,<span class="selector-tag">Segoe</span> <span class="selector-tag">UI</span> <span class="selector-tag">Emoji</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>  CSS-Tricks</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Sentinel</span> <span class="selector-tag">SSm</span> <span class="selector-tag">A</span>,<span class="selector-tag">Sentinel</span> <span class="selector-tag">SSm</span> <span class="selector-tag">B</span>,<span class="selector-tag">system-ui</span>,<span class="selector-tag">-apple-system</span>,<span class="selector-tag">BlinkMacSystemFont</span>,<span class="selector-tag">Segoe</span> <span class="selector-tag">UI</span>,<span class="selector-tag">Roboto</span>,<span class="selector-tag">Helvetica</span>,<span class="selector-tag">Arial</span>,<span class="selector-tag">sans-serif</span>,<span class="selector-tag">Apple</span> <span class="selector-tag">Color</span> <span class="selector-tag">Emoji</span>,<span class="selector-tag">Segoe</span> <span class="selector-tag">UI</span> <span class="selector-tag">Emoji</span>,<span class="selector-tag">Segoe</span> <span class="selector-tag">UI</span> <span class="selector-tag">Symbol</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/01/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">font-family学习笔记（一）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-18 17:19:18" itemprop="dateCreated datePublished" datetime="2020-08-18T17:19:18+08:00">2020-08-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-02 23:30:22" itemprop="dateModified" datetime="2021-03-02T23:30:22+08:00">2021-03-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="字体分类"><a href="#字体分类" class="headerlink" title="字体分类"></a>字体分类</h4><ul>
-<li><p>serif（衬线）</p>
-</li>
-<li><p>sans-serif（无衬线）</p>
-</li>
-<li><p>monospace （等宽）</p>
-</li>
-<li><p>fantasy（不常用）</p>
-</li>
-<li><p>cuisive（不常用）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/18/font-family%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1027,7 +1019,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1040,7 +1032,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

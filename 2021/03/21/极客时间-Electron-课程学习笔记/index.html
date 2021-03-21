@@ -20,22 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Dijkstra算法算法思路：   Dijkstra算法采用的是一种贪心的策略,声明一个数组dis来保存源点到各个顶点的最短距离和一个保存已经找到了最短路径的顶点的集合：T,初始时,原点 s 的路径权重被赋为 0 （dis[s] &#x3D; 0）.若对于顶点 s 存在能直接到达的边（s,m）,则把dis[m]设为w（s, m）,同时把所有其他（s不能直接到达的）顶点的路径长度设为无穷大.初始时,集合T只有">
+  <meta name="description" content="主进程 Electron 运行 package.json 的 main 脚本的进程被称为主进程 每个应用只有一个主进程 管理原生 GUI，典型的窗口(BrowserWindow,Tray,Dock,Menu) 创建渲染进程 控制应用生命周期  渲染进程 展示 Web 页面的进程被称为渲染进程 通过 Node.js Electron 提供的 API 可以跟系统底层打交道 一个 Electron">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最短路径问题：Dijkstra算法">
-<meta property="og:url" content="http://example.com/2018/09/12/33/index.html">
+<meta property="og:title" content="极客时间 Electron 课程学习笔记">
+<meta property="og:url" content="http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="Dijkstra算法算法思路：   Dijkstra算法采用的是一种贪心的策略,声明一个数组dis来保存源点到各个顶点的最短距离和一个保存已经找到了最短路径的顶点的集合：T,初始时,原点 s 的路径权重被赋为 0 （dis[s] &#x3D; 0）.若对于顶点 s 存在能直接到达的边（s,m）,则把dis[m]设为w（s, m）,同时把所有其他（s不能直接到达的）顶点的路径长度设为无穷大.初始时,集合T只有">
+<meta property="og:description" content="主进程 Electron 运行 package.json 的 main 脚本的进程被称为主进程 每个应用只有一个主进程 管理原生 GUI，典型的窗口(BrowserWindow,Tray,Dock,Menu) 创建渲染进程 控制应用生命周期  渲染进程 展示 Web 页面的进程被称为渲染进程 通过 Node.js Electron 提供的 API 可以跟系统底层打交道 一个 Electron">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/191263841.png">
-<meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3399450281.png">
-<meta property="article:published_time" content="2018-09-12T00:53:00.000Z">
-<meta property="article:modified_time" content="2021-01-18T13:40:35.824Z">
+<meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210321163931126.png">
+<meta property="article:published_time" content="2021-03-21T12:46:32.000Z">
+<meta property="article:modified_time" content="2021-03-21T12:52:17.913Z">
 <meta property="article:author" content="Li Chen">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="Electron">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/191263841.png">
+<meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210321163931126.png">
 
-<link rel="canonical" href="http://example.com/2018/09/12/33/">
+<link rel="canonical" href="http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -48,7 +49,7 @@
   };
 </script>
 
-  <title>最短路径问题：Dijkstra算法 | 李晨的博客</title>
+  <title>极客时间 Electron 课程学习笔记 | 李晨的博客</title>
   
 
 
@@ -169,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/09/12/33/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
@@ -182,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          最短路径问题：Dijkstra算法
+          极客时间 Electron 课程学习笔记
         </h1>
 
         <div class="post-meta">
@@ -191,24 +192,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2018-09-12 08:53:00" itemprop="dateCreated datePublished" datetime="2018-09-12T08:53:00+08:00">2018-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-                </span>
+              <time title="Created: 2021-03-21 20:46:32 / Modified: 20:52:17" itemprop="dateCreated datePublished" datetime="2021-03-21T20:46:32+08:00">2021-03-21</time>
             </span>
 
           
@@ -222,23 +208,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><p>算法思路：</p>
-<ol>
-<li> Dijkstra算法采用的是一种贪心的策略,声明一个数组dis来保存源点到各个顶点的最短距离和一个保存已经找到了最短路径的顶点的集合：T,初始时,原点 s 的路径权重被赋为 0 （dis[s] = 0）.若对于顶点 s 存在能直接到达的边（s,m）,则把dis[m]设为w（s, m）,同时把所有其他（s不能直接到达的）顶点的路径长度设为无穷大.初始时,集合T只有顶点s.</li>
-<li> 然后,从dis数组选择最小值dis[i]（vi ∈V-S ）,则该值就是源点s到该值对应的顶点的最短路径,并且把该点加入到T中,OK,此时完成一个顶点.</li>
-<li> 然后,我们需要看看新加入的顶点是否可以到达其他顶点并且看看通过该顶点到达其他点的路径长度是否比源点直接到达短,如果是,那么就替换这些顶点在dis中的值.</li>
-<li> 然后,又从dis中找出最小值dis[i]（vi ∈V-S ）,重复上述动作,直到T中包含了图的所有顶点.</li>
-</ol>
-<p>个人理解原理：</p>
-<p><strong>直接连接的权值最小值一定比多结点连接小（权值均为正）,多结点连接的权值最小值一定比更多结点连接小</strong>,这样便可确定两点路径的最小值</p>
-<p>例如：</p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/191263841.png" alt="191263841"></p>
-<p>首先第一步,我们先声明一个dis数组,该数组初始化的值为：  </p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3399450281.png" alt="3399450281"></p>
-<p>我们的顶点集T的初始化为：T={v1},选取dis数组中的最小值,将结点加入T,则V1到V3的最短距离即为10.因为是dis数组当前的最小值,对于比大的边来说,之后不可能让V1通过他们获得比值更小的路径,因为权值均为正.特别的,对于值为无穷大的路径,之后其路径值必大于当前的最小路径,因为这些结点间即使存在路径,也是通过当前存在路径的结点沟通起来的,其路径值必然大于当前的最小路径值.多结点连接同理.</p>
-<p><strong>为什么Dijkstra算法中不能有负权值？</strong><br>因为如果允许有负权值,可能出现当与S内某点（记作a）以负边相连的点（记作b）确定最短路径时,它的最短路径长度加上这条负边的权值结果小于a原先确定的最短路径长度.而此时a无法更新.因为新的vi 必须从顶点集合V-S中选出,因此a的dist不可能被刷新.</p>
+        <a id="more"></a>
+
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210321163931126.png" alt="image-20210321163931126"></p>
+<h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><ul>
+<li>Electron 运行 package.json 的 main 脚本的进程被称为主进程</li>
+<li>每个应用只有一个主进程</li>
+<li>管理原生 GUI，典型的窗口(BrowserWindow,Tray,Dock,Menu)</li>
+<li>创建渲染进程</li>
+<li>控制应用生命周期</li>
+</ul>
+<h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><ul>
+<li>展示 Web 页面的进程被称为渲染进程</li>
+<li>通过 Node.js Electron 提供的 API 可以跟系统底层打交道</li>
+<li>一个 Electron 应用可以有多个渲染进程</li>
+</ul>
+<h3 id="IPC-模块通信"><a href="#IPC-模块通信" class="headerlink" title="IPC 模块通信"></a>IPC 模块通信</h3><ul>
+<li>Electron 提供了 IPC 通信模块，主进程的 ipcMain 和 渲染进程的 ipcRenderer</li>
+<li>ipcMain,ipcRenderer 都是 EventEmitter 对象</li>
+</ul>
+<h4 id="渲染进程到主进程"><a href="#渲染进程到主进程" class="headerlink" title="渲染进程到主进程"></a>渲染进程到主进程</h4><ul>
+<li>ipcRenderer.send  和 ipcMain.on</li>
+<li>ipcRenderer.invoke 和 ipcMain.handle,它们和上面的区别是 handle 可以返回一个结果给渲染进程。</li>
+</ul>
+<h4 id="从主进程到渲染进程"><a href="#从主进程到渲染进程" class="headerlink" title="从主进程到渲染进程"></a>从主进程到渲染进程</h4><ul>
+<li>ipcRenderer.on</li>
+<li>webContents.send</li>
+</ul>
+<h4 id="页面间（渲染进程与渲染进程间）通信"><a href="#页面间（渲染进程与渲染进程间）通信" class="headerlink" title="页面间（渲染进程与渲染进程间）通信"></a>页面间（渲染进程与渲染进程间）通信</h4><ul>
+<li>通知事件<ul>
+<li>ipcRenderer.sendTo</li>
+</ul>
+</li>
+<li>数据共享<ul>
+<li> Web 技术(localStorage,sessionStorage,indexedDB)</li>
+<li>使用 remote(不推荐)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Electron-优缺点"><a href="#Electron-优缺点" class="headerlink" title="Electron 优缺点"></a>Electron 优缺点</h3><ul>
+<li>性能较差，包体积大</li>
+<li>跨平台，使用前端技术构建，没有浏览器的兼容问题，支持 ES6/7 和浏览器最新 Feature ，比如纯天然的 <a target="_blank" rel="noopener" href="https://mathiasbynens.be/demo/img-loading-lazy">lazyLoad</a></li>
+<li>使用Node.js 或 Electron net 模块发送请求不存在 web 的跨域问题 </li>
+</ul>
+<h3 id="Electron-学习资源"><a href="#Electron-学习资源" class="headerlink" title="Electron 学习资源"></a>Electron 学习资源</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/geektime-geekbang/geektime-electron/blob/master/PDF/Electron%20%E5%B7%A5%E7%A8%8B%E7%AF%87.pdf">Electron 工程相关</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/geektime-geekbang/geektime-electron">Electron 开发实战</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/357927866">electron 桌面端业务中的小结(坑)</a></li>
+</ul>
 <hr>
-<p>部分内容转自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35644234/article/details/60870719">最短路径问题—Dijkstra算法详解</a> 侵删<br>本人水平有限,有错误的地方请指正,谢谢！</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>因为Electron 工程篇的部分内容我没有实际的应用，后续如果有用到的话也会再去总结。因此本篇内容会持续进行更新。</p>
 
     </div>
 
@@ -247,6 +266,10 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/Electron/" rel="tag"># Electron</a>
+          </div>
 
         
 
@@ -254,13 +277,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/04/20/29/" rel="prev" title="下载站已开启（换服务器了,下载站已关闭）">
-      <i class="fa fa-chevron-left"></i> 下载站已开启（换服务器了,下载站已关闭）
+    <a href="/2021/03/21/Electron-%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/" rel="prev" title="Electron 项目笔记">
+      <i class="fa fa-chevron-left"></i> Electron 项目笔记
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2018/09/13/35/" rel="next" title="最短路径问题：Floyd算法">
-      最短路径问题：Floyd算法 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -326,7 +346,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra算法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%BF%9B%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">主进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">渲染进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IPC-%E6%A8%A1%E5%9D%97%E9%80%9A%E4%BF%A1"><span class="nav-number">3.</span> <span class="nav-text">IPC 模块通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E5%88%B0%E4%B8%BB%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">渲染进程到主进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E4%B8%BB%E8%BF%9B%E7%A8%8B%E5%88%B0%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">从主进程到渲染进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E9%97%B4%EF%BC%88%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E4%B8%8E%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E9%97%B4%EF%BC%89%E9%80%9A%E4%BF%A1"><span class="nav-number">3.3.</span> <span class="nav-text">页面间（渲染进程与渲染进程间）通信</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Electron-%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">Electron 优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Electron-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">5.</span> <span class="nav-text">Electron 学习资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">6.</span> <span class="nav-text">后记</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -459,9 +479,9 @@ NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
       api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
       apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
       shortname : 'lichen404-hexo-blog',
-      url       : "http://example.com/2018/09/12/33/",
-      identifier: "2018/09/12/33/",
-      title     : "最短路径问题：Dijkstra算法",
+      url       : "http://example.com/2021/03/21/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4-Electron-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
+      identifier: "2021/03/21/极客时间-Electron-课程学习笔记/",
+      title     : "极客时间 Electron 课程学习笔记",
     });
   }, window.DisqusJS);
 });
