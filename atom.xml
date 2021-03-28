@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-23T12:05:21.195Z</updated>
+  <updated>2021-03-28T13:08:40.328Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Event Loop 学习笔记</title>
+    <link href="http://example.com/2021/03/25/%E4%B8%80%E6%AC%A1%E6%80%A7%E6%90%9E%E6%87%82-Event-Loop/"/>
+    <id>http://example.com/2021/03/25/%E4%B8%80%E6%AC%A1%E6%80%A7%E6%90%9E%E6%87%82-Event-Loop/</id>
+    <published>2021-03-25T03:27:05.000Z</published>
+    <updated>2021-03-28T13:08:40.328Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Event-Loop&quot;&gt;&lt;a href=&quot;#Event-Loop&quot; class=&quot;headerlink&quot; title=&quot;Event Loop&quot;&gt;&lt;/a&gt;Event Loop&lt;/h2&gt;&lt;p&gt;JavaScript 是单线程的，在 NodeJS 和 </summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>极客时间 Electron 课程学习笔记</title>
@@ -422,29 +445,6 @@
     
     
     <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>git 使用总结</title>
-    <link href="http://example.com/2020/03/08/145/"/>
-    <id>http://example.com/2020/03/08/145/</id>
-    <published>2020-03-08T08:58:28.000Z</published>
-    <updated>2021-03-08T11:48:12.881Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;git-使用总结&quot;&gt;&lt;a href=&quot;#git-使用总结&quot; class=&quot;headerlink&quot; title=&quot;git 使用总结&quot;&gt;&lt;/a&gt;git 使用总结&lt;/h2&gt;&lt;h3 id=&quot;git-用户配置&quot;&gt;&lt;a href=&quot;#git-用户配置&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Git" scheme="http://example.com/categories/Git/"/>
     
     
   </entry>
