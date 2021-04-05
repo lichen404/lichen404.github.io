@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-28T13:08:40.328Z</updated>
+  <updated>2021-04-05T05:59:25.401Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,20 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue 函数式组件</title>
+    <link href="http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
+    <id>http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/</id>
+    <published>2021-03-29T07:03:14.000Z</published>
+    <updated>2021-04-05T05:59:25.401Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Event Loop 学习笔记</title>
     <link href="http://example.com/2021/03/25/%E4%B8%80%E6%AC%A1%E6%80%A7%E6%90%9E%E6%87%82-Event-Loop/"/>
     <id>http://example.com/2021/03/25/%E4%B8%80%E6%AC%A1%E6%80%A7%E6%90%9E%E6%87%82-Event-Loop/</id>
     <published>2021-03-25T03:27:05.000Z</published>
-    <updated>2021-03-28T13:08:40.328Z</updated>
+    <updated>2021-04-05T05:59:25.404Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Event-Loop&quot;&gt;&lt;a href=&quot;#Event-Loop&quot; class=&quot;headerlink&quot; title=&quot;Event Loop&quot;&gt;&lt;/a&gt;Event Loop&lt;/h2&gt;&lt;p&gt;JavaScript 是单线程的，在 NodeJS 和 </summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;Event-Loop&quot;&gt;&lt;a href=&quot;#Event-Loop&quot; class=&quot;headerlink&quot; title=&quot;Event Loop&quot;&gt;&lt;/a&gt;Event Loop&lt;/h2&gt;&lt;p&gt;JavaScript 是单线程的，在 NodeJS 和  浏览器中都引入了消息队列和事件循环系统来解决单线程带来的一些问题。&lt;/p&gt;
+&lt;h3 id=&quot;如果没有-Event-Loop-会发生什么？&quot;&gt;&lt;a href=&quot;#如果没有-Event-Loop-会发生什么？&quot; class=&quot;headerlink&quot; title=&quot;如果没有 Event Loop 会发生什么？&quot;&gt;&lt;/a&gt;如果没有 Event Loop 会发生什么？&lt;/h3&gt;&lt;p&gt;如果没有 Event Loop ，因为 JavaScript 是单线程的，所有任务都在一个线程上完成。一旦遇到大量任务或者一个耗时的任务，浏览器网页将出现”假死”，因为 JavaScript 不能停下来去响应用户的行为 。&lt;/p&gt;</summary>
     
     
     
@@ -422,29 +442,6 @@
     
     
     <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>worpress本地更新方法</title>
-    <link href="http://example.com/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/"/>
-    <id>http://example.com/2020/03/14/worpress%E6%9C%AC%E5%9C%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/</id>
-    <published>2020-03-14T06:24:13.000Z</published>
-    <updated>2021-01-13T15:56:38.304Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;因为某些众所周知的原因,wordpress没有办法自动在线更新.只能手动更新,具体方法：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
     
     
   </entry>
