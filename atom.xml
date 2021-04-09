@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-05T05:59:25.401Z</updated>
+  <updated>2021-04-09T17:35:05.759Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,11 @@
     <link href="http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
     <id>http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/</id>
     <published>2021-03-29T07:03:14.000Z</published>
-    <updated>2021-04-05T05:59:25.401Z</updated>
+    <updated>2021-04-09T17:35:05.759Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6&quot;&gt;函数式组件也不再被推荐使用&lt;/a&gt;，这里简单记录下使用函数式组件的一些场景和用法。&lt;/p&gt;
+&lt;p&gt;Vue 函数式组件是没有状态(没有响应式数据)，也没有实例(没有 this 上下文)。&lt;/p&gt;</summary>
     
     
     
