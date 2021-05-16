@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="DOM 事件、事件委托和默认动作事件捕获和冒泡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM事件和事件委托">
+<meta property="og:url" content="http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/index.html">
+<meta property="og:site_name" content="李晨的博客">
+<meta property="og:description" content="DOM 事件、事件委托和默认动作事件捕获和冒泡">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210411235943451.png">
+<meta property="article:published_time" content="2021-04-21T11:08:20.000Z">
+<meta property="article:modified_time" content="2021-05-16T15:46:38.940Z">
+<meta property="article:author" content="Li Chen">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210411235943451.png">
+
+<link rel="canonical" href="http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>DOM事件和事件委托 | 李晨的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="李晨的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">李晨的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DOM事件和事件委托
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-04-21 19:08:20" itemprop="dateCreated datePublished" datetime="2021-04-21T19:08:20+08:00">2021-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-16 23:46:38" itemprop="dateModified" datetime="2021-05-16T23:46:38+08:00">2021-05-16</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="DOM-事件、事件委托和默认动作"><a href="#DOM-事件、事件委托和默认动作" class="headerlink" title="DOM 事件、事件委托和默认动作"></a>DOM 事件、事件委托和默认动作</h2><h3 id="事件捕获和冒泡"><a href="#事件捕获和冒泡" class="headerlink" title="事件捕获和冒泡"></a>事件捕获和冒泡</h3><a id="more"></a>
+
+<h4 id="捕获和冒泡的历史问题"><a href="#捕获和冒泡的历史问题" class="headerlink" title="捕获和冒泡的历史问题"></a>捕获和冒泡的历史问题</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grandfather&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;father&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son&quot;</span>&gt;</span></span><br><span class="line">            文字</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="comment">// 分别给三个 div 添加事件监听 fnGrandfather/fnFather/fnSon</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>IE 和 Netscape 都认为点击文字，也算点击了 son,father,grandfather。但在调用顺序上，IE5 认为先调用 fnGrandFather,</p>
+<p>而 Netscape 认为先调用 fnSon。最后 W3C 在 2002 发布 DOM Level 2 Events Specification 文档规定：</p>
+<ul>
+<li>浏览器应该同时支持两种调用顺序，开发者自己选择函数在捕获阶段执行还是冒泡阶段执行</li>
+<li>首先按爷爷=&gt;爸爸=&gt;儿子的顺序看有没有函数监听(捕获阶段)</li>
+<li>然后按儿子=&gt;爸爸=&gt;爷爷顺序看有没有函数监听(冒泡阶段)</li>
+<li>有监听函数就调用，并提供事件信息(event对象)，没有就跳过</li>
+</ul>
+<h4 id="捕获和冒泡阶段"><a href="#捕获和冒泡阶段" class="headerlink" title="捕获和冒泡阶段"></a>捕获和冒泡阶段</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">father.addEventListener(<span class="string">&#x27;click&#x27;</span>,fn,bool) <span class="comment">// bool 不传或为 falsy 就会在冒泡阶段调用 fn</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/image-20210411235943451.png" alt="image-20210411235943451"></p>
+<h5 id="一种特殊情况"><a href="#一种特殊情况" class="headerlink" title="一种特殊情况"></a>一种特殊情况</h5><ul>
+<li>只有一个 div 被监听</li>
+<li>分别在捕获阶段和冒泡阶段监听 click 事件</li>
+<li>用户点击的元素就是开发者监听的</li>
+</ul>
+<p>在这种情况下谁先监听谁先执行，并不一定是在捕获阶段监听的函数先执行。</p>
+<h4 id="取消冒泡"><a href="#取消冒泡" class="headerlink" title="取消冒泡"></a>取消冒泡</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.stopPropagation()  <span class="comment">//中断冒泡，浏览器不再向上通知</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="target-和-currentTarget"><a href="#target-和-currentTarget" class="headerlink" title="target 和 currentTarget"></a>target 和 currentTarget</h4><ul>
+<li><code>e.target</code> 是用户操作的元素</li>
+<li><code>e.currentTarget</code> 是当前设置监听的元素，事件监听回调函数中的 this 指向的是 e.currentTarget</li>
+</ul>
+<h3 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">button.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> event = <span class="keyword">new</span> CustomEvent(<span class="string">&#x27;frank&#x27;</span>,&#123;</span><br><span class="line">        detail:&#123;</span><br><span class="line">            name:<span class="string">&#x27;frank&#x27;</span>,</span><br><span class="line">            age:<span class="number">18</span></span><br><span class="line">        &#125;,</span><br><span class="line">        bubbles:<span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    button.dispatchEvent(event)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">button.addEventListener(<span class="string">&#x27;frank&#x27;</span>,<span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;frank 事件触发了&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(e.detail)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul>
+<li>监听100个按钮的点击事件，监听这100个按钮的祖先，等冒泡的时候判断 target 是不是这100个按钮中的一个</li>
+<li>监听目前还不存在的元素的点击事件，监听祖先，等点击的时候看是不是想要监听的元素</li>
+</ul>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
+<li>省监听数(内存)</li>
+<li>可以监听动态元素</li>
+</ul>
+<h4 id="手写事件委托"><a href="#手写事件委托" class="headerlink" title="手写事件委托"></a>手写事件委托</h4><p>简写版：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">on</span>(<span class="params">eventType,element,selector,fn</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!(element <span class="keyword">instanceof</span> Element))&#123;</span><br><span class="line">        element = <span class="built_in">document</span>.querySelector(element)</span><br><span class="line">    &#125;</span><br><span class="line">    element.addEventListener(eventType,<span class="function"><span class="params">e</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">const</span> t = t.target</span><br><span class="line">        <span class="keyword">if</span>(t.matches(selector))&#123;</span><br><span class="line">            fn(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简写版存在一个问题，如果点击的是 element 内部的元素，事件委托就会失效。因此需要递归判断 target 的父元素/爷爷元素等是否是 element。完整版：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">on</span>(<span class="params">eventType,element,selector,fn</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!(element <span class="keyword">instanceof</span> Element))&#123;</span><br><span class="line">        element = <span class="built_in">document</span>.querySelector(element)</span><br><span class="line">    &#125;</span><br><span class="line">    element.addEventListener(eventType,<span class="function"><span class="params">e</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> t = t.target</span><br><span class="line">        <span class="keyword">while</span>(!t.matches(selector))&#123;</span><br><span class="line">            <span class="keyword">if</span>(element===t)&#123;</span><br><span class="line">                t = <span class="literal">null</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            t = t.parentNode</span><br><span class="line">        &#125;</span><br><span class="line">        t &amp;&amp; fn.call(t,e,t)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> element</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="JS-和-DOM-事件的关系"><a href="#JS-和-DOM-事件的关系" class="headerlink" title="JS 和  DOM  事件的关系"></a>JS 和  DOM  事件的关系</h3><p>DOM 事件并不是 JS  的内容，事实上 DOM 只是浏览器提供的 web api。JS 只是调用了 DOM 提供的 addEventListener 而已。而 NodeJS 实现了类似的事件系统 EventEmitter，不过没有 DOM 事件中冒泡，捕获等行为。</p>
+<h3 id="默认动作"><a href="#默认动作" class="headerlink" title="默认动作"></a>默认动作</h3><p>许多事件会自动触发浏览器执行某些行为。比如点击表单的提交按钮会触发提交表单到服务器的行为，点击链接触发导航到该 URL 的行为。</p>
+<h4 id="阻止浏览器默认动作"><a href="#阻止浏览器默认动作" class="headerlink" title="阻止浏览器默认动作"></a>阻止浏览器默认动作</h4><ul>
+<li>使用 event 对象的 preventDefault() 方法</li>
+<li>如果处理程序是使用 <code>on&lt;event&gt;</code> (而不是 addEventListener) 分配的，那么返回 false 也是有效的</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;/&quot;</span> onclick=<span class="string">&quot;return false&quot;</span>&gt;Click here&lt;/a&gt;</span><br><span class="line">or</span><br><span class="line">&lt;a href=<span class="string">&quot;/&quot;</span> onclick=<span class="string">&quot;(event)=&gt;event.preventDefault()&quot;</span>&gt;here&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="form-表单的正确写法"><a href="#form-表单的正确写法" class="headerlink" title="form 表单的正确写法"></a>form 表单的正确写法</h4><p>之前遇到过一个问题，在 form 表单中点击按钮自动刷新了整个页面。原因是在 chrome 浏览器中，即使 button type 没有设置为 submit ,也会被视为提交按钮，点击后会触发表单的提交动作从而导致整个页面刷新。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"> &lt;template&gt;</span><br><span class="line">    &lt;form @submit.prevent&#x3D;&quot;submit&quot;&gt;</span><br><span class="line">      &lt;label&gt;</span><br><span class="line">        &lt;span&gt;用户名&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;user.username&quot; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;label&gt;</span><br><span class="line"></span><br><span class="line">      &lt;label&gt;</span><br><span class="line">        &lt;span&gt;密码&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;password&quot; v-model&#x3D;&quot;user.password&quot; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;label&gt;</span><br><span class="line">      &lt;button&gt;登录&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      user: &#123;</span><br><span class="line">        username: &quot;&quot;,</span><br><span class="line">        password: &quot;&quot;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    submit() &#123;</span><br><span class="line">      console.log(this.user);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>通常我们不需要 form 的默认动作，可以监听 form 的 submit 事件阻止默认动作并调用我们自定义的  submit 函数。在 form 标签中的 input 元素中回车也可以触发submit 事件，点击 label 元素会将焦点放在内部的 input 元素上。</p>
+<h4 id="如何阻止滚动？"><a href="#如何阻止滚动？" class="headerlink" title="如何阻止滚动？"></a>如何阻止滚动？</h4><ul>
+<li>阻止 scroll 事件的默认动作是没用的，因为现有滚动才会有滚动事件</li>
+<li>要阻止滚动可以阻止 wheel 和 touchstart(移动端) 的默认动作</li>
+<li>CSS 隐藏滚动条，避免用户拖动滚动条进行滚动</li>
+</ul>
+<hr>
+<p>参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zh.javascript.info/default-browser-action">浏览器默认行为</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Reference/API">web API 参考</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/" rel="prev" title="Vue 函数式组件">
+      <i class="fa fa-chevron-left"></i> Vue 函数式组件
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/08/flex-%E5%B8%83%E5%B1%80%E8%B8%A9%E5%9D%91/" rel="next" title="Flex 布局踩坑">
+      Flex 布局踩坑 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-%E4%BA%8B%E4%BB%B6%E3%80%81%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E5%92%8C%E9%BB%98%E8%AE%A4%E5%8A%A8%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">DOM 事件、事件委托和默认动作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E5%92%8C%E5%86%92%E6%B3%A1"><span class="nav-number">1.1.</span> <span class="nav-text">事件捕获和冒泡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%92%8C%E5%86%92%E6%B3%A1%E7%9A%84%E5%8E%86%E5%8F%B2%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">捕获和冒泡的历史问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%92%8C%E5%86%92%E6%B3%A1%E9%98%B6%E6%AE%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">捕获和冒泡阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">一种特殊情况</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E5%86%92%E6%B3%A1"><span class="nav-number">1.1.3.</span> <span class="nav-text">取消冒泡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#target-%E5%92%8C-currentTarget"><span class="nav-number">1.1.4.</span> <span class="nav-text">target 和 currentTarget</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">自定义事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-number">1.3.</span> <span class="nav-text">事件委托</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.3.1.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8B%E5%86%99%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-number">1.3.3.</span> <span class="nav-text">手写事件委托</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS-%E5%92%8C-DOM-%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.</span> <span class="nav-text">JS 和  DOM  事件的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8A%A8%E4%BD%9C"><span class="nav-number">1.5.</span> <span class="nav-text">默认动作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%BB%E6%AD%A2%E6%B5%8F%E8%A7%88%E5%99%A8%E9%BB%98%E8%AE%A4%E5%8A%A8%E4%BD%9C"><span class="nav-number">1.5.1.</span> <span class="nav-text">阻止浏览器默认动作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#form-%E8%A1%A8%E5%8D%95%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%86%99%E6%B3%95"><span class="nav-number">1.5.2.</span> <span class="nav-text">form 表单的正确写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E6%BB%9A%E5%8A%A8%EF%BC%9F"><span class="nav-number">1.5.3.</span> <span class="nav-text">如何阻止滚动？</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Li Chen"
+      src="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Li Chen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lichen404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lichen404" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:f360family@gmail.com" title="E-Mail → mailto:f360family@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'DgxBp5XEw3oPzN7uHjxuNKfY7aCOPDoaLRxSPCKL7Y1pAE161Bp5qXjtsh6IW6J1',
+      shortname : 'lichen404-hexo-blog',
+      url       : "http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/",
+      identifier: "2021/04/21/DOM事件和事件委托/",
+      title     : "DOM事件和事件委托",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+</body>
+</html>

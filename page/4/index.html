@@ -161,6 +161,297 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/04/55/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/04/55/" class="post-title-link" itemprop="url">解决本地调试AJAX的跨域问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-04 05:29:00" itemprop="dateCreated datePublished" datetime="2019-03-04T05:29:00+08:00">2019-03-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:29:26" itemprop="dateModified" datetime="2021-01-13T23:29:26+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近在学习前端的过程中因为用到了AJAX,所以要在本地调试.但是令人X疼的是即使是在本地,也会遇到跨域问题.因为浏览器打开本地文件所使用的的file协议与HTTP协议就不同. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2666391080-300x98.png" alt="2666391080-300x98"></p>
+<p>但其实浏览器本身是接收到了数据的,但是出于浏览器<code>同源策略</code>的限制,我们不能看到数据.如果你不了解浏览器的同源策略,下面有简单的解释：<br>简单来说,同源策略就是浏览器出于安全考虑,限制了JavaScript 脚本在不同网站页面的运行,避免不同网站的代码相互影响.下面是同源页面的判定规则：</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Outcome</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://store.company/dir2/other.html">http://store.company/dir2/other.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com/dir/inner/another.html">http://store.company.com/dir/inner/another.html</a></td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://store.company.com/secure.html">https://store.company.com/secure.html</a></td>
+<td>Failure</td>
+<td>Different protocol</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://store.company.com:81/dir/etc.html">http://store.company.com:81/dir/etc.html</a></td>
+<td>Failure</td>
+<td>Different port</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://news.company.com/dir/other.html">http://news.company.com/dir/other.html</a></td>
+<td>Failure</td>
+<td>Different host</td>
+</tr>
+</tbody></table>
+<p>**简单来说就是要同域名,同端口,同协议才算是“同源”.**我在CSDN找到了我觉得比较完美解决本地调试的办法.</p>
+<ol>
+<li> 升级Chrome到最新版本或下载最新版本的浏览器</li>
+<li> 创建一个调试用的Chrome快捷方式,右键选择Chrome快捷方式,在弹出的右键菜单中选择”创建快捷方式”,重命名新建的快捷方式为Chrome-Debug.</li>
+<li> 打开Chrome-Debug快捷方式属性,右键选择Chrome-Debug快捷方式,右键菜单中选择”属性”,打开Chrome-Debug快捷方式属性设置对话框.</li>
+<li> 增加启动参数,在目标后面增加如下的启动参数：–user-data-dir=”c:ChromeDebug” –test-type –disable-web-security ,点”确定”按钮保存设置.完整的目标内容如下所示：”C:Program Files (x86)GoogleChromeApplicationchrome.exe” –user-data-dir=”c:ChromeDebug” –test-type –disable-web-security (注意 每个–前面都有一个空格)</li>
+<li> 打开Chrome-Debug.因为启动参数中增加了–user-data-dir=”c:ChromeDebug”,表示Chrome会从c:ChromeDebug中存取用户数据,因该目录可能为空,所以新打开的Chrome-Debug窗口是一个全新的Chrome,没有书签、历史、扩展程序等内容,需要再重新安装扩展程序.</li>
+<li> 再次打开之前出错的程序,就可以发现Ajax已经可以正常跨域访问了.</li>
+</ol>
+<hr>
+<p>具体内容可查看:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41802303/article/details/80666933">chrome浏览器开启Ajax跨域访问调试</a>,侵删.</p>
+<p> <strong>2020-3-1 更新：不应该使用file协议打开html文件,请使用 Parcel 建立本地服务器访问.同源问题可以通过JSONP或CORS解决.</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/02/16/48/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/16/48/" class="post-title-link" itemprop="url">罗技K480键盘使用指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-02-16 23:16:00" itemprop="dateCreated datePublished" datetime="2019-02-16T23:16:00+08:00">2019-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:54:19" itemprop="dateModified" datetime="2021-01-13T23:54:19+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="写在前面："><a href="#写在前面：" class="headerlink" title="写在前面："></a>写在前面：</h3><p>最近新买了 iPad pro 10.5+apple pencil,寻思着就差个键盘凑齐“生产力工具”了（手动滑稽）<br>加上我正好逛贴吧薅羊毛看到京东备件库有95新的K480键盘,比原价便宜四成,于是赶紧入手了一把.<br>入手价：82元+6元运费=88元,看下使用效果图：</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2035927978-300x225.jpg" alt="2035927978-300x225"></p>
+<p>使用效果确实不错,我用键盘蓝牙连接 iPad 和电脑,基本可以用按钮实现无缝切换.输入也感觉不到任何的延迟,用起来很流畅.</p>
+<hr>
+<p>我把罗技官网的快捷键提示搬运过来,方便查阅.顺便测试一下,看下 iPad 的快捷键是否都能正常使用.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fkey-table-german-0.png" alt="fkey-table-german-0"></p>
+<p>图中下面有叉号的即为不能正常使用.del 键不知道有什么用,删除字符用的是下面的 back 键,windows 跟 iOS 都是这样,有点奇怪.</p>
+<p>再来试试功能键：<img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/fkey-table-german.png" title="功能键测试"></p>
+<p>功能键均能正常使用,iPad 对应最下面的 iOS.</p>
+<hr>
+<p>我是在 iPad pro 10.5 ,iOS 12的系统下测试得到的结果,不能保证所有 iPad 都是一样的效果.以上的测试结果仅供参考.总而言之,K480确实很适合在拥有多设备的情况下使用,切换几乎无延迟.电脑,手机,iPad,一个键盘就够了.最近我即使用电脑也在使用这个键盘,以前的机械键盘都已经在吃灰了.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/01/09/45/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/09/45/" class="post-title-link" itemprop="url">斐讯K3C路由器的一个安全漏洞</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-09 02:06:00" itemprop="dateCreated datePublished" datetime="2019-01-09T02:06:00+08:00">2019-01-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近偶然发下之前在转转上收的K3C竟然默认开启了WPS功能(Wi-Fi Protected Setup),而且我在官改的固件中也找不到关闭的按钮.正好我手上有块支持Kali linux无线破解的网卡,我决定测试一下,使用Kali linux上的reaver来爆破pin码,看看斐讯有没有做这方面的防护.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4131968415.jpg" alt="4131968415"></p>
+<p>可以看到,路由器默认开启了WPS功能,并且pin码竟然默认为12345670,直接跑出了密码.虽说现在使用这种方法破解路由器已经有点过时,但这也算是一个不大不小的漏洞.因为我手上只有一台刷了官改固件K3C,不知道这是我这一台机器的情况,还是都是这样的,也不清楚是官改固件的问题还是都是这样的.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1828136325.jpg" alt="1828136325"></p>
+<p>在cdlinux上使用minidwep也是一样的结果.后来我在恩山无线论坛上找到了比较靠谱的方法：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">winscp找到<span class="regexp">/opt/</span>lantiq<span class="regexp">/wave/</span>confs/hostapd_wlan0.conf、</span><br><span class="line"><span class="regexp">/opt/</span>lantiq<span class="regexp">/wave/</span>confs/hostapd_wlan2.conf这两个文件,</span><br><span class="line">将里面的wps_state=<span class="number">2</span>改成wps_state=<span class="number">0</span>然后重启即可</span><br></pre></td></tr></table></figure>
+<hr>
+<p>附上原答案链接：<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=341654&page=2#pid3135592">K3C 如何关闭wps功能</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2018/09/13/35/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -854,7 +1145,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -867,7 +1158,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

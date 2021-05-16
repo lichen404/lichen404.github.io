@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-09T17:35:05.759Z</updated>
+  <updated>2021-05-16T15:04:48.311Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,15 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Flex 布局踩坑</title>
+    <link href="http://example.com/2021/05/08/flex-%E5%B8%83%E5%B1%80%E8%B8%A9%E5%9D%91/"/>
+    <id>http://example.com/2021/05/08/flex-%E5%B8%83%E5%B1%80%E8%B8%A9%E5%9D%91/</id>
+    <published>2021-05-08T08:18:30.000Z</published>
+    <updated>2021-05-16T15:04:48.311Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;Flex-布局的默认高度问题&quot;&gt;&lt;a href=&quot;#Flex-布局的默认高度问题&quot; class=&quot;headerlink&quot; title=&quot;Flex 布局的默认高度问题&quot;&gt;&lt;/a&gt;Flex 布局的默认高度问题&lt;/h3&gt;&lt;p&gt;将元素设置为 &lt;code&gt;display:flex &lt;/code&gt; 后，子元素如果没有设置高度或设为 auto，将占满整个容器的高度。可以通过设置 &lt;code&gt;align-items&lt;/code&gt; 属性来解决。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DOM事件和事件委托</title>
+    <link href="http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
+    <id>http://example.com/2021/04/21/DOM%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</id>
+    <published>2021-04-21T11:08:20.000Z</published>
+    <updated>2021-05-16T15:46:38.940Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;DOM-事件、事件委托和默认动作&quot;&gt;&lt;a href=&quot;#DOM-事件、事件委托和默认动作&quot; class=&quot;headerlink&quot; title=&quot;DOM 事件、事件委托和默认动作&quot;&gt;&lt;/a&gt;DOM 事件、事件委托和默认动作&lt;/h2&gt;&lt;h3 id=&quot;事件捕获和冒泡&quot;&gt;&lt;a href=&quot;#事件捕获和冒泡&quot; class=&quot;headerlink&quot; title=&quot;事件捕获和冒泡&quot;&gt;&lt;/a&gt;事件捕获和冒泡&lt;/h3&gt;</summary>
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue 函数式组件</title>
     <link href="http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
     <id>http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/</id>
     <published>2021-03-29T07:03:14.000Z</published>
-    <updated>2021-04-09T17:35:05.759Z</updated>
+    <updated>2021-05-16T15:04:48.305Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6&quot;&gt;函数式组件也不再被推荐使用&lt;/a&gt;，这里简单记录下使用函数式组件的一些场景和用法。&lt;/p&gt;
-&lt;p&gt;Vue 函数式组件是没有状态(没有响应式数据)，也没有实例(没有 this 上下文)。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6&quot;&gt;函数式组件也不再被推荐使用&lt;/a&gt;，这里简单记录下使用函数式组件的一些场景和用法。&lt;/p&gt;</summary>
     
     
     
@@ -93,11 +128,37 @@
   </entry>
   
   <entry>
+    <title>Vue 生命周期的一点补充</title>
+    <link href="http://example.com/2021/03/08/Vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%A1%A5%E5%85%85/"/>
+    <id>http://example.com/2021/03/08/Vue-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%A1%A5%E5%85%85/</id>
+    <published>2021-03-08T07:00:21.000Z</published>
+    <updated>2021-05-16T15:04:48.308Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/data.png&quot; alt=&quot;data&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上面的这幅图描述了 Vue</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>mobX 学习笔记</title>
     <link href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-03-01T02:37:39.000Z</published>
-    <updated>2021-03-21T07:07:12.132Z</updated>
+    <updated>2021-05-16T15:04:48.316Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;学习使用-Mobx&quot;&gt;&lt;a href=&quot;#学习使用-Mobx&quot; class=&quot;headerlink&quot; title=&quot;学习使用 Mobx&quot;&gt;&lt;/a&gt;学习使用 Mobx&lt;/h2&gt;&lt;p&gt;在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：&lt;/p&gt;</summary>
@@ -116,7 +177,7 @@
     <link href="http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/</id>
     <published>2021-03-01T02:36:01.000Z</published>
-    <updated>2021-03-23T12:05:21.193Z</updated>
+    <updated>2021-05-16T15:04:48.321Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;解决控制台-MobX-警告&quot;&gt;&lt;a href=&quot;#解决控制台-MobX-警告&quot; class=&quot;headerlink&quot; title=&quot;解决控制台 MobX 警告&quot;&gt;&lt;/a&gt;解决控制台 MobX 警告&lt;/h3&gt;&lt;p&gt;&lt;code&gt;MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed&lt;/code&gt;&lt;/p&gt;
@@ -368,76 +429,6 @@
     
     
     <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>执行*.sh 文件的几种方式</title>
-    <link href="http://example.com/2020/05/18/205/"/>
-    <id>http://example.com/2020/05/18/205/</id>
-    <published>2020-05-18T09:59:27.000Z</published>
-    <updated>2021-01-13T14:20:17.749Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;执行-sh-文件的几种方式&quot;&gt;&lt;a href=&quot;#执行-sh-文件的几种方式&quot; class=&quot;headerlink&quot; title=&quot;执行*.sh 文件的几种方式&quot;&gt;&lt;/a&gt;执行*.sh 文件的几种方式&lt;/h3&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS高阶函数</title>
-    <link href="http://example.com/2020/04/14/199/"/>
-    <id>http://example.com/2020/04/14/199/</id>
-    <published>2020-04-14T06:33:30.000Z</published>
-    <updated>2021-01-29T16:05:50.645Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;map&quot;&gt;&lt;a href=&quot;#map&quot; class=&quot;headerlink&quot; title=&quot;map()&quot;&gt;&lt;/a&gt;map()&lt;/h4&gt;&lt;p&gt;创建一个新数组,其中每一个元素由调用数组中的每一个元素执行的函数得来&lt;/p&gt;
-&lt;figure</summary>
-        
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS中typeof 和 instanceof 的区别</title>
-    <link href="http://example.com/2020/03/31/195/"/>
-    <id>http://example.com/2020/03/31/195/</id>
-    <published>2020-03-31T11:58:55.000Z</published>
-    <updated>2021-01-13T14:26:39.603Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;JS-中-typeof-和-instanceof-的区别&quot;&gt;&lt;a href=&quot;#JS-中-typeof-和-instanceof-的区别&quot; class=&quot;headerlink&quot; title=&quot;JS 中 typeof 和 instanceof</summary>
-        
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
-    
     
   </entry>
   
