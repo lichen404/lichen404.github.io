@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-16T15:04:48.311Z</updated>
+  <updated>2021-06-02T17:46:42.815Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue 3 学习笔记</title>
+    <link href="http://example.com/2021/05/26/Vue-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/05/26/Vue-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-26T09:09:31.000Z</published>
+    <updated>2021-06-02T17:46:42.815Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Vue-3-学习笔记&quot;&gt;&lt;a href=&quot;#Vue-3-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Vue 3 学习笔记&quot;&gt;&lt;/a&gt;Vue 3 学习笔记&lt;/h2&gt;&lt;p&gt;Vue 3 的文档已经有&lt;a href=&quot;https://v3.cn.vuejs.org/guide/introduction.html&quot;&gt;中文版&lt;/a&gt;，内容很详细，也有 Vue 2 迁移 Vue 3 的&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/introduction.html#%E6%A6%82%E8%A7%88&quot;&gt;指南&lt;/a&gt;。因此这里只记录下自己用到的部分新特性和自己的一些理解。&lt;/p&gt;
+&lt;h3 id=&quot;Vue-3-数据响应式&quot;&gt;&lt;a href=&quot;#Vue-3-数据响应式&quot; class=&quot;headerlink&quot; title=&quot;Vue 3  数据响应式&quot;&gt;&lt;/a&gt;Vue 3  数据响应式&lt;/h3&gt;&lt;p&gt;Vue 2 的数据响应式底层实现是 &lt;code&gt;Object.defineProperty()&lt;/code&gt;,对于数组则是拦截了数组的七个方法。这种方式存在的问题是对于对象没有办法检测到属性的添加或删除。对于基于数组索引的变化也不能检测到。&lt;/p&gt;
+&lt;p&gt;Vue 3 的数据响应式基于 ES6 的 Proxy 实现的，和 Mobx 6 相同。解决了上面提到的问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Proxy 可以实现直接监听对象而非属性，所以对象的属性新增和删除也可以被监听&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Proxy 可以直接监听数组的变化。因此数组直接修改下标对应的内容或长度也可以被监听&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>color-ui笔记(二)</title>
+    <link href="http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
+    <id>http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%BA%8C/</id>
+    <published>2021-05-24T10:48:45.000Z</published>
+    <updated>2021-06-02T17:46:42.822Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;完善和部署项目&quot;&gt;&lt;a href=&quot;#完善和部署项目&quot; class=&quot;headerlink&quot; title=&quot;完善和部署项目&quot;&gt;&lt;/a&gt;完善和部署项目&lt;/h2&gt;&lt;h3 id=&quot;编写文档首页&quot;&gt;&lt;a href=&quot;#编写文档首页&quot; class=&quot;headerlink&quot; title=&quot;编写文档首页&quot;&gt;&lt;/a&gt;编写文档首页&lt;/h3&gt;&lt;p&gt;程序员不懂设计，直接从一些设计网站上获取素材。比如 &lt;a href=&quot;https://dribbble.com/&quot;&gt;dribbble&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>color-ui笔记(一)</title>
+    <link href="http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%B8%80/"/>
+    <id>http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%B8%80/</id>
+    <published>2021-05-24T10:44:07.000Z</published>
+    <updated>2021-06-02T17:46:42.820Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;准备工作和完成组件&quot;&gt;&lt;a href=&quot;#准备工作和完成组件&quot; class=&quot;headerlink&quot; title=&quot;准备工作和完成组件&quot;&gt;&lt;/a&gt;准备工作和完成组件&lt;/h2&gt;&lt;h3 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h3&gt;&lt;p&gt;全局安装 create-vite-app&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn global add create-vite-app@1.18.0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;创建项目&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cva color-ui&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;引入 vue-router &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn add vue-router@4.0.0-beta3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>Flex 布局踩坑</title>
@@ -57,10 +119,11 @@
     <link href="http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
     <id>http://example.com/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/</id>
     <published>2021-03-29T07:03:14.000Z</published>
-    <updated>2021-05-16T15:04:48.305Z</updated>
+    <updated>2021-06-02T17:46:42.818Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6&quot;&gt;函数式组件也不再被推荐使用&lt;/a&gt;，这里简单记录下使用函数式组件的一些场景和用法。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;Vue-函数式组件&quot;&gt;&lt;a href=&quot;#Vue-函数式组件&quot; class=&quot;headerlink&quot; title=&quot;Vue 函数式组件&quot;&gt;&lt;/a&gt;Vue 函数式组件&lt;/h2&gt;&lt;p&gt;最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中&lt;a href=&quot;https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6&quot;&gt;函数式组件也不再被推荐使用&lt;/a&gt;，这里简单记录下使用函数式组件的一些场景和用法。&lt;/p&gt;
+&lt;p&gt;Vue 函数式组件是没有状态(没有响应式数据)，也没有实例(没有 this 上下文)。&lt;/p&gt;</summary>
     
     
     
@@ -357,78 +420,6 @@
     
     
     <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS实现流光文字</title>
-    <link href="http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/"/>
-    <id>http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/</id>
-    <published>2020-07-01T09:58:01.000Z</published>
-    <updated>2021-01-18T13:40:35.835Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>饥人谷分享</title>
-    <link href="http://example.com/2020/06/15/249/"/>
-    <id>http://example.com/2020/06/15/249/</id>
-    <published>2020-06-15T02:06:15.000Z</published>
-    <updated>2021-01-13T14:12:15.195Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;自我介绍&quot;&gt;&lt;a href=&quot;#自我介绍&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>pointer-events:none 和 cursor:not-allowed 踩坑</title>
-    <link href="http://example.com/2020/05/29/214/"/>
-    <id>http://example.com/2020/05/29/214/</id>
-    <published>2020-05-29T09:19:58.000Z</published>
-    <updated>2021-01-13T14:19:24.204Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;pointer-events-none-和-cursor-not-allowed-踩坑&quot;&gt;&lt;a href=&quot;#pointer-events-none-和-cursor-not-allowed-踩坑&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
-    
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   

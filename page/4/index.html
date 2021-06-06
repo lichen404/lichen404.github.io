@@ -161,6 +161,266 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/04/18/77/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/77/" class="post-title-link" itemprop="url">无线网卡监听模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-18 06:51:00" itemprop="dateCreated datePublished" datetime="2019-04-18T06:51:00+08:00">2019-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:03:37" itemprop="dateModified" datetime="2021-01-13T23:03:37+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>监听模式（monitor mode）,或 RFMON（Radio Frequency MONitor）,是指无线网卡可以接收所有经过它的数据流的工作方式,对应于IEEE 802.11网卡的其他模式,诸如Master（路由器）、Managed（普通模式的网卡）、Ad-hoc等.监听模式不区分所接收数据包的目标MAC地址,这点和混杂模式类似.然而,和混杂模式不同的是,监听模式的不需要和无线接入点（AP）或Ad-hoc网络建立连接.监听模式是无线网卡特有的特殊模式,而混杂模式应用于有线网卡和无线网卡.</p>
+<p>监听模式通常用于网络发现、流量监听和分组分析.Linux、Mac OS X、Windows以及其他Unix-like平台有使用监听模式的网络发现、抓包工具,如KisMAC、Kismet、Wireshark、Aircrack-NG等.</p>
+<p>无线网络的特性可能让人联想到古老的集线器（Hub）网络,在集线器网络中,所有通过集线器的数据都会被转发给该集线器所有的接口,也就是说,只要连接在该集线器上的机器,就可以监听该网络上的所有机器的网络通信.默认情况下,网卡只会接受发给自己的数据报文,将其他的报文统统丢弃.当然也可以让网卡接受所有的报文,这就是所谓的混杂模式（promiscuous mode）.</p>
+<p>无线网卡跟这个很类似,默认情况下无线网卡和无线接入点（Wireless Access Point,WAP）建立连接后,就处于托管模式（Managed mode）,在这个模式下,无线网卡只专注于接受从 WAP 发给自己的数据报文.如果想让无线网卡监听空气中所有的无线通信,则可以将无线网卡设置成监听模式（Monitor mode,也叫 RFMON 模式）,然后再使用诸如 Wireshark 之类的软件捕获数据报文进行分析.</p>
+<p>无线网卡除了 Managed mode 和 Monitor mode 这两个模式之外,其实还支持好几种其他的模式,譬如：Ad hoc（也叫 IBSS 模式） 和 Master mode ,Linux Wireless 站点上对此有详细的介绍,也可以参考 Chris 的 《Wireshark 数据包分析实战》第 11 章,下面附一张无线网卡的几种工作模式的示意图.  </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/4107977739-190x300.png" alt="4107977739-190x300"></p>
+<hr>
+<p>转自</p>
+<ul>
+<li>  维基百科 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F">监听模式</a></li>
+<li>CSDN <a target="_blank" rel="noopener" href="https://blog.csdn.net/whatday/article/details/88796508">无线网络分析监听</a><br>  侵删</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/04/18/73/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/73/" class="post-title-link" itemprop="url">用pyecharts统计天气数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-18 06:24:00" itemprop="dateCreated datePublished" datetime="2019-04-18T06:24:00+08:00">2019-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:56:38" itemprop="dateModified" datetime="2021-01-13T23:56:38+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前在知乎上看到了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57783355">每天起床第一句,太阳公公在哪里——用pyecharts研究天气</a>这篇文章,我注意到了文中提及的<a target="_blank" rel="noopener" href="http://www.tianqihoubao.com/">天气后报</a>网站.我在上面看到了我家这边的天气数据,从2011年到今天的都有.so 我也想搞来做个图表之类的来看一下.Let’s do it. </p>
+<p>先搞个多线程爬虫,把数据格式化后存储在 MongoDB 里面. </p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3484431250.png" alt="3484431250"></p>
+<p>搞定了,然后写代码来生成与知乎文章类似的词云,折线图和饼图.代码太多,我这里只截取一小部分.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/966804010-768x356.png" alt="966804010-768x356"></p>
+<p> 然后让我们来看看生成的图表吧.我家这边算是地处中原吧,秦岭-淮河一线附近,按道理说算是不冷不热.不过在历年气温上也能看到历史温度高达39度,夏天基本也有很多时候是30多度的高温.冬天虽说温度不算很低,但是很多地方都没有暖气,其实也挺冷的.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/884598495-768x384.png" alt="884598495-768x384"></p>
+<p> 晴雨天数估计是BUG了,18年晴天数有点夸张.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2529365067-768x384.png" alt="2529365067-768x384"></p>
+<p> 再来看看天气占比,最近几年感觉我家这边冬季也会有那种雾霾天气.不过在雾霾天在图表上显示的占比很小,霾天在将近10年的时间内实际只有2天.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3159919581-768x384.png" alt="3159919581-768x384"></p>
+<p>最后看下六月份的天气词云吧.跟我想的有点不一样,我的印象里六月是经常下大雨,打雷闪电的季节.但是实际上下大雨打雷的次数并不多.下雨多是阵雨,小雨,大雨跟暴雨次数很少.这也比较符合地理位置的气候吧,毕竟年降雨量也就那么多.</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3525669193-768x476.png" alt="3525669193-768x476"></p>
+<p> 不过我发现2015年6月份连着下了三天的大雨,不过我一点印象都没有…</p>
+<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/563266257.png" alt="563266257"></p>
+<hr>
+<p>关于爬虫和生成图表的代码可以去我的GitHub下载,<a target="_blank" rel="noopener" href="https://github.com/lichen404/weatherSpider">链接</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/21/61/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/21/61/" class="post-title-link" itemprop="url">小诗一首</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-21 07:07:00" itemprop="dateCreated datePublished" datetime="2019-03-21T07:07:00+08:00">2019-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-13 23:18:23" itemprop="dateModified" datetime="2021-01-13T23:18:23+08:00">2021-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="煤的对话"><a href="#煤的对话" class="headerlink" title="煤的对话"></a>煤的对话</h2><p>艾青</p>
+<p>你住在哪里？</p>
+<p>我住在万年的深山里</p>
+<p>我住在万年的岩石里</p>
+<p>你的年纪——</p>
+<p>我的年纪比山的更大</p>
+<p>你从什么时候沉默的？</p>
+<p>从恐龙统治了森林的年代</p>
+<p>从地壳第一次震动的年代</p>
+<p>你已死在过深的怨愤里了么？</p>
+<p>死？不,不,我还活着——</p>
+<p>请给我以火,给我以火！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/04/55/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -808,276 +1068,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/02/02/22/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/02/02/22/" class="post-title-link" itemprop="url">博客ToDoList</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-02-02 17:42:00" itemprop="dateCreated datePublished" datetime="2018-02-02T17:42:00+08:00">2018-02-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>博客前几天刚通过备案审核,写一个博客未完成事项,免得自己忘了.</p>
-<ol>
-<li> 博客实现全站HTTPS</li>
-<li> 博客工信部备案</li>
-<li> 博客实现伪静态</li>
-<li> 代码高亮插件</li>
-<li> 图片插件</li>
-<li> 实现又拍云或七牛云缓存</li>
-<li> footer修改</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/01/21/19/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/21/19/" class="post-title-link" itemprop="url">wireshark捕捉到的IP报文为什么是1514字节？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-01-21 02:21:00" itemprop="dateCreated datePublished" datetime="2018-01-21T02:21:00+08:00">2018-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>按照教材上对应用最广泛的以太网V2的定义,<strong>以太网封装IP数据包的最大长度是1500字节</strong>,也就是说以太网最大帧长应该是以太网首部加上1500,再加上7字节的前导同步码和1字节的帧开始定界符,具体就是：7字节前导同步码＋1字节帧开始定界符＋6字节的目的MAC＋6字节的源MAC＋2字节的帧类型＋1500＋4字节的CRC校验.如图：</p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2380356210.png" alt="2380356210"></p>
-<p>按照上述,物理层的最大帧应该是1526字节,但是实际上我用wireshark捕捉到的最大帧却是1514字节,原因是当数据帧到达网卡时,在物理层上网卡要先去掉前导同步码和帧开始定界符,然后对帧进行CRC检验,如果帧校验和错,就丢弃此帧.如果校验和正确,就判断帧的目的硬件地址是否符合自己的接收条件（目的地址是自己的物理硬件地址、广播地址、可接收的多播硬件地址等）,如果符合,就将帧交“设备驱动程序”做进一步处理.这时我们的抓包软件才能抓到数据,因此,抓包软件抓到的是去掉前导同步码、帧开始分界符、CRC校验之外的数据,其最大值是6+6+2+1500=1514</p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/3177431725.jpg" alt="3177431725"></p>
-<p>而真正的传输数据也就是 Payload在TCP报文中还要减去IP首部的20字节和以太网帧多余的14字节.ICMP报文还要额外减去ICMP首部的8字节.所以当实验中我使用ping -l 3807(3500+学号后三位) 指定发送3807字节的payload后 wireshark收到的总共字节为3807+20×3+14×3+8=3917  </p>
-<hr>
-<h3 id="部分内容转自"><a href="#部分内容转自" class="headerlink" title="部分内容转自"></a>部分内容转自</h3><ul>
-<li><p>  CSDN <a target="_blank" rel="noopener" href="http://blog.csdn.net/ftxc_blog/article/details/12811235">以太网MAC帧格式</a></p>
-</li>
-<li><p>  百度知道 <a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/262389086921611245.html">懂wireshark捕包（关于tcp）的进来下</a></p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/01/20/10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/20/10/" class="post-title-link" itemprop="url">一次wireshark的实践应用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-01-20 04:32:00" itemprop="dateCreated datePublished" datetime="2018-01-20T04:32:00+08:00">2018-01-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这学期新学了计算机网络,有时候会用到wireshark.让我想起来以前看的一本讲wireshark的小书,书上刚开始讲了一道很有意思的面试题.今天打算用虚拟机和wireshark模拟环境亲自试验一下.<br><code>PS：以下内容我尽量以计算机网络专业术语描述,如有错误,请予以指正,谢谢！</code></p>
-<h3 id="题目如下"><a href="#题目如下" class="headerlink" title="题目如下"></a>题目如下</h3><p>两台服务器A和B的网络配置如下（见图1）,B的子网掩码本应该是255.255.255.0,被不小心配成了255.255.255.224.它们还能正常通信吗？  </p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2977533294.jpg" alt="2977533294"></p>
-<h2 id="实验准备"><a href="#实验准备" class="headerlink" title="实验准备"></a>实验准备</h2><ul>
-<li>  Windows10物理机一台,清除ARP缓存,子网掩码配置255.255.255.224 IP地址配置192.168.1.2,模拟服务器B MAC地址 1C:1B:0D:9F:10:EA</li>
-<li>  Deepin Linux虚拟机一台,清除ARP缓存,使用桥接模式直连物理网络 子网掩码配置255.255.255.0 IP地址配置192.168.1.169,模拟服务器A MAC地址 00:0C:29:FE:0C:57</li>
-<li>  家用路由器一台 与虚拟机和物理机直连,充当网关 IP地址 192.168.1.1 MAC地址 8C:AB:8E:68:86:49</li>
-</ul>
-<h2 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h2><p>首先用服务器B ping服务器A,得到分组如下：</p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/1742977777.jpg" alt="1742977777"></p>
-<p>可以ping通,说明可以正常通信.和书上的解释相同,服务器B通过子网掩码判断出服务器A与自身不在一个子网,所以分组1 ICMP报文的以太网帧请求的目的MAC地址是路由器,而不是服务器A,请求通过路由器转发ICMP报文.而分组2 路由器转发ICMP报文给服务器A后,服务器A根据子网掩码判断服务器B与自己在一个子网,所以直接发送ARP广播查询服务器B的MAC地址,当获得服务器B的MAC地址后,分组5中 A回复B的ICMP报文则不需要路由器转发.分组2如图：  </p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/648835784.jpg" alt="648835784"></p>
-<p>原问题还有一问,就是如果把A和B子网掩码互换,是否还能ping通.先说下这个问题的<code>官方答案</code>,原因是主机B根据子网掩码认为主机A与自己在一个子网,所以直接发送ARP请求A的MAC地址.在获得MAC地址后,发出ICMP报文.而A收到ICMP报文后无法发报文出去,因为它发现自己的默认网关在其它网段,是无效的,但是服务器A根据子网掩码认为B与自身不在同一网段,需要网关转发ICMP回复报文.<code>但是</code>,我这次用虚拟机里的Linux系统没有实现上述效果,设置子网掩码后,A还是直接去ARP请求按理说不在同一子网的B的硬件地址,丝毫不受子网掩码约束,原因不明<code>汗!</code></p>
-<p>后来我又找了台Windows物理机,终于实现了书上所说的那种情况.在设置子网掩码的时候直接提示与网关不在同一网段,结果也理所当然的不能ping通.wireshark截图如下.  </p>
-<p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/2736107889.jpg" alt="2736107889"></p>
-<p>但更诡异的事出现了,当我把子网掩码设置还原,想用服务器A反过来ping B的时候,竟然ping不通,但服务器B却能ping通A.这个现象感觉用上面的解释感觉完全说不通啊,我决定改天再用思科的交换机模拟器试验一下,毕竟家用的路由器跟网络概念中的路由器可能不太一样.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次小小的实践真的让我学到了很多东西,一个简单的问题涉及到了ICMP,ARP,子网掩码等这么多网络知识.而且让我用wireshark更直观清晰的认识和分析这些协议.我更加意识到,只要有心,只要肯去实践,就能学到比书本上更多的东西.</p>
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
-<li>  ARP请求不能跨子网,但是ARP回复并不考虑子网</li>
-<li>  子网掩码用于划分子网,计算机用子网掩码和目标IP判断是否在同一个子网</li>
-<li>  跨子网通信需要默认网关的转发</li>
-<li>  wireshark的过滤规则</li>
-</ul>
-<h2 id="最终更新-2019-01-06"><a href="#最终更新-2019-01-06" class="headerlink" title="最终更新 (2019-01-06)"></a>最终更新 (2019-01-06)</h2><p>关于这个问题的第一问,知乎上有比较详细的回答：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/297822814">第一章带来的困惑？</a>.这个问题我在不同的平台复现,最终结果不同.所以我也不再纠结,重要的是理解其中的网络规则,因此仅将网络上类似的讨论和解答与大家分享,真伪自辨.</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>《wireshark网络分析就这么简单》 作者 林沛满 以及<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/linpeiman">林沛满的新浪博客</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1145,7 +1139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

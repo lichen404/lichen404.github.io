@@ -161,6 +161,233 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/Vue-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/26/Vue-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Vue 3 学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-26 17:09:31" itemprop="dateCreated datePublished" datetime="2021-05-26T17:09:31+08:00">2021-05-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-03 01:46:42" itemprop="dateModified" datetime="2021-06-03T01:46:42+08:00">2021-06-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Vue-3-学习笔记"><a href="#Vue-3-学习笔记" class="headerlink" title="Vue 3 学习笔记"></a>Vue 3 学习笔记</h2><p>Vue 3 的文档已经有<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/introduction.html">中文版</a>，内容很详细，也有 Vue 2 迁移 Vue 3 的<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/introduction.html#%E6%A6%82%E8%A7%88">指南</a>。因此这里只记录下自己用到的部分新特性和自己的一些理解。</p>
+<h3 id="Vue-3-数据响应式"><a href="#Vue-3-数据响应式" class="headerlink" title="Vue 3  数据响应式"></a>Vue 3  数据响应式</h3><p>Vue 2 的数据响应式底层实现是 <code>Object.defineProperty()</code>,对于数组则是拦截了数组的七个方法。这种方式存在的问题是对于对象没有办法检测到属性的添加或删除。对于基于数组索引的变化也不能检测到。</p>
+<p>Vue 3 的数据响应式基于 ES6 的 Proxy 实现的，和 Mobx 6 相同。解决了上面提到的问题</p>
+<ul>
+<li><p>Proxy 可以实现直接监听对象而非属性，所以对象的属性新增和删除也可以被监听</p>
+</li>
+<li><p>Proxy 可以直接监听数组的变化。因此数组直接修改下标对应的内容或长度也可以被监听</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/26/Vue-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="post-title-link" itemprop="url">color-ui笔记(二)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-24 18:48:45" itemprop="dateCreated datePublished" datetime="2021-05-24T18:48:45+08:00">2021-05-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-03 01:46:42" itemprop="dateModified" datetime="2021-06-03T01:46:42+08:00">2021-06-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="完善和部署项目"><a href="#完善和部署项目" class="headerlink" title="完善和部署项目"></a>完善和部署项目</h2><h3 id="编写文档首页"><a href="#编写文档首页" class="headerlink" title="编写文档首页"></a>编写文档首页</h3><p>程序员不懂设计，直接从一些设计网站上获取素材。比如 <a target="_blank" rel="noopener" href="https://dribbble.com/">dribbble</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%BA%8C/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
+      <meta itemprop="name" content="Li Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李晨的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="post-title-link" itemprop="url">color-ui笔记(一)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-24 18:44:07" itemprop="dateCreated datePublished" datetime="2021-05-24T18:44:07+08:00">2021-05-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-03 01:46:42" itemprop="dateModified" datetime="2021-06-03T01:46:42+08:00">2021-06-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="准备工作和完成组件"><a href="#准备工作和完成组件" class="headerlink" title="准备工作和完成组件"></a>准备工作和完成组件</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>全局安装 create-vite-app</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add create-vite-app@1.18.0</span><br></pre></td></tr></table></figure>
+<p>创建项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cva color-ui</span><br></pre></td></tr></table></figure>
+<p>引入 vue-router </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-router@4.0.0-beta3</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/24/color-ui%E7%AC%94%E8%AE%B0-%E4%B8%80/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/08/flex-%E5%B8%83%E5%B1%80%E8%B8%A9%E5%9D%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -345,7 +572,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-16 23:04:48" itemprop="dateModified" datetime="2021-05-16T23:04:48+08:00">2021-05-16</time>
+                <time title="Modified: 2021-06-03 01:46:42" itemprop="dateModified" datetime="2021-06-03T01:46:42+08:00">2021-06-03</time>
               </span>
 
           
@@ -360,6 +587,7 @@
 
       
           <h2 id="Vue-函数式组件"><a href="#Vue-函数式组件" class="headerlink" title="Vue 函数式组件"></a>Vue 函数式组件</h2><p>最近学习过程中用到了 Vue 的函数式组件，发现网上相关的资料很少。而在 Vue 3 中<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/functional-components.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6">函数式组件也不再被推荐使用</a>，这里简单记录下使用函数式组件的一些场景和用法。</p>
+<p>Vue 函数式组件是没有状态(没有响应式数据)，也没有实例(没有 this 上下文)。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/29/Vue-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/#more" rel="contents">
@@ -664,227 +892,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">mobX 学习笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-01 10:37:39" itemprop="dateCreated datePublished" datetime="2021-03-01T10:37:39+08:00">2021-03-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-16 23:04:48" itemprop="dateModified" datetime="2021-05-16T23:04:48+08:00">2021-05-16</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="学习使用-Mobx"><a href="#学习使用-Mobx" class="headerlink" title="学习使用 Mobx"></a>学习使用 Mobx</h2><p>在知乎上看到了一个很好的使用 mobx 配合 hooks 使用的例子：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/01/mobX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">react-epic 笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-01 10:36:01" itemprop="dateCreated datePublished" datetime="2021-03-01T10:36:01+08:00">2021-03-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-16 23:04:48" itemprop="dateModified" datetime="2021-05-16T23:04:48+08:00">2021-05-16</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="解决控制台-MobX-警告"><a href="#解决控制台-MobX-警告" class="headerlink" title="解决控制台 MobX 警告"></a>解决控制台 MobX 警告</h3><p><code>MobX: Since strict-mode is enabled, changing (observed) observable values without using an action is not allowed</code></p>
-<p>MobX 在启用严格模式时，修改 observable state 的操作必须在 action 中进行。在异步动作的回调中执行的代码是不会被 action 包装的。在回调中修改 observable state 是无法通过 enforceActions 检查的。官方文档的解决办法是使用 Flow。但是因为需要用到 generator 和 yield，我选择使用了更简单的方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/01/react-epic-%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/17066936?s=400&v=4#/images/avatar.gif">
-      <meta itemprop="name" content="Li Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李晨的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/" class="post-title-link" itemprop="url">小程序踩坑</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-02-25 22:13:01" itemprop="dateCreated datePublished" datetime="2021-02-25T22:13:01+08:00">2021-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-02 23:11:26" itemprop="dateModified" datetime="2021-03-02T23:11:26+08:00">2021-03-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="小程序踩坑"><a href="#小程序踩坑" class="headerlink" title="小程序踩坑"></a>小程序踩坑</h3><p>之前也有用过小程序，最近学习了下小程序的云开发，记录下学习小程序遇到的一些问题。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/02/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -952,7 +963,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

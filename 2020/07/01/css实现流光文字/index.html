@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":null,"activeClass":"disqusjs"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下： 123456789101112131415161718192021222324#text &amp;#123;            margin-top: 100px;            line-height: 145px;            text-align: center;">
+  <meta name="description" content="公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS实现流光文字">
 <meta property="og:url" content="http://example.com/2020/07/01/css%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%85%89%E6%96%87%E5%AD%97/index.html">
 <meta property="og:site_name" content="李晨的博客">
-<meta property="og:description" content="公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下： 123456789101112131415161718192021222324#text &amp;#123;            margin-top: 100px;            line-height: 145px;            text-align: center;">
+<meta property="og:description" content="公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/yourname.gif">
 <meta property="article:published_time" content="2020-07-01T09:58:01.000Z">
-<meta property="article:modified_time" content="2021-01-18T13:40:35.835Z">
+<meta property="article:modified_time" content="2021-06-02T17:46:42.826Z">
 <meta property="article:author" content="Li Chen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/yourname.gif">
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-18 21:40:35" itemprop="dateModified" datetime="2021-01-18T21:40:35+08:00">2021-01-18</time>
+                <time title="Modified: 2021-06-03 01:46:42" itemprop="dateModified" datetime="2021-06-03T01:46:42+08:00">2021-06-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,6 +222,8 @@
 
       
         <p>公司的一个内部导航网站的标题使用了流光文字的效果,感觉还不错.百度搜了一下大概知道了原理. 具体代码如下：</p>
+<a id="more"></a>
+
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#text</span> &#123;</span><br><span class="line">            <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">145px</span>;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">letter-spacing</span>: <span class="number">10px</span>;</span><br><span class="line">            <span class="comment">/* -webkit-text-fill-color: transparent; */</span></span><br><span class="line">            <span class="attribute">color</span>: transparent;</span><br><span class="line">            <span class="attribute">background-size</span>: <span class="number">200%</span> <span class="number">100%</span>;</span><br><span class="line">            <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to right, #<span class="number">4261</span>aa, #<span class="number">6</span>d87da <span class="number">25%</span>, #<span class="number">93</span>b9ed <span class="number">50%</span>, #acd7f5 <span class="number">75%</span>, #ffffff <span class="number">100%</span>);</span><br><span class="line">            <span class="attribute">-webkit-background-clip</span>: text;</span><br><span class="line">            <span class="attribute">animation</span>: text <span class="number">5s</span> linear infinite;</span><br><span class="line">            <span class="attribute">background-clip</span>: text;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">@keyframes</span> text &#123;</span><br><span class="line">            0% &#123;</span><br><span class="line">                <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            100% &#123;</span><br><span class="line">                <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 <p>只需要把元素的 text 或者 text-fill-color 设置为 transparent ,然后设置元素的背景为渐变色,background-size 宽度设为 200%,扩大背景,设置-webkit-background-clip 为 text,背景色只覆盖文字 .最后使用 animation 动画变更 background-position 的位置即可. 效果如下图：</p>
 <p><img src="https://blog-pic-data.oss-cn-shenzhen.aliyuncs.com/img/yourname.gif" alt="yourname"></p>
@@ -360,7 +362,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
